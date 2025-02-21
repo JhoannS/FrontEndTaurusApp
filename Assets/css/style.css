@@ -83,3 +83,12 @@
     font-weight: 600;
     scale: .9;
 }
+
+.btn-link{
+    background: var(--primary_essentials);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+}

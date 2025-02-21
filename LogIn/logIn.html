@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bienvenido</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/Assets/css/style.css">
     <script src="../Assets/js/styles.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,11 +16,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
   </head>
 
-  <body class="bg-background text-text">
-    <div class="h-screen flex items-center justify-center">
-      <h1 class="text-4xl font-bold text-semaforo-verde">¡Bienvenido! <span class="material-symbols-rounded">
-        cancel
-        </span></h1>
-    </div>
+  <body class="bg-mono-negro flex justify-center items-center">
+        <main class="flex items-center justify-between h-[100vh] w-[80%] p-[80px] gap-16">
+            <div class="left w-[50%]">
+                <div class="logo flex gap-3 items-center">
+                    <div class="gota h-7 w-10 shadow-essentials bg-essentials-primary rounded-full"></div>
+                    <div class="logo">
+                        <h1 class="text-[20px] font-semibold">Taurus Comunity CO</h1>
+                        <p class="-mt-[8px] text-[14px] font-medium">Software profesional Essentials App</p>
+                    </div>
+                </div>
+                <div class="welcome">
+                    <h2 class="text-[35px] font-bold mt-[20px]">Bienvenido Nuevamente</h2>
+                    <p class="text-[20px]">Hoy es un excelente dia para vender, inicia sesión y sácale el jugo a tu App Machine.</p>
+                </div>
+
+                <form action="#" method="post" class="mt-10 flex flex-col gap-8">
+                    <div class="flex flex-col gap-1">
+                        <label for="user" class="font-medium text-[18px]">Usuario</label>
+                        <input class="w-full border border-secundary-light rounded-lg py-1 px-3 focus:border-red-300" type="number" name="user" id="user" placeholder="Escriba su documento de identidad">
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                        <label for="password" class="font-medium text-[18px]">Contraseña:</label>
+                        <input class="w-full border border-secundary-light rounded-lg py-1 px-3 focus:border-red-300" type="password" name="password" id="password" placeholder="Escriba su contraseña">
+                    </div>
+
+                    <a href="" class="text-essentials-primary text-right">Olvidé mi contraseña</a>
+
+                    <button type="submit" class="shadow-essentials bg-essentials-primary rounded-lg py-[12px] text-[18px] hover:bg-essentials-secundary hover:scale-90 hover:text-essentials-primary font-semibold">Iniciar sessión</button>
+
+                    <p class="text-center">¿No tienes una cuenta con nosotros?, <a href="" class="text-essentials-secundary">contáctenos</a>.</p>
+
+                    <p class="text-essentials-primary text-center text-[12px]">Versión Deimos 1.0.0</p>
+
+                </form>
+            </div>
+            <div class="right  w-[50%]">Diseñar imagen de referencia de la app</div>
+        </main>
   </body>
 </html>

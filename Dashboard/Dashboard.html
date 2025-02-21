@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Administrativo</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/Assets/css/style.css">
+    <link rel="stylesheet" href="/Assets/css/style.css" />
     <script src="../Assets/js/styles.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,45 +13,120 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+      rel="stylesheet"
+    />
   </head>
 
-  <body class="bg-mono-negro">
-    <header class="flex px-[60px] justify-between">
-        <div class="date flex gap-3 items-center">
-            <div class="dia flex items-center justify-center font-semibold h-10 w-7 shadow-essentials bg-essentials-primary rounded-full" id="dia" >00</div>
-            <div class="mes-año flex flex-col text-[14px] font-medium" id="mes-año">
-                <span id="mes">Enero</span>
-                <span id="año">2025</span>
-            </div>
-            <div class="separador h-8 w-[2px] bg-essentials-primary rounded-lg"></div>
-            <div class="hora text-[14px]" id="hora">00:00:00</div>
+  <body class="bg-mono flex">
+    <div class="h-[100vh] w-[60px] flex items-center p-[20px]">
+      <aside
+        class="w-[60px] flex justify-center flex-col gap-2 items-center bg-secundary-default p-2 rounded-full"
+      >
+        <div
+          class="gota h-12 w-12 shadow-essentials bg-essentials-primary rounded-full"
+        ></div>
+        <div class="btn-link">
+          <a href="" class="bg-transparent flex items-center justify-center">
+            <span class="material-symbols-rounded"> space_dashboard </span>
+          </a>
         </div>
+        <div class="btn-link-disable">
+          <a href="" class="bg-transparent flex items-center justify-center">
+            <span class="material-symbols-rounded"> swap_horiz </span>
+          </a>
+        </div>
+        <div class="btn-link-disable">
+          <a href="" class="bg-transparent flex items-center justify-center">
+            <span class="material-symbols-rounded"> savings </span>
+          </a>
+        </div>
+        <div class="btn-link-disable">
+          <a href="" class="bg-transparent flex items-center justify-center">
+            <span class="material-symbols-rounded"> monitoring </span>
+          </a>
+        </div>
+        <div class="btn-link-disable">
+          <a href="" class="bg-transparent flex items-center justify-center">
+            <span class="material-symbols-rounded"> identity_platform </span>
+          </a>
+        </div>
+        <div class="btn-link-disable">
+          <a href="" class="bg-transparent flex items-center justify-center">
+            <span class="material-symbols-rounded"> calendar_clock </span>
+          </a>
+        </div>
+        <div class="btn-link-disable">
+          <a href="" class="bg-transparent flex items-center justify-center">
+            <span class="material-symbols-rounded"> checklist </span>
+          </a>
+        </div>
+        <div class="btn-link-disable">
+          <a href="" class="bg-transparent flex items-center justify-center">
+            <span class="material-symbols-rounded"> barcode_scanner </span>
+          </a>
+        </div>
+        <div class="btn-link-disable">
+          <a href="" class="bg-transparent flex items-center justify-center">
+            <span class="material-symbols-rounded"> qr_code_2 </span>
+          </a>
+        </div>
+        <div class="btn-link-disable">
+          <a href="" class="bg-transparent flex items-center justify-center">
+            <span class="material-symbols-rounded"> donut_small </span>
+          </a>
+        </div>
+        <div class="btn-link-disable">
+          <a href="" class="bg-transparent flex items-center justify-center">
+            <span class="material-symbols-rounded"> diversity_1 </span>
+          </a>
+        </div>
+      </aside>
+    </div>
 
-        <div class="options-user flex gap-2 items-center justify-center">
-            <div class="btn-link">
-                <span class="bg-transparent material-symbols-rounded">
-                notifications
-                </span>
-            </div>
-            <div class="btn-link">
-                <span class="bg-transparent material-symbols-rounded">
-                settings
-                </span>
-            </div>
-            <div class="logo flex gap-3 items-center">
-                <div class="gota h-10 w-10 shadow-essentials bg-essentials-primary rounded-full"></div>
-                <div class="logo">
-                    <h3 class="font-semibold">Nombre de Usuario</h3>
-                    <p class="-mt-[8px] text-secundary-light text-[13px] font-medium">Rol de perfil</p>
-                </div>
-            </div>
+    <header class="w-full h-[100%] flex px-[40px] py-[20px] justify-between">
+      <div class="date flex gap-3 items-center">
+        <div
+          class="dia flex items-center justify-center font-semibold h-10 w-7 shadow-essentials bg-essentials-primary rounded-full"
+          id="dia"
+        >
+          00
         </div>
+        <div class="mes-año flex flex-col text-[14px] font-medium" id="mes-año">
+          <span id="mes">Enero</span>
+          <span id="anio">2025</span>
+        </div>
+        <div
+          class="separador h-8 w-[2px] bg-essentials-primary rounded-lg"
+        ></div>
+        <div class="hora text-[14px]" id="hora">00:00:00</div>
+      </div>
+
+      <div class="options-user flex gap-2 items-center justify-center">
+        <div class="btn-link">
+          <span class="bg-transparent material-symbols-rounded">
+            notifications
+          </span>
+        </div>
+        <div class="btn-link">
+          <span class="bg-transparent material-symbols-rounded">
+            settings
+          </span>
+        </div>
+        <div class="logo flex gap-3 items-center">
+          <div
+            class="gota h-10 w-10 shadow-essentials bg-essentials-primary rounded-full"
+          ></div>
+          <div class="logo">
+            <h3 class="font-semibold">Nombre de Usuario</h3>
+            <p class="-mt-[8px] text-secundary-light text-[13px] font-medium">
+              Rol de perfil
+            </p>
+          </div>
+        </div>
+      </div>
     </header>
-    <section class="">
-        <aside>panel</aside>
-        <main>Contenido 1</main>
-        <main>Contenido 2</main>
-    </section>
+    <script src="../Assets/js/hora.js"></script>
   </body>
 </html>

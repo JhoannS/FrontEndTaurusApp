@@ -84,6 +84,10 @@
     scale: .9;
 }
 
+.material-symbols-rounded{
+    background: transparent;
+}
+
 .btn-link{
     background: var(--primary_essentials);
     border-radius: 100%;
@@ -91,4 +95,19 @@
     justify-content: center;
     align-items: center;
     padding: 6px;
+}
+
+.btn-link-disable{
+    background-color: var(--secundary);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+}
+
+.btn-link-disable:hover{
+    background-color: var(--primary_essentials);
+    cursor: pointer;
+   
 }

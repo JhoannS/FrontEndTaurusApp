@@ -85,48 +85,62 @@
       </aside>
     </div>
 
-    <header class="w-full h-[100%] flex px-[40px] py-[20px] justify-between">
-      <div class="date flex gap-3 items-center">
-        <div
-          class="dia flex items-center justify-center font-semibold h-10 w-7 shadow-essentials bg-essentials-primary rounded-full"
-          id="dia"
-        >
-          00
-        </div>
-        <div class="mes-año flex flex-col text-[14px] font-medium" id="mes-año">
-          <span id="mes">Enero</span>
-          <span id="anio">2025</span>
-        </div>
-        <div
-          class="separador h-8 w-[2px] bg-essentials-primary rounded-lg"
-        ></div>
-        <div class="hora text-[14px]" id="hora">00:00:00</div>
-      </div>
-
-      <div class="options-user flex gap-2 items-center justify-center">
-        <div class="btn-link">
-          <span class="bg-transparent material-symbols-rounded">
-            notifications
-          </span>
-        </div>
-        <div class="btn-link">
-          <span class="bg-transparent material-symbols-rounded">
-            settings
-          </span>
-        </div>
-        <div class="logo flex gap-3 items-center">
+    <main class="w-full h-[100%] px-[40px] py-[20px]">
+      <header class="w-full h-[100%] flex justify-between mb-[40px]">
+        <div class="date flex gap-3 items-center">
           <div
-            class="gota h-10 w-10 shadow-essentials bg-essentials-primary rounded-full"
+            class="dia flex items-center justify-center font-semibold h-10 w-7 shadow-essentials bg-essentials-primary rounded-full"
+            id="dia"
+          >
+            00
+          </div>
+          <div
+            class="mes-año flex flex-col text-[14px] font-medium"
+            id="mes-año"
+          >
+            <span id="mes">Enero</span>
+            <span id="anio">2025</span>
+          </div>
+          <div
+            class="separador h-8 w-[2px] bg-essentials-primary rounded-lg"
           ></div>
-          <div class="logo">
-            <h3 class="font-semibold">Nombre de Usuario</h3>
-            <p class="-mt-[8px] text-secundary-light text-[13px] font-medium">
-              Rol de perfil
-            </p>
+          <div class="hora text-[14px]" id="hora">00:00:00</div>
+        </div>
+
+        <div class="options-user flex gap-2 items-center justify-center">
+          <div class="btn-link-disable">
+            <span class="bg-transparent material-symbols-rounded">
+              notifications
+            </span>
+          </div>
+          <div class="btn-link-disable">
+            <span class="bg-transparent material-symbols-rounded">
+              settings
+            </span>
+          </div>
+          <div class="logo flex gap-3 items-center">
+            <div
+              class="gota h-10 w-10 shadow-essentials bg-essentials-primary rounded-full"
+            ></div>
+            <div class="logo">
+              <h3 class="font-semibold">Nombre de Usuario</h3>
+              <p class="-mt-[8px] text-secundary-light text-[13px] font-medium">
+                Rol de perfil
+              </p>
+            </div>
           </div>
         </div>
+      </header>
+
+      <div class="flex gap-[10px]">
+        <div class="left w-[40%] bg-red-400 h-[85vh]">
+            <h4 class="text-[25px]">Bienvenido Nombre usuario, espero te encuentres muy bien, ¿Listo para vender?</h4>
+            <p>La apliación más profesional del mercado.</p>
+        </div>
+        <div class="right w-[60%] bg-blue-400">riht</div>
       </div>
-    </header>
+    </main>
+
     <script src="../Assets/js/hora.js"></script>
   </body>
 </html>

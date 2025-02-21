@@ -1,3 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+    /* UNIVERSAL */
+    --mono_blanco:#F5EFFF;
+    --mono_negro:#060809;
+    --bg_empty:#1F1D2B;
+
+    /* SEMAFORO */
+    --verde:#1BCC75;
+    --amarillo:#FFA823;
+    --rojo:#FF3131;
+
+    /* SECUNDARIO */
+    --secundary:#1A2130;
+    --secundary_light:#A5B8D4;
+
+    /* MACHINE APP */
+    --primary_machine:#57CC99;
+    --secundary_machine:#C7F9CC;
+    --complement_machine:#80ED99;
+
+    /* GURU APP */
+    --primary_guru:#BB9457;
+    --secundary_guru:#FFE6A7;
+    --complement_guru:#99582A;
+
+    /* SHOPPER APP */
+    --primary_shopper:#3D4AEE;
+    --secundary_shopper:#87A2FF;
+    --complement_shopper:#8E9AAF;
+
+    /* ESSENTIALS APP */
+    --primary_essentials:#FF4D6D;
+    --secundary_essentials:#FFB3C1;
+    --complement_essentials:#FF758F;
+
+    /* SMART APP */
+    --primary_smart:#DEE2FF;
+    --secundary_smart:#FEEAFA;
+    --complement_smart:#EFD3D7;
+}
+
+
+* {
+  font-family: "Outfit", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background: var(--mono_negro);
+  color:var(--mono_blanco);
+  transition: all ease-in-out .2s;
+}
+
+.number {
+    font-family: "Lexend", serif;
+  }
+  
+
+.shadow-essentials{
+    box-shadow: 0px 8px 28px #ff4d6d;
+}

@@ -1,2 +1,1 @@
-# FrontEndTaurusApp
-# FrontEndTaurusApp
+# Taurus App

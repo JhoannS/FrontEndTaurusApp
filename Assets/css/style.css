@@ -2,7 +2,32 @@
 
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@layer utilities {
+    /* Estilos generales del scrollbar */
+    .scrollbar-custom::-webkit-scrollbar {
+      width: 4px;
+      height: 2px;
+    }
+  
+    /* Fondo del scrollbar */
+    .scrollbar-custom::-webkit-scrollbar-track {
+        background-color: transparent;
+      border-radius: 8px;
+      
+    }
+  
+    /* Barra deslizante */
+    .scrollbar-custom::-webkit-scrollbar-thumb {
+      background: var(--primary_essentials);
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  
+    /* Barra al pasar el mouse */
+    .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  }
 
 :root{
     /* UNIVERSAL */

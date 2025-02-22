@@ -133,18 +133,21 @@
       </header>
 
       <div class="flex gap-[10px]">
-        <div class="left w-[35%] bg-red-400 h-[85vh] flex flex-col gap-3">
-          <h4 class="text-[25px]">
-            <span id="saludo">...</span> Nombre usuario!, espero te encuentres
-            muy bien, ¿Listo para vender?
-          </h4>
-          <p>La apliación más profesional del mercado.</p>
-          <button
-            class="flex items-center justify-center gap-3 shadow-essentials py-[10px] px-[40px] rounded-xl"
-          >
-            Vender con POS
-            <span class="material-symbols-rounded"> outbound </span>
-          </button>
+        <div class="left w-[35%] h-[85vh] flex flex-col gap-5 justify-between px-3">
+          <div class="saludo-btn flex flex-col justify-center items-center gap-3">
+            <h4 class="text-[25px] text-center">
+              <span id="saludo">...</span> Nombre usuario!, espero te encuentres
+              muy bien, ¿Listo para vender?
+            </h4>
+            <p>La apliación más profesional del mercado.</p>
+            <button
+              class="flex items-center justify-center gap-3 shadow-essentials bg-essentials-primary py-[10px] px-[40px] rounded-xl hover:shadow-lg"
+            >
+              Vender con POS
+              <span class="material-symbols-rounded"> outbound </span>
+            </button>
+          </div>
+         
 
           <div class="chart bg-transparent">
             <div
@@ -155,7 +158,7 @@
               ></div>
             </div>
 
-            <div class="info flex items-center justify-evenly gap-5">
+            <div class="info flex items-center justify-between gap-5">
               <div class="realizados">
                 <p class="text-semaforo-verde">Servicios realizados:</p>
                 <p class="number text-[20px]">Numero</p>
@@ -196,46 +199,47 @@
               </div>
             </div>
 
-            <div class="calendar flex flex-col justify-center items-center">
+          </div>
 
-              <div class="month-nav flex justify-between items-center text-[12px]">
-                <span
-                  class="material-symbols-rounded cursor-pointer"
-                  onclick="changeMonth(-1)"
-                >
-                  chevron_left
-                </span>
+          <div class="calendar flex flex-col justify-center items-center">
 
-                <span id="monthYear" class="mx-5"></span>
-                <span
-                  class="material-symbols-rounded cursor-pointer"
-                  onclick="changeMonth(1)"
-                >
-                  chevron_right
-                </span>
-              </div>
+            <div class="month-nav flex justify-between items-center text-[12px] my-2">
+              <span
+                class="material-symbols-rounded cursor-pointer"
+                onclick="changeMonth(-1)"
+              >
+                chevron_left
+              </span>
 
-              <div class="weekdays flex gap-5">
-                <span>Dom</span><span>Lun</span><span>Mar</span><span>Mié</span
-                ><span>Jue</span><span>Vie</span><span>Sáb</span>
-              </div>
+              <span id="monthYear" class="mx-5"></span>
+              <span
+                class="material-symbols-rounded cursor-pointer "
+                onclick="changeMonth(1)"
+              >
+                chevron_right
+              </span>
+            </div>
 
-              <div class="day-nav flex justify-between bg-purple-400 rounded-2xl p-[15px] w-full">
-                <span
-                  class="material-symbols-rounded cursor-pointer"
-                  onclick="changeDays(-1)"
-                >
-                  chevron_left
-                </span>
+            <!-- <div class="weekdays flex gap-5">
+              <span>Dom</span><span>Lun</span><span>Mar</span><span>Mié</span
+              ><span>Jue</span><span>Vie</span><span>Sáb</span>
+            </div> -->
 
-                <div class="days flex gap-8 bg-transparent" id="daysContainer"></div>
-                <span
-                  class="material-symbols-rounded cursor-pointer"
-                  onclick="changeDays(1)"
-                >
-                  chevron_right
-                </span>
-              </div>
+            <div class="day-nav flex justify-between bg-mono-blanco rounded-2xl p-[15px] w-full">
+              <span
+                class="material-symbols-rounded cursor-pointer text-mono-negro"
+                onclick="changeDays(-1)"
+              >
+                chevron_left
+              </span>
+
+              <div class="days flex gap-8 bg-transparent" id="daysContainer"></div>
+              <span
+                class="material-symbols-rounded cursor-pointer text-mono-negro"
+                onclick="changeDays(1)"
+              >
+                chevron_right
+              </span>
             </div>
           </div>
         </div>

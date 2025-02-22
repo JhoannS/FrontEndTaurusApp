@@ -1,8 +1,8 @@
 let currentDate = new Date();
 let currentMonth = currentDate.getMonth();
 let currentYear = currentDate.getFullYear();
-let startDayIndex = 0;
 let today = currentDate.getDate();
+let startDayIndex = today - 1; // Comienza desde el día actual
 let isCurrentMonth = true;
 
 function updateCalendar() {
@@ -11,6 +11,7 @@ function updateCalendar() {
 
     const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
     isCurrentMonth = (currentMonth === new Date().getMonth() && currentYear === new Date().getFullYear());
+
     renderDays(daysInMonth);
 }
 
@@ -20,11 +21,11 @@ function renderDays(daysInMonth) {
 
     for (let i = startDayIndex; i < Math.min(startDayIndex + 7, daysInMonth); i++) {
         let dayElement = document.createElement("div");
-        dayElement.classList.add("day");
+        dayElement.classList.add("day", "bg-transparent", "text-mono-negro", "font-bold");
         dayElement.textContent = i + 1;
 
         if (isCurrentMonth && (i + 1) === today) {
-            dayElement.classList.add("today");
+            dayElement.classList.add("text-essentials-primary");
         }
 
         daysContainer.appendChild(dayElement);
@@ -40,7 +41,7 @@ function changeMonth(step) {
         currentMonth = 0;
         currentYear++;
     }
-    startDayIndex = 0;
+    startDayIndex = 0; // Reiniciar para evitar saltos de días al cambiar de mes
     updateCalendar();
 }
 
@@ -49,9 +50,9 @@ function changeDays(step) {
     startDayIndex += step * 7;
 
     if (startDayIndex >= daysInMonth) {
-        startDayIndex = 0;
+        startDayIndex = daysInMonth - 7;
     } else if (startDayIndex < 0) {
-        startDayIndex = Math.max(0, daysInMonth - 7);
+        startDayIndex = 0;
     }
     renderDays(daysInMonth);
 }

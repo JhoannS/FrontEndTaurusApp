@@ -139,16 +139,111 @@
             muy bien, ¿Listo para vender?
           </h4>
           <p>La apliación más profesional del mercado.</p>
-          <button class="flex items-center justify-center gap-3 shadow-essentials py-[10px] px-[40px] rounded-xl">
+          <button
+            class="flex items-center justify-center gap-3 shadow-essentials py-[10px] px-[40px] rounded-xl"
+          >
             Vender con POS
             <span class="material-symbols-rounded"> outbound </span>
           </button>
-          
+
+          <div class="chart bg-transparent">
+            <div
+              class="pastel h-[150px] w-full flex justify-center items-center my-[10px]"
+            >
+              <div
+                class="circulo rounded-full bg-orange-400 h-full w-[150px]"
+              ></div>
+            </div>
+
+            <div class="info flex items-center justify-evenly gap-5">
+              <div class="realizados">
+                <p class="text-semaforo-verde">Servicios realizados:</p>
+                <p class="number text-[20px]">Numero</p>
+              </div>
+              <div class="balance">
+                <p class="text-semaforo-verde">Balance general:</p>
+                <p class="number text-[20px]">$ cantidad vendida</p>
+              </div>
+            </div>
+
+            <div class="tags flex justify-between my-2">
+              <div class="curso flex flex-col">
+                <p class="text-[12px]">En curso:</p>
+                <div
+                  class="tag bg-semaforo-verde rounded-lg w-full h-[4px]"
+                ></div>
+                <span class="text-[12px]"
+                  >#<span class="text-[12px]"> Servicios</span></span
+                >
+              </div>
+              <div class="proxima flex flex-col">
+                <p class="text-[12px]">Proximas:</p>
+                <div
+                  class="tag bg-semaforo-amarillo rounded-lg w-full h-[4px]"
+                ></div>
+                <span class="text-[12px]"
+                  >#<span class="text-[12px]"> Servicios</span></span
+                >
+              </div>
+              <div class="cancelada flex flex-col">
+                <p class="text-[12px]">Canceladas:</p>
+                <div
+                  class="tag bg-semaforo-rojo rounded-lg w-full h-[4px]"
+                ></div>
+                <span class="text-[12px]"
+                  >#<span class="text-[12px]"> Servicios</span></span
+                >
+              </div>
+            </div>
+
+            <div class="calendar flex flex-col justify-center items-center">
+
+              <div class="month-nav flex justify-between items-center text-[12px]">
+                <span
+                  class="material-symbols-rounded cursor-pointer"
+                  onclick="changeMonth(-1)"
+                >
+                  chevron_left
+                </span>
+
+                <span id="monthYear" class="mx-5"></span>
+                <span
+                  class="material-symbols-rounded cursor-pointer"
+                  onclick="changeMonth(1)"
+                >
+                  chevron_right
+                </span>
+              </div>
+
+              <div class="weekdays flex gap-5">
+                <span>Dom</span><span>Lun</span><span>Mar</span><span>Mié</span
+                ><span>Jue</span><span>Vie</span><span>Sáb</span>
+              </div>
+
+              <div class="day-nav flex justify-between bg-purple-400 rounded-2xl p-[15px] w-full">
+                <span
+                  class="material-symbols-rounded cursor-pointer"
+                  onclick="changeDays(-1)"
+                >
+                  chevron_left
+                </span>
+
+                <div class="days flex gap-8 bg-transparent" id="daysContainer"></div>
+                <span
+                  class="material-symbols-rounded cursor-pointer"
+                  onclick="changeDays(1)"
+                >
+                  chevron_right
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="right w-[65%] bg-blue-400">riht</div>
       </div>
     </main>
 
     <script src="../Assets/js/hora.js"></script>
+    <script src="../Assets/js/almanaqueDinamico.js"></script>
   </body>
 </html>

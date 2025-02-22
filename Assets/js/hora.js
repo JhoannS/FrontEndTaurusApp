@@ -28,11 +28,11 @@ function actualizarFechaHora() {
     // Saludo según la hora
     let saludo;
     if (fecha.getHours() < 12) {
-        saludo = "¡Buenos días!";
+        saludo = "¡Buenos días";
     } else if (fecha.getHours() < 18) {
-        saludo = "¡Buenas tardes!";
+        saludo = "¡Buenas tardes";
     } else {
-        saludo = "¡Buenas noches!";
+        saludo = "¡Buenas noches";
     }
 
     // Actualizar el contenido de los divs en tiempo real

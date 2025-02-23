@@ -306,17 +306,17 @@
   width: 100%;
   font-size: 13px;
   padding: 5px 10px 5px 10px;
-  background-color: var(--azul_oscuro_opacidad);
-  border: 1px solid var(--blanco_opacidad);
+  background-color: var(--secundary_opacity);
+  border: 1px solid var(--mono_blanco);
   border-radius: 5px;
-  color: var(--blanco);
+  color: var(--mono_blanco);
   cursor: pointer;
   outline: none;
 }
 
 .custom-select select:focus {
-  background: var(--azul_oscuro_opacidad);
-  border: 1px solid var(--rojo);
+  background: var(--secundary_opacity);
+  border: 1px solid var(--primary_essentials);
   border-radius: 8px;
 }
 
@@ -329,6 +329,6 @@
   transform: translate(0, -50%);
   width: 12px;
   height: 12px;
-  background-color: var(--blanco);
+  background-color: var(--mono_blanco);
   clip-path: polygon(8% 17%, 0% 25%, 50% 84%, 100% 25%, 92% 17%, 50% 65%);
 }

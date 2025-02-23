@@ -18,6 +18,7 @@ tailwind.config = {
                 secundary: {
                   default: '#1A2130',
                   light: '#A5B8D4',
+                  opacity: 'rgba(26, 33, 48, 0.479)'
                 },
                 machine: {
                   primary: '#57CC99',

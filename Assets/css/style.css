@@ -42,6 +42,7 @@
 
     /* SECUNDARIO */
     --secundary:#1A2130;
+    --secundary_opacity:rgba(26, 33, 48, 0.479)0;
     --secundary_light:#A5B8D4;
 
     /* MACHINE APP */

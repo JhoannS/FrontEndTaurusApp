@@ -142,14 +142,29 @@
         <p class="font-bold">Sucursales activas</p>
        </div>
 
+       <!-- header administrativo -->
        <div class="titulp-input-btn flex justify-between items-center gap-5">
         <h4 class="font-semibold text-[25px]">Multisucursales</h4>
         <div class="input">
             <input type="search" placeholder="Buscar contenido...">
             <span class="material-symbols-rounded text-essentials-primary">travel_explore</span>
         </div>
-        <button class="btn-essentials">Crear nueva sucursal <span class="material-symbols-rounded"> outbound </span> </button>
-              
+        <button class="btn-essentials">Crear nueva sucursal <span class="material-symbols-rounded"> outbound </span> </button>  
+       </div>
+
+       <div class="tarjetas-sucursales my-7">
+        <div class="card-sucursal flex flex-col gap-2  max-w-[25%] rounded-lg p-3">
+            <img src="../Assets/img/Recursos Essentials/img-sucursal.jpg" alt="img de ref local" class="rounded-lg">
+            <div class="icono-id-nombre flex gap-2 ">
+                <span class="material-symbols-rounded flex justify-center items-center h-10 w-10 text-[14px] bg-essentials-primary rounded-lg"> swap_horiz </span>
+                <div class="idd-nombre text-[14px]">
+                    <p>(Ttiulo de la sucursal)</p>
+                    <p>Sucursal ID: <span>"Id registrado en BD"</span></p>
+                </div>
+            </div>
+            <button class="btn-essentials-secundary">Ir a mi sucursalr <span class="material-symbols-rounded"> outbound </span></button>
+
+        </div>
        </div>
     </main>
 

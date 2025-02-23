@@ -105,6 +105,22 @@
     gap: 8px;
 }
 
+.btn-essentials-secundary{
+  background: var(--primary_essentials);
+  border-radius: 8px;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-essentials-secundary:hover{
+  background-color: var(--secundary_essentials);
+  color: var(--primary_essentials);
+  font-weight: 600;
+  scale: .9;
+}
 .btn-essentials:hover{
     background-color: var(--secundary_essentials);
     color: var(--primary_essentials);

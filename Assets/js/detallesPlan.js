@@ -21,8 +21,8 @@ let barsData = [
     id: "bar3",
     title: "Facturación POS",
     segments: [
-      { max: 9999, value: 1, color: "bg-teal-500", tag: "Farmacia" },
-      { max: 9999, value: 1, color: "bg-pink-500", tag: "Dermatología" }
+      { max: 9999, value: 1, color: "bg-teal-500", tag: "Electronica" },
+      { max: 9999, value: 1, color: "bg-pink-500", tag: "Digital" }
     ],
   },
   {
@@ -38,7 +38,7 @@ let barsData = [
     id: "bar5",
     title: "Gestión de mesas:",
     segments: [
-      { max: 200, value: 1, color: "bg-emerald-500", tag: "Analgésicos" },
+      { max: 200, value: 1, color: "bg-emerald-500", tag: "Registradas" },
     ],
   },
 ];

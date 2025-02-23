@@ -91,6 +91,17 @@
 .shadow-essentials{
     box-shadow: 0px 8px 28px #ff4d6d;
 }
+
+.shadow-verde{
+  box-shadow: 0px 8px 20px var(--verde);
+}
+.shadow-amarillo{
+  box-shadow: 0px 8px 20px var(--amarillo);
+}
+.shadow-rojo{
+  box-shadow: 0px 8px 20px var(-rojo);
+}
+
 .shadowM{
     box-shadow: 0px 2px 27px var(--secundary_light);
 }

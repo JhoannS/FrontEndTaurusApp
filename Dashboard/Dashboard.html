@@ -133,8 +133,12 @@
       </header>
 
       <div class="flex gap-[10px]">
-        <div class="left w-[35%] h-[85vh] flex flex-col gap-5 justify-between px-3">
-          <div class="saludo-btn flex flex-col justify-center items-center gap-3">
+        <div
+          class="left w-[35%] h-[85vh] flex flex-col gap-5 justify-between px-3"
+        >
+          <div
+            class="saludo-btn flex flex-col justify-center items-center gap-3"
+          >
             <h4 class="text-[25px] text-center">
               <span id="saludo">...</span> Nombre usuario!, espero te encuentres
               muy bien, ¿Listo para vender?
@@ -147,7 +151,6 @@
               <span class="material-symbols-rounded"> outbound </span>
             </button>
           </div>
-         
 
           <div class="chart bg-transparent">
             <div
@@ -198,12 +201,12 @@
                 >
               </div>
             </div>
-
           </div>
 
           <div class="calendar flex flex-col justify-center items-center">
-
-            <div class="month-nav flex justify-between items-center text-[12px] my-2">
+            <div
+              class="month-nav flex justify-between items-center text-[12px] my-2"
+            >
               <span
                 class="material-symbols-rounded cursor-pointer"
                 onclick="changeMonth(-1)"
@@ -213,7 +216,7 @@
 
               <span id="monthYear" class="mx-5"></span>
               <span
-                class="material-symbols-rounded cursor-pointer "
+                class="material-symbols-rounded cursor-pointer"
                 onclick="changeMonth(1)"
               >
                 chevron_right
@@ -225,7 +228,9 @@
               ><span>Jue</span><span>Vie</span><span>Sáb</span>
             </div> -->
 
-            <div class="day-nav flex justify-between bg-mono-blanco shadowM rounded-2xl p-[15px] w-full">
+            <div
+              class="day-nav flex justify-between bg-mono-blanco shadowM rounded-2xl p-[15px] w-full"
+            >
               <span
                 class="material-symbols-rounded cursor-pointer text-mono-negro"
                 onclick="changeDays(-1)"
@@ -233,7 +238,10 @@
                 chevron_left
               </span>
 
-              <div class="days flex gap-8 bg-transparent" id="daysContainer"></div>
+              <div
+                class="days flex gap-8 bg-transparent"
+                id="daysContainer"
+              ></div>
               <span
                 class="material-symbols-rounded cursor-pointer text-mono-negro"
                 onclick="changeDays(1)"
@@ -246,13 +254,20 @@
 
         <div class="right w-[65%] px-3">
           <div class="encabezado flex gap-2 items-center bg-transparent">
-            <div class="gota h-[20px] w-[20px] rounded-full bg-essentials-primary shadow-essentials"></div>
-            <p class="bg-transparent">Historial de movimientos</p>
+            <div
+              class="gota h-[20px] w-[20px] rounded-full bg-essentials-primary shadow-essentials"
+            ></div>
+            <p class="bg-transparent">Historial de movimientos:</p>
           </div>
           <div class="flex items-center gap-[5px] my-[5px] bg-transparent">
             <div class="checkbox-wrapper-16">
               <label class="checkbox-wrapper">
-                <input class="checkbox-input" type="checkbox" value="Todos" name="CategoriasDash"/>
+                <input
+                  class="checkbox-input"
+                  type="checkbox"
+                  value="Todos"
+                  name="CategoriasDash"
+                />
                 <span class="checkbox-tile">
                   <span class="checkbox-label">Todos</span>
                 </span>
@@ -338,86 +353,57 @@
             </div>
           </div>
 
-          <div class="cardInfo my-4 flex flex-col gap-2  max-h-[250px] overflow-y-auto scrollbar-custom">
-            <div class="anuncio mr-2 flex justify-between gap-3 items-center border border-secundary-light rounded-lg p-3">
-              <div class="iconoIfo bg-essentials-primary flex items-center justify-center p-3 rounded-lg">
-                <span class="material-symbols-rounded">
+          <div
+            class="cardInfo my-4 flex flex-col gap-2 max-h-[250px] overflow-y-auto scrollbar-custom"
+          >
+            <div
+              class="anuncio mr-2 flex justify-between gap-3 items-center border border-secundary-light rounded-lg p-3"
+            >
+              <div class="iconoIfo flex items-center gap-3">
+                <span
+                  class="material-symbols-rounded bg-essentials-primary p-3 rounded-lg"
+                >
                   privacy_tip
-                  </span>
-              </div>
-              <div class="info">
-                <p>Se ha eliminado el productod: "Nombre del producto"</p>
-                <div class="creacion-id flex justify-between text-[12px]">
-                  <p>Creado por: <span>"Nombre usuario"</span>.</p>
-                  <p>ID movimiento: <span>"Numero en la DB"</span>.</p>
+                </span>
+                <div class="info">
+                  <p>Se ha "Accion" el productod: "Nombre del producto"</p>
+                  <div class="creacion-id flex justify-between text-[12px]">
+                    <p>Creado por: <span>"Nombre usuario"</span>.</p>
+                    <p>ID movimiento: <span>"Numero en la DB"</span>.</p>
+                  </div>
                 </div>
               </div>
-              <div class="fecha-categoria flex flex-col items-end gap-2 text-[12px]">
+
+              <div
+                class="fecha-categoria flex flex-col items-end gap-2 text-[12px]"
+              >
                 <p>Fecha creacion: <span>"Fecha del movimiento"</span></p>
-                <p class="bg-essentials-primary rounded-[5px] p-1">Nombre Tag</p>
-              </div>
-            </div>
-            <div class="anuncio mr-2 flex justify-between gap-3 items-center border border-secundary-light rounded-lg p-3">
-              <div class="iconoIfo bg-essentials-primary flex items-center justify-center p-3 rounded-lg">
-                <span class="material-symbols-rounded">
-                  privacy_tip
-                  </span>
-              </div>
-              <div class="info">
-                <p>Se ha eliminado el productod: "Nombre del producto"</p>
-                <div class="creacion-id flex justify-between text-[12px]">
-                  <p>Creado por: <span>"Nombre usuario"</span>.</p>
-                  <p>ID movimiento: <span>"Numero en la DB"</span>.</p>
-                </div>
-              </div>
-              <div class="fecha-categoria flex flex-col items-end gap-2 text-[12px]">
-                <p>Fecha creacion: <span>"Fecha del movimiento"</span></p>
-                <p class="bg-essentials-primary rounded-[5px] p-1">Nombre Tag</p>
-              </div>
-            </div>
-            <div class="anuncio mr-2 flex justify-between gap-3 items-center border border-secundary-light rounded-lg p-3">
-              <div class="iconoIfo bg-essentials-primary flex items-center justify-center p-3 rounded-lg">
-                <span class="material-symbols-rounded">
-                  privacy_tip
-                  </span>
-              </div>
-              <div class="info">
-                <p>Se ha eliminado el productod: "Nombre del producto"</p>
-                <div class="creacion-id flex justify-between text-[12px]">
-                  <p>Creado por: <span>"Nombre usuario"</span>.</p>
-                  <p>ID movimiento: <span>"Numero en la DB"</span>.</p>
-                </div>
-              </div>
-              <div class="fecha-categoria flex flex-col items-end gap-2 text-[12px]">
-                <p>Fecha creacion: <span>"Fecha del movimiento"</span></p>
-                <p class="bg-essentials-primary rounded-[5px] p-1">Nombre Tag</p>
-              </div>
-            </div>
-            <div class="anuncio mr-2 flex justify-between gap-3 items-center border border-secundary-light rounded-lg p-3">
-              <div class="iconoIfo bg-essentials-primary flex items-center justify-center p-3 rounded-lg">
-                <span class="material-symbols-rounded">
-                  privacy_tip
-                  </span>
-              </div>
-              <div class="info">
-                <p>Se ha eliminado el productod: "Nombre del producto"</p>
-                <div class="creacion-id flex justify-between text-[12px]">
-                  <p>Creado por: <span>"Nombre usuario"</span>.</p>
-                  <p>ID movimiento: <span>"Numero en la DB"</span>.</p>
-                </div>
-              </div>
-              <div class="fecha-categoria flex flex-col items-end gap-2 text-[12px]">
-                <p>Fecha creacion: <span>"Fecha del movimiento"</span></p>
-                <p class="bg-essentials-primary rounded-[5px] p-1">Nombre Tag</p>
+                <p class="bg-essentials-primary rounded-[5px] p-1">
+                  Nombre Tag
+                </p>
               </div>
             </div>
           </div>
 
+          <div class="encabezado flex gap-2 items-center bg-transparent">
+            <div
+              class="gota h-[20px] w-[20px] rounded-full bg-essentials-primary shadow-essentials"
+            ></div>
+            <p class="bg-transparent">Detalles de mi plan Essentials App:</p>
+          </div>
+
+          <div class="detallesPlan bg-transparent">
+            <div class="w-full mx-auto space-y-6">
+              <!-- Contenedor de las 5 barras -->
+              <div id="progressBarsContainer" class="space-y-4"></div>
+          </div>
+          </div>
         </div>
       </div>
     </main>
 
     <script src="../Assets/js/hora.js"></script>
     <script src="../Assets/js/almanaqueDinamico.js"></script>
+    <script src="../Assets/js/detallesPlan.js"></script>
   </body>
 </html>

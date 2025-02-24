@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overviews usuarios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/Assets/css/style.css" />
+    <script src="../Assets/js/styles.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+</head>
+
+<body class="bg-mono flex scrollbar-custom">
+    <!-- Panel de navegacion -->
+    <div class="h-[100vh] w-[60px] flex items-center p-[20px]">
+        <aside class="w-[60px] flex justify-center flex-col gap-2 items-center bg-secundary-default p-2 rounded-full">
+            <div class="gota h-12 w-12 shadow-essentials bg-essentials-primary rounded-full z-20"></div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> space_dashboard </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> swap_horiz </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> savings </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> monitoring </span>
+                </a>
+            </div>
+            <div class="btn-link">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> identity_platform </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> calendar_clock </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> checklist </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> barcode_scanner </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> qr_code_2 </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> donut_small </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> diversity_1 </span>
+                </a>
+            </div>
+        </aside>
+    </div>
+
+    <!-- panel de contenido -->
+    <main class="w-full h-[100%] px-[40px] py-[20px] bg-transparent">
+        <!-- header de opciones -->
+        <header class="w-full h-[100%] flex justify-between mb-[20px]">
+            <div class="date flex gap-3 items-center">
+                <div class="dia flex items-center justify-center font-semibold h-10 w-7 shadow-essentials bg-essentials-primary rounded-full"
+                    id="dia">
+                    00
+                </div>
+                <div class="mes-año flex flex-col text-[14px] font-medium" id="mes-año">
+                    <span id="mes">Enero</span>
+                    <span id="anio">2025</span>
+                </div>
+                <div class="separador h-8 w-[2px] bg-essentials-primary rounded-lg"></div>
+                <div class="hora text-[14px]" id="hora">00:00:00</div>
+            </div>
+
+            <div class="options-user flex gap-2 items-center justify-center">
+                <div class="btn-link-disable">
+                    <span class="bg-transparent material-symbols-rounded">
+                        notifications
+                    </span>
+                </div>
+                <div class="btn-link-disable">
+                    <span class="bg-transparent material-symbols-rounded">
+                        settings
+                    </span>
+                </div>
+                <div class="logo flex gap-3 items-center">
+                    <div class="gota h-10 w-10 shadow-essentials bg-essentials-primary rounded-full"></div>
+                    <div class="logo">
+                        <h3 class="font-semibold">Nombre de Usuario</h3>
+                        <p class="-mt-[8px] text-secundary-light text-[13px] font-medium">
+                            Rol de perfil
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- navegable -->
+        <div class="options flex gap-1 items-center text-[14px]">
+            <a href="" class="hover:text-essentials-secundary">
+                <p>Dashboard</p>
+            </a>
+            <span class="material-symbols-rounded text-[18px]">chevron_right</span>
+            <p class="font-bold">Overviews de usuarios</p>
+        </div>
+
+        <!-- header administrativo -->
+        <div class="titulp-input-btn flex justify-between items-center gap-5">
+            <h4 class="font-semibold text-[25px]">Gestiona tu negocio a la medida</h4>
+
+        </div>
+
+       <div class="cardsUsuarios flex gap-5 my-10">
+        <div class="cardUsuario border border-secundary-light rounded-lg p-5 w-[33.3%] text-center flex flex-col justify-between items-center">
+            <img src="../Assets/img/Recursos Essentials/cliente.jpg" alt="Img" width="130px" height="130px" class="rounded-full my-2">
+            <h4 class="text-[20px] font-bold">Gestor de clientes</h4>
+            <p class="text-secundary-light text-[14px] -mt-[8px] bg-transparent">Solo administradores</p>
+
+            <div class="descripcion bg-essentials-primary p-2 rounded-lg text-center mt-2">
+                <p class="bg-transparent">Gestiona a tus clientes, fideliza, crea, elimina,
+                    premia, etc.</p>
+            </div>
+            <div class="movimientos-total flex justify-between gap-2 my-2 w-full">
+                <div class="movimien border border-essentials-primary p-2 text-[14px] rounded-lg w-[50%]">
+                    <p class="bg-transparent">Ultimo movimiento:</p>
+                    <p class="bg-transparent">(Fecha del ultimo movimiento)</p>
+                </div>
+                <div class="total border border-essentials-primary p-2 text-[14px] rounded-lg w-[50%]">
+                    <p class="bg-transparent">Total de clientes:</p>
+                    <p class="bg-transparent">(Cantidad total en bd)</p>
+                </div>
+            </div>
+            <a href="">
+                <button class="btn-essentials">Gestionar <span class="material-symbols-rounded text-[14px]">
+                north_east
+                </span></button>
+            </a>
+            
+        </div>
+        <div class="cardUsuario border border-secundary-light rounded-lg p-5 w-[33.3%] text-center flex flex-col justify-between items-center">
+            <img src="../Assets/img/Recursos Essentials/empleado.jpg" alt="Img" width="130px" height="130px" class="rounded-full my-2">
+            <h4 class="text-[20px] font-bold">Gestor de empleados</h4>
+            <p class="text-secundary-light text-[14px] -mt-[8px] bg-transparent">Solo administradores</p>
+
+            <div class="descripcion bg-essentials-primary p-2 rounded-lg text-center mt-2">
+                <p class="bg-transparent">Gestiona a tus empleados, crea, elimina,
+                    exporta nominas, etc.</p>
+            </div>
+            <div class="movimientos-total flex justify-between gap-2 my-2 w-full">
+                <div class="movimien border border-essentials-primary p-2 text-[14px] rounded-lg w-[50%]">
+                    <p class="bg-transparent">Ultimo movimiento:</p>
+                    <p class="bg-transparent">(Fecha del ultimo movimiento)</p>
+                </div>
+                <div class="total border border-essentials-primary p-2 text-[14px] rounded-lg w-[50%]">
+                    <p class="bg-transparent">Total de empleados:</p>
+                    <p class="bg-transparent">(Cantidad total en bd)</p>
+                </div>
+            </div>
+            <a href="">
+                <button class="btn-essentials">Gestionar <span class="material-symbols-rounded text-[14px]">
+                north_east
+                </span></button>
+            </a>
+        </div>
+        <div class="cardUsuario border border-secundary-light rounded-lg p-5 w-[33.3%] text-center flex flex-col justify-between items-center">
+            <img src="../Assets/img/Recursos Essentials/Proveedor.jpg" alt="Img" width="130px" height="130px" class="rounded-full my-2">
+            <h4 class="text-[20px] font-bold">Gestor de proveedores</h4>
+            <p class="text-secundary-light text-[14px] -mt-[8px] bg-transparent">Solo administradores</p>
+
+            <div class="descripcion bg-essentials-primary p-2 rounded-lg text-center mt-2">
+                <p class="bg-transparent">Gestiona a tus proveedores, crea, elimina,
+                    gestiona compras del mismo, etc.</p>
+            </div>
+            <div class="movimientos-total flex justify-between gap-2 my-2 w-full">
+                <div class="movimien border border-essentials-primary p-2 text-[14px] rounded-lg w-[50%]">
+                    <p class="bg-transparent">Ultimo movimiento:</p>
+                    <p class="bg-transparent">(Fecha del ultimo movimiento)</p>
+                </div>
+                <div class="total border border-essentials-primary p-2 text-[14px] rounded-lg w-[50%]">
+                    <p class="bg-transparent">Total de proveedores:</p>
+                    <p class="bg-transparent">(Cantidad total en bd)</p>
+                </div>
+            </div>
+            <a href="">
+                <button class="btn-essentials">Gestionar <span class="material-symbols-rounded text-[14px]">
+                north_east
+                </span></button>
+            </a>
+        </div>
+       </div>
+
+
+    </main>
+
+
+        <script src="../Assets/js/hora.js"></script>
+        <script src="../Assets/js/modales.js"></script>
+</body>
+
+</html>

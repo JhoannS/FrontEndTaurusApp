@@ -2,552 +2,506 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vende con TauruPOS</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/Assets/css/style.css" />
-    <script src="../Assets/js/styles.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vende con TauruPOS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/Assets/css/style.css" />
+  <script src="../Assets/js/styles.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
 </head>
 
 <body class="bg-mono flex scrollbar-custom">
-    <!-- Panel de navegacion -->
-    <div class="h-[100vh] w-[60px] flex items-center p-[20px]">
-        <aside class="w-[60px] flex justify-center flex-col gap-2 items-center bg-secundary-default p-2 rounded-full">
-            <div class="gota h-12 w-12 shadow-essentials bg-essentials-primary rounded-full z-20"></div>
-            <div class="btn-link">
-                <a href="" class="bg-transparent flex items-center justify-center">
-                    <span class="material-symbols-rounded"> space_dashboard </span>
-                </a>
-            </div>
-            <div class="btn-link-disable">
-                <a href="" class="bg-transparent flex items-center justify-center">
-                    <span class="material-symbols-rounded"> swap_horiz </span>
-                </a>
-            </div>
-            <div class="btn-link-disable">
-                <a href="" class="bg-transparent flex items-center justify-center">
-                    <span class="material-symbols-rounded"> savings </span>
-                </a>
-            </div>
-            <div class="btn-link-disable">
-                <a href="" class="bg-transparent flex items-center justify-center">
-                    <span class="material-symbols-rounded"> monitoring </span>
-                </a>
-            </div>
-            <div class="btn-link-disable">
-                <a href="" class="bg-transparent flex items-center justify-center">
-                    <span class="material-symbols-rounded"> identity_platform </span>
-                </a>
-            </div>
-            <div class="btn-link-disable">
-                <a href="" class="bg-transparent flex items-center justify-center">
-                    <span class="material-symbols-rounded"> calendar_clock </span>
-                </a>
-            </div>
-            <div class="btn-link-disable">
-                <a href="" class="bg-transparent flex items-center justify-center">
-                    <span class="material-symbols-rounded"> checklist </span>
-                </a>
-            </div>
-            <div class="btn-link-disable">
-                <a href="" class="bg-transparent flex items-center justify-center">
-                    <span class="material-symbols-rounded"> barcode_scanner </span>
-                </a>
-            </div>
-            <div class="btn-link-disable">
-                <a href="" class="bg-transparent flex items-center justify-center">
-                    <span class="material-symbols-rounded"> qr_code_2 </span>
-                </a>
-            </div>
-            <div class="btn-link-disable">
-                <a href="" class="bg-transparent flex items-center justify-center">
-                    <span class="material-symbols-rounded"> donut_small </span>
-                </a>
-            </div>
-            <div class="btn-link-disable">
-                <a href="" class="bg-transparent flex items-center justify-center">
-                    <span class="material-symbols-rounded"> diversity_1 </span>
-                </a>
-            </div>
-        </aside>
+  <!-- Panel de navegacion -->
+  <div class="h-[100vh] w-[60px] flex items-center p-[20px]">
+    <aside class="w-[60px] flex justify-center flex-col gap-2 items-center bg-secundary-default p-2 rounded-full">
+      <div class="gota h-12 w-12 shadow-essentials bg-essentials-primary rounded-full z-20"></div>
+      <div class="btn-link">
+        <a href="" class="bg-transparent flex items-center justify-center">
+          <span class="material-symbols-rounded"> space_dashboard </span>
+        </a>
+      </div>
+      <div class="btn-link-disable">
+        <a href="" class="bg-transparent flex items-center justify-center">
+          <span class="material-symbols-rounded"> swap_horiz </span>
+        </a>
+      </div>
+      <div class="btn-link-disable">
+        <a href="" class="bg-transparent flex items-center justify-center">
+          <span class="material-symbols-rounded"> savings </span>
+        </a>
+      </div>
+      <div class="btn-link-disable">
+        <a href="" class="bg-transparent flex items-center justify-center">
+          <span class="material-symbols-rounded"> monitoring </span>
+        </a>
+      </div>
+      <div class="btn-link-disable">
+        <a href="" class="bg-transparent flex items-center justify-center">
+          <span class="material-symbols-rounded"> identity_platform </span>
+        </a>
+      </div>
+      <div class="btn-link-disable">
+        <a href="" class="bg-transparent flex items-center justify-center">
+          <span class="material-symbols-rounded"> calendar_clock </span>
+        </a>
+      </div>
+      <div class="btn-link-disable">
+        <a href="" class="bg-transparent flex items-center justify-center">
+          <span class="material-symbols-rounded"> checklist </span>
+        </a>
+      </div>
+      <div class="btn-link-disable">
+        <a href="" class="bg-transparent flex items-center justify-center">
+          <span class="material-symbols-rounded"> barcode_scanner </span>
+        </a>
+      </div>
+      <div class="btn-link-disable">
+        <a href="" class="bg-transparent flex items-center justify-center">
+          <span class="material-symbols-rounded"> qr_code_2 </span>
+        </a>
+      </div>
+      <div class="btn-link-disable">
+        <a href="" class="bg-transparent flex items-center justify-center">
+          <span class="material-symbols-rounded"> donut_small </span>
+        </a>
+      </div>
+      <div class="btn-link-disable">
+        <a href="" class="bg-transparent flex items-center justify-center">
+          <span class="material-symbols-rounded"> diversity_1 </span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- panel de contenido -->
+  <main class="w-full h-[100%] px-[40px] py-[20px] bg-transparent">
+    <!-- header de opciones -->
+    <header class="w-full h-[100%] flex justify-between mb-[20px]">
+      <div class="date flex gap-3 items-center">
+        <div
+          class="dia flex items-center justify-center font-semibold h-10 w-7 shadow-essentials bg-essentials-primary rounded-full"
+          id="dia">
+          00
+        </div>
+        <div class="mes-año flex flex-col text-[14px] font-medium" id="mes-año">
+          <span id="mes">Enero</span>
+          <span id="anio">2025</span>
+        </div>
+        <div class="separador h-8 w-[2px] bg-essentials-primary rounded-lg"></div>
+        <div class="hora text-[14px]" id="hora">00:00:00</div>
+      </div>
+
+      <div class="options-user flex gap-2 items-center justify-center">
+        <div class="btn-link-disable">
+          <span class="bg-transparent material-symbols-rounded">
+            notifications
+          </span>
+        </div>
+        <div class="btn-link-disable">
+          <span class="bg-transparent material-symbols-rounded">
+            settings
+          </span>
+        </div>
+        <div class="logo flex gap-3 items-center">
+          <div class="gota h-10 w-10 shadow-essentials bg-essentials-primary rounded-full"></div>
+          <div class="logo">
+            <h3 class="font-semibold">Nombre de Usuario</h3>
+            <p class="-mt-[8px] text-secundary-light text-[13px] font-medium">
+              Rol de perfil
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- navegable -->
+    <div class="options flex gap-1 my-2 items-center text-[14px]">
+      <a href="" class="hover:text-essentials-secundary">
+        <p>Dashboard</p>
+      </a>
+      <span class="material-symbols-rounded text-[18px]">chevron_right</span>
+      <p class="font-bold">TauruPOS</p>
     </div>
 
-    <!-- panel de contenido -->
-    <main class="w-full h-[100%] px-[40px] py-[20px] bg-transparent">
-        <!-- header de opciones -->
-        <header class="w-full h-[100%] flex justify-between mb-[20px]">
-            <div class="date flex gap-3 items-center">
-                <div class="dia flex items-center justify-center font-semibold h-10 w-7 shadow-essentials bg-essentials-primary rounded-full"
-                    id="dia">
-                    00
-                </div>
-                <div class="mes-año flex flex-col text-[14px] font-medium" id="mes-año">
-                    <span id="mes">Enero</span>
-                    <span id="anio">2025</span>
-                </div>
-                <div class="separador h-8 w-[2px] bg-essentials-primary rounded-lg"></div>
-                <div class="hora text-[14px]" id="hora">00:00:00</div>
-            </div>
+    <!-- header administrativo -->
+    <div class="titulp-input-btn flex justify-between items-center gap-5">
+      <h4 class="font-semibold text-[25px]">Vende con POS</h4>
+      <div class="input">
+        <input type="search" placeholder="Buscar contenido..." />
+        <span class="material-symbols-rounded text-essentials-primary">travel_explore</span>
+      </div>
 
-            <div class="options-user flex gap-2 items-center justify-center">
-                <div class="btn-link-disable">
-                    <span class="bg-transparent material-symbols-rounded">
-                        notifications
-                    </span>
-                </div>
-                <div class="btn-link-disable">
-                    <span class="bg-transparent material-symbols-rounded">
-                        settings
-                    </span>
-                </div>
-                <div class="logo flex gap-3 items-center">
-                    <div class="gota h-10 w-10 shadow-essentials bg-essentials-primary rounded-full"></div>
-                    <div class="logo">
-                        <h3 class="font-semibold">Nombre de Usuario</h3>
-                        <p class="-mt-[8px] text-secundary-light text-[13px] font-medium">
-                            Rol de perfil
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </header>
+      <a href="" target="_blank" type="submit" class="btn-essentials">
+        Nueva orden<span class="material-symbols-rounded">
+          outbound
+        </span>
+      </a>
+    </div>
 
-        <!-- navegable -->
-        <div class="options flex gap-1 my-2 items-center text-[14px]">
-            <a href="" class="hover:text-essentials-secundary">
-                <p>Dashboard</p>
-            </a>
-            <span class="material-symbols-rounded text-[18px]">chevron_right</span>
-            <p class="font-bold">TauruPOS</p>
+    <div class="producto-facturador flex justify-between gap-3 h-[80vh] w-full my-4">
+      <div class="producto w-[65%] overflow-y-auto scrollbar-custom px-2">
+        <div class="flex items-center gap-[5px] my-[5px] bg-transparent">
+          <div class="checkbox-wrapper-16">
+            <label class="checkbox-wrapper">
+              <input class="checkbox-input" type="checkbox" value="Todos" name="CategoriasDash" />
+              <span class="checkbox-tile">
+                <span class="checkbox-label">Todos</span>
+              </span>
+            </label>
+          </div>
+
+          <div class="checkbox-wrapper-16">
+            <label class="checkbox-wrapper">
+              <input class="checkbox-input" type="checkbox" value="Todos" name="CategoriasDash" />
+              <span class="checkbox-tile">
+                <span class="checkbox-label">Demas categorias creadasa por el usuario</span>
+              </span>
+            </label>
+          </div>
+
         </div>
 
-        <!-- header administrativo -->
-        <div class="titulp-input-btn flex justify-between items-center gap-5">
-            <h4 class="font-semibold text-[25px]">Vende con POS</h4>
-            <div class="input w-[500px]">
-                <input type="search" placeholder="Buscar contenido..." />
-                <span class="material-symbols-rounded text-essentials-primary">travel_explore</span>
-            </div>
+        <div class="cardsMenu flex justify-between gap-2 flex- mt-5">
+          <div class="cardMenu w-[24%] h-[33%] relative">
+            <img src="../Assets/img/Recursos Essentials/img-sucursal.jpg" alt="img producto" class="rounded-t-lg">
 
-            <button type="submit" class="btn-essentials">
-                Nueva orden<span class="material-symbols-rounded">
-                    outbound
+            <div class=" p-2 bg-secundary-default rounded-b-md">
+              <h5 class="text-[18px] font-bold">Hamburguesa Ranchera</h5>
+              <p class="font-light text-[12px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id corrupti soluta deserunt doloremque eos ab illum ipsum odit.</p>
+              <div class=" absolute top-1 right-1">
+                <span class="material-symbols-rounded p-1 rounded-md bg-secundary-opacity text-[16px]">
+                  info
                 </span>
-            </button>
+              </div>
+              <button type="submit" class="btn-essentials mt-3 w-full">Añadir <span class="material-symbols-rounded text-[16px]"> shopping_cart </span> </button>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
 
-            <button data-modal-target="modalCotizar" type="submit" class="btn-essentials bg-transparent shadow-md border border-essentials-primary">
-                    Cotizaciones<span class="material-symbols-rounded">
-                    outbound
+
+      <div class="facturador p-2 w-[35%] border border-secundary-light rounded-lg flex flex-col justify-between">
+        <div class="top">
+          <div class="encabezado flex gap-2 items-center bg-transparent">
+            <div class="gota h-[20px] w-[20px] rounded-full bg-essentials-primary shadow-essentials"></div>
+            <p class="bg-transparent text-[20px]">Orden # <span>123456789</span></p>
+          </div>
+          <div class="flex items-center gap-[5px] my-[5px] bg-transparent">
+            <div class="checkbox-wrapper-16">
+              <label class="checkbox-wrapper">
+                <input class="checkbox-input" type="checkbox" value="Todos" name="CategoriasDash" />
+                <span class="checkbox-tile">
+                  <span class="checkbox-label">Mesa</span>
                 </span>
-            </button>
-        </div>
-
-        <div class="producto-facturador flex justify-between gap-3 h-[80vh] w-full my-4">
-            <div class="producto bg-emerald-400 w-[65%]">
-                <div class="flex items-center gap-[5px] my-[5px] bg-transparent">
-                    <div class="checkbox-wrapper-16">
-                      <label class="checkbox-wrapper">
-                        <input
-                          class="checkbox-input"
-                          type="checkbox"
-                          value="Todos"
-                          name="CategoriasDash"
-                        />
-                        <span class="checkbox-tile">
-                          <span class="checkbox-label">Todos</span>
-                        </span>
-                      </label>
-                    </div>
-
-                    <div class="checkbox-wrapper-16">
-                        <label class="checkbox-wrapper">
-                          <input
-                            class="checkbox-input"
-                            type="checkbox"
-                            value="Todos"
-                            name="CategoriasDash"
-                          />
-                          <span class="checkbox-tile">
-                            <span class="checkbox-label">Demas categorias creadasa por el usuario</span>
-                          </span>
-                        </label>
-                      </div>
-                   
-                  </div>
+              </label>
             </div>
-            <div class="facturador p-2 w-[35%] border border-secundary-light rounded-lg">
-                <div class="encabezado flex gap-2 items-center bg-transparent">
-                    <div
-                      class="gota h-[20px] w-[20px] rounded-full bg-essentials-primary shadow-essentials"
-                    ></div>
-                    <p class="bg-transparent text-[20px]">Orden # <span>123456789</span></p>
-                  </div>
-                  <div class="flex items-center gap-[5px] my-[5px] bg-transparent">
-                    <div class="checkbox-wrapper-16">
-                      <label class="checkbox-wrapper">
-                        <input
-                          class="checkbox-input"
-                          type="checkbox"
-                          value="Todos"
-                          name="CategoriasDash"
-                        />
-                        <span class="checkbox-tile">
-                          <span class="checkbox-label">Mesa</span>
-                        </span>
-                      </label>
-                    </div>
-
-                    <div class="checkbox-wrapper-16">
-                        <label class="checkbox-wrapper">
-                          <input
-                            class="checkbox-input"
-                            type="checkbox"
-                            value="Todos"
-                            name="CategoriasDash"
-                          />
-                          <span class="checkbox-tile">
-                            <span class="checkbox-label">Domicilio</span>
-                          </span>
-                        </label>
-                      </div>
-                      <div class="checkbox-wrapper-16">
-                        <label class="checkbox-wrapper">
-                          <input
-                            class="checkbox-input"
-                            type="checkbox"
-                            value="Todos"
-                            name="CategoriasDash"
-                          />
-                          <span class="checkbox-tile">
-                            <span class="checkbox-label">Plataforma digital</span>
-                          </span>
-                        </label>
-                      </div>
-                   
-                  </div>
-                  <div class="overflow-x-auto">
-                    <table class="w-full border-collapse">
-                        <thead class="rounded-xl">
-    
-                            <tr class="">
-                                <th class="text-[14px] p-2 text-left">Item</th>
-                                <th class="text-[14px] p-2 text-left">Cantidad</th>
-                                <th class="text-[14px] p-2 text-left">Precio</th>
-                            </tr>
-    
-    
-                        </thead>
-                        <tbody>
-
-                            <tr class="border-t-[2px]">
-                                <td class="text-left text-[12px] p-2 w-[50%]">
-                                    <div class="flex items-center gap-[5px]">
-                           
-                                        <div
-                                            class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center">
-                                            <img src="../Assets/img/Recursos Essentials/dashboard.jpg" alt="img producto" width="25px" height="25px"
-                                                class="rounded-[100%] h-[25px] w-[25px]" />
-                                        </div>
-                                        
-                                        <div class="flex flex-col">
-                                            <p>Hamburguesa ranchera</p>
-                                            <p class="text-[10px] -mt-[3px]">$14.000</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="text-center text-[12px] p-2 w-[30%]"><div class="input w-[100%]">
-                                    <input type="number" placeholder="0" name="nombre_sucursal">
-                                    <span class="material-symbols-rounded text-essentials-primary">pin</span>
-                                </div> </td>
-                                <td class="text-center text-[12px] p-2">$14.000</td>
-                            </tr>
-    
-                        </tbody>
-                    </table>
-                </div>
+  
+            <div class="checkbox-wrapper-16">
+              <label class="checkbox-wrapper">
+                <input class="checkbox-input" type="checkbox" value="Todos" name="CategoriasDash" />
+                <span class="checkbox-tile">
+                  <span class="checkbox-label">Domicilio</span>
+                </span>
+              </label>
             </div>
+            <div class="checkbox-wrapper-16">
+              <label class="checkbox-wrapper">
+                <input class="checkbox-input" type="checkbox" value="Todos" name="CategoriasDash" />
+                <span class="checkbox-tile">
+                  <span class="checkbox-label">Plataforma digital</span>
+                </span>
+              </label>
+            </div>
+  
+          </div>
+          <div class="overflow-x-">
+            <table class="w-full border-collapse">
+              <thead class="rounded-xl">
+  
+                <tr class="">
+                  <th class="text-[14px] p-2 text-left">Item</th>
+                  <th class="text-[14px] p-2 text-left">Cantidad</th>
+                  <th class="text-[14px] p-2 text-left">Precio</th>
+                </tr>
+  
+  
+              </thead>
+              <tbody>
+  
+                <tr class="border-t-[2px]">
+                  <td class="text-left text-[16px] p-2 w-[50%]">
+                    <div class="flex items-center gap-[5px]">
+  
+                      <div
+                        class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center">
+                        <img src="../Assets/img/Recursos Essentials/dashboard.jpg" alt="img producto" width="25px"
+                          height="25px" class="rounded-[100%] h-[25px] w-[25px]" />
+                      </div>
+  
+                      <div class="flex flex-col">
+                        <p>Hamburguesa ranchera</p>
+                        <p class="text-[14px] -mt-[3px]">$14.000</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-center text-[12px] p-2 w-[30%]">
+                    <div class="input w-[100%]">
+                      <input type="number" placeholder="0" name="nombre_sucursal">
+                      <span class="material-symbols-rounded text-essentials-primary">pin</span>
+                    </div>
+                  </td>
+                  <td class="text-center text-[16px] p-2">$14.000</td>
+                </tr>
+  
+              </tbody>
+            </table>
+            <p class="my-[5px] text-[14px]">Comentario para la orden:</p>
+            <div class="flex justify-between gap-2">
+               <div class="input w-[100%]">
+              <input type="text" placeholder="Escribre una observación" name="nombre_sucursal">
+              <span class="material-symbols-rounded text-essentials-primary">format_italic</span>
+            </div>
+            <span class="material-symbols-rounded cursor-pointer hover:text-mono-blanco hover:bg-essentials-primary text-essentials-primary border-[2px] border-essentials-primary rounded-md p-1">delete</span>
+            </div>
+  
+            
+  
+            
+  
+          </div>
         </div>
+        <div class="bottom">
+          <div class="subtotal flex justify-between items-center">
+            <p class="text-secundary-light">Subtotal:</p>
+            <p>$14.000</p>
+          </div>
+         
+          <div class="total flex justify-between items-center">
+            <p class="text-essentials-primary font-bold text-[25px]">Total:</p>
+            <p class="text-secundary-light text-[20px] font-semibold">$14.000</p>
+          </div>
+          <div class="py-2">
+            <button data-modal-target="modalProcederPago" type="submit" class="btn-essentials w-full">Proceder al pago <span class="material-symbols-rounded"> outbound </span> </button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
 
 
-    </main>
+  </main>
+  <div id="modalProcederPago"
+    class="modal hidden fixed inset-0 flex items-center justify-center bg-secundary-opacity backdrop-blur-sm z-50">
     <div
-    id="modalEmpleado"
-    class="modal hidden fixed inset-0 flex items-center justify-center bg-secundary-opacity backdrop-blur-sm z-50"
-  >
-    <div
-      class="bg-mono-negro border-[2px] border-secundary-light text-blanco p-6 rounded-lg shadow-lg w-[90%] max-w-[600px]"
-    >
-      <div
-        class="flex items-center gap-[3px] cursor-pointer"
-        data-modal-close
-      >
+      class="bg-mono-negro border-[2px] border-secundary-light text-blanco p-6 rounded-lg shadow-lg w-[90%] max-w-[600px]">
+      <div class="flex items-center gap-[3px] cursor-pointer" data-modal-close>
         <span class="material-symbols-rounded">chevron_left</span>
         <p class="text-[12px]">Volver</p>
       </div>
 
       <div class="encabezado flex gap-2 items-center bg-transparent my-2">
-        <div
-          class="gota h-[20px] w-[20px] rounded-full bg-essentials-primary shadow-essentials"
-        ></div>
-        <p class="bg-transparent text-[25px]">Creacion de un nuevo empleado</p>
+        <div class="gota h-[20px] w-[20px] rounded-full bg-essentials-primary shadow-essentials"></div>
+        <p class="bg-transparent text-[25px]">Orden #<span>123456789</span></p>
       </div>
 
-      <p class="mb-[10px] text-secundary-light">Este apartado podrás crear empleados, recuerda llenar todos los campos 
-        para tener un registro exitoso. 
-    </p>
+      <p class="mb-[10px] text-secundary-light">Verifica cada campo para asi evitar errores al momento de facturar.
+      </p>
 
       <hr class="h-[2px] w-full" />
 
-      
-        <!-- contenido del modal -->
-        <div class="mt-[10px] flex justify-between gap-3 w-full">
-          <div class="w-[50%]">
-            <p class="my-[5px] text-[14px]">Nombre completo:</p>
-            <div
-              class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
-            >
+
+      <!-- contenido del modal -->
+      <div class="mt-[10px] flex justify-between gap-3 w-full">
+        <div class="w-[50%]">
+          <p class="my-[5px] text-[14px]">Selecciona el metodo de pago:</p>
+          <div class="flex">
+            <div class="w-[100%]">
+              <div class="custom-select">
+                <select>
+                  <option>Efectivo</option>
+                  <option>Nequi</option>
+                  <option>Daviplata</option>
+                  <option>Tarjeta</option>
+                </select>
+                <div class="select-arrow"></div>
+              </div>
+            </div>
+            
+          </div>
+
+        </div>
+
+        <div class="w-[50%]">
+          <p class="my-[5px] text-[14px]">Monto a pagar:</p>
+          <div
+            class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
+            <span class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">payments</span>
+
+            <input type="number" id=""
+              class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco" placeholder="$0"
+              name="emailEmpleado" disabled/>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-[10px] flex justify-between gap-3 w-full">
+        <div class="w-[50%]">
+          <p class="my-[5px] text-[14px]">Cantidad de dineor recibido:</p>
+          <div
+            class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
+            <span class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">payments</span>
+
+            <input type="number" id=""
+              class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco" placeholder=""
+              name="emailEmpleado" />
+          </div>
+        </div>
+
+        <div class="w-[50%]">
+          <p class="my-[5px] text-[14px]">Monto a devolver:</p>
+          <div
+            class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
+            <span class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">payments</span>
+
+            <input type="number" id=""
+              class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco" placeholder="$0"
+              name="emailEmpleado" disabled/>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="mt-[10px] flex justify-between gap-3 w-full">
+        <div class="w-[100%]">
+          <p class="my-[5px] text-[14px]">Comentario para este ticket:</p>
+          <div
+            class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
+            <span class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">format_italic</span>
+
+            <input type="text" id=""
+              class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco" placeholder=""
+              name="cargoEmpleado" />
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-[10px] flex justify-between gap-3 w-full">
+        <div class="w-[50%]">
+          <div class="flex items-center space-x-3 mt-[10px]">
+            <label class="group flex items-center cursor-pointer">
+              <input class="hidden peer" type="checkbox" />
+  
               <span
-                class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                >format_italic</span
-              >
-
-              <input
-                type="text"
-                id="monto"
-                class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
-                placeholder=""
-                name="nombreCliente"
-              />
-            </div>
-          </div>
-
-          <div class="w-[50%]">
-              <p class="my-[5px] text-[14px]">Tipo y numero de documento:</p>
-              <div class="flex">
-                <div class="w-[30%]">
-                    <div class="custom-select">
-                      <select>
-                        <option>CC</option>
-                        <option>PEP</option>
-                        <option>PP</option>
-                        <option>CE</option>
-                      </select>
-                      <div class="select-arrow"></div>
-                    </div>
-                  </div>
-                <div
-                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
-                >
-                  <span
-                    class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                    >pin</span
-                  >
-    
-                  <input
-                    type="number"
-                    id=""
-                    class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
-                    placeholder=""
-                    name="documentoEmpleado"
-                  />
-                </div>
-              </div>
-              
-          </div>
-          
-        </div>
-
-        <div class="mt-[10px] flex justify-between gap-3 w-full">
-            <div class="w-[50%]">
-              <p class="my-[5px] text-[14px]">Email:</p>
-              <div
-                class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
+                class="relative w-4 h-4 flex justify-center items-center bg-gray-100 border-2 border-gray-400 rounded-md shadow-md transition-all duration-500 peer-checked:border-essentials-primary peer-checked:bg-essentials-primary peer-hover:scale-105"
               >
                 <span
-                  class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                  >format_italic</span
+                  class="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10 opacity-0 peer-checked:opacity-100 rounded-md transition-all duration-500 peer-checked:animate-pulse"
+                ></span>
+  
+                <svg
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  class="hidden w-5 h-5 text-white peer-checked:block transition-transform duration-500 transform scale-50 peer-checked:scale-100"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
+                  <path
+                    clip-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
   
-                <input
-                  type="email"
-                  id=""
-                  class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
-                  placeholder=""
-                  name="emailEmpleado"
-                />
-              </div>
-            </div>
-  
-            <div class="w-[50%]">
-              <p class="my-[5px] text-[14px]">Telefono:</p>
-              <div
-                class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
-              >
-                <span
-                  class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                  >pin</span
-                >
-  
-                <input
-                  type="number"
-                  id=""
-                  class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
-                  placeholder=""
-                  name="telefonoEmpleado"
-                />
-              </div>
-            </div>
-            
-        </div>
-
-        <div class="mt-[10px] flex justify-between gap-3 w-full">
-            <div class="w-[50%]">
-                <p class="my-[5px] text-[14px]">Genero:</p>
-                <div class="custom-select">
-                  <select>
-                    <option>Selecciona un genero</option>
-                    <option>Hombre</option>
-                    <option>Mujer</option>
-                    <option>Otro</option>
-                  </select>
-                  <div class="select-arrow"></div>
-                </div>
-              </div>
-  
-            <div class="w-[50%]">
-              <p class="my-[5px] text-[14px]">Direccion residencia:</p>
-              <div
-                class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
-              >
-                <span
-                  class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                  >format_italic</span
-                >
-  
-                <input
-                  type="text"
-                  id=""
-                  class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
-                  placeholder=""
-                  name="direccionEmpleado"
-                />
-              </div>
-            </div>
-            
-        </div>
-
-        <div class="mt-[10px] flex justify-between gap-3 w-full">
-            <div class="w-[50%]">
-              <p class="my-[5px] text-[14px]">Cargo:</p>
-              <div
-                class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
-              >
-                <span
-                  class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                  >format_italic</span
-                >
-  
-                <input
-                  type="email"
-                  id=""
-                  class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
-                  placeholder=""
-                  name="cargoEmpleado"
-                />
-              </div>
-            </div>
-  
-            <div class="w-[50%]">
-              <p class="my-[5px] text-[14px]">Salario base:</p>
-              <div
-                class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
-              >
-                <span
-                  class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                  >payments</span
-                >
-  
-                <input
-                  type="number"
-                  id=""
-                  class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
-                  placeholder=""
-                  name="salarioBase"
-                />
-              </div>
-            </div>
-            
-        </div>
-
-        <div class="mt-[10px] flex justify-between gap-3 w-full">
-            <div class="w-[50%]">
-              <p class="my-[5px] text-[14px]">Horario de trabajo:</p>
-              <div
-                class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
-              >
-                <span
-                  class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                  >format_italic</span
-                >
-  
-                <input
-                  type="text"
-                  id=""
-                  class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
-                  placeholder=""
-                  name="horariosEmpleado"
-                />
-              </div>
-            </div>
-  
-            <div class="w-[50%]">
-                <p class="my-[5px] text-[14px]">Tipo de contrato:</p>
-                <div class="custom-select">
-                  <select>
-                    <option>Selecciona un tipo de contrato</option>
-                    <option>Termino fijo</option>
-                    <option>Obra labor</option>
-                    <option>Prestacion de servicios</option>
-                    <option>Aprendizaje</option>
-                  </select>
-                  <div class="select-arrow"></div>
-                </div>
-              </div>
-            
-        </div>
-
-        <div class=" mt-[10px] w-[100%]">
-            <p class="my-[5px] text-[14px]">Hoja de vida:</p>
-            <div
-              class="w-[100%] transition-all rounded-[5px] p-[3px] flex items-center gap-[8px]"
-            >
               <span
-                class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                >attach_file</span
+                class="ml-3 text-[16px] font-medium transition-colors duration-300"
               >
-  
-              <input
-                type="file"
-                id="monto"
-                class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro"
-                placeholder=""
-                name="monto"
-              />
-            </div>
+                Imprimir recibo de compra.
+              </span>
+            </label>
           </div>
+        </div>
 
-          <button class="btn-essentials mt-4 w-full" id="confirm-button">Confirmar creacion</button>
-       
-</div>
+        <div class="w-[50%]">
+          <div class="flex items-center space-x-3 mt-[10px]">
+            <label class="group flex items-center cursor-pointer">
+              <input class="hidden peer" type="checkbox" />
+  
+              <span
+                class="relative w-4 h-4 flex justify-center items-center bg-gray-100 border-2 border-gray-400 rounded-md shadow-md transition-all duration-500 peer-checked:border-essentials-primary peer-checked:bg-essentials-primary peer-hover:scale-105"
+              >
+                <span
+                  class="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10 opacity-0 peer-checked:opacity-100 rounded-md transition-all duration-500 peer-checked:animate-pulse"
+                ></span>
+  
+                <svg
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  class="hidden w-5 h-5 text-white peer-checked:block transition-transform duration-500 transform scale-50 peer-checked:scale-100"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+  
+              <span
+                class="ml-3 text-[16px] font-medium transition-colors duration-300"
+              >
+                Guardar factura digital.
+              </span>
+            </label>
+          </div>
+        </div>
 
-        <script src="../Assets/js/hora.js"></script>
-        <script src="../Assets/js/modales.js"></script>
+      </div>
+
+      <div class="mt-[10px] flex justify-between gap-3 w-full">
+        <div class="w-[50%]">
+          <p class="my-[5px] text-[14px]">Nombre y apellido o razon social:</p>
+          <div
+            class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
+            <span class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">format_italic</span>
+
+            <input type="text" id=""
+              class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco" placeholder=""
+              name="emailEmpleado" />
+          </div>
+        </div>
+
+        <div class="w-[50%]">
+          <p class="my-[5px] text-[14px]">Número de identificacion fiscal (NIF):</p>
+          <div
+            class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
+            <span class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">pin</span>
+
+            <input type="number" id=""
+              class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco" placeholder=""
+              name="emailEmpleado"/>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="btn-essentials mt-4 w-full" id="confirm-button">Confirmar pago <span class="material-symbols-rounded">
+        outbound
+      </span></button>
+
+    </div>
+
+    <script src="../Assets/js/hora.js"></script>
+    <script src="../Assets/js/modales.js"></script>
 </body>
 
 </html>

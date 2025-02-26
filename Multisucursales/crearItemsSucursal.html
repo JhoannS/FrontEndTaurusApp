@@ -128,128 +128,124 @@
                 <p>Sucursales activas</p>
             </a>
             <span class="material-symbols-rounded text-[18px]">chevron_right</span>
-            <p class="font-bold">(Nombre de sucursal)</p>
-        </div>
-
-        <!-- header administrativo -->
-        <div class="titulp-input-btn flex justify-between items-center gap-5">
-            <h4 class="font-semibold text-[25px]">Gestion de sucursal virtual</h4>
-            <div class="input w-[400px]">
-                <input type="search" placeholder="Buscar contenido..." />
-                <span class="material-symbols-rounded text-essentials-primary">travel_explore</span>
-            </div>
-
-            <a href="crearItemSucursal">
-                <button data-modal-target="modalAgregarItem" type="submit" class="btn-essentials">
-                    Agregar items a esta bodega<span class="material-symbols-rounded">
-                        outbound
-                    </span>
-                </button>
+            <a href="" class="hover:text-essentials-secundary">
+                <p>Crear nuevo item para esta sucursal</p>
             </a>
+            <span class="material-symbols-rounded text-[18px]">chevron_right</span>
+
+            <p class="font-bold">Crear Item</p>
         </div>
 
-        <div class="tarjetas-overviews my-7 flex w-full gap-2 justify-between">
-            <div class="border border-secundary-light rounded-lg w-full p-2 flex justify-between items-center">
-                <div class="metodoPago-monto">
-                    <p class="text-[12px]">Son datos y hay que darlos</p>
-                    <p class="text-[14px]">proveedor frecuente:</p>
-                    <p class="font-bold text-[18px]">Nombre del proveedor</p>
+        <div class="parentOver flex justify-between gap-[60px] mt-4">
+            <div class="w-[60%]">
+                <div class="encabezado flex justify-between items-center mb-3">
+                    <h2 class="text-blanco text-[20px] font-semibold">Creación de mercancia</h2>
                 </div>
-                <div
-                    class="contador bg-essentials-primary p-2 rounded-md flex justify-center items-center shadow-essentials w-10 h-10 font-bold">
-                    <span class="material-symbols-rounded">
-                        ar_on_you
+
+                <div class="container cursor-pointer flex justify-between items-center gap-4">
+                    <div class="wrapper w-full h-full border border-dashed border-secundary-light rounded-lg flex justify-between items-center"
+                        onclick="defaultBtnActive()">
+                        <div class="file-name p-2 flex justify-between w-full">
+                            <p>Imagen de referencia en formato PNG, JPG, JPEG no mayor a 3Mb</p>
+                            <span class="material-symbols-rounded">Upload</span>
+                        </div>
+
+                    </div>
+                    <div id="cancel-btn">
+                        <i class="material-symbols-rounded">close</i>
+                    </div>
+
+                    <input id="default-btn" type="file" hidden accept="image/png, image/jpeg, image/jpg, image/gif">
+                </div>
+            </div>
+
+            <div class="w-[40%] flex flex-col justify-center h-[80vh]">
+                <div class="">
+                    <p class="text-blanco text-[25px] font-semibold">Vista previa de tu item</p>
+                    <div class="max-h-[200px] max-w-[200px">
+                        <div class="image p-2 w-[200px]  flex justify-center items-center ">
+                            <img alt="" class="border border-dashed border-secundary-light rounded-lg h-[200px] w-[200px] object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" text-blanco text-[17px] font-medium my-[15px]">
+                    <p>Orden #98979778</p>
+                    <div class="flex justify-between items-center">
+                        <p>Fecha de creación: <span>Nov 29, 2024</span></p>
+                        <p>14:20:23</p>
+                    </div>
+                </div>
+
+                <hr class="h-[2px] w-full my-[10px]" />
+
+                <div class="text-blanco flex items-center justify-between text-[14px]">
+                    <p class="flex items-center gap-2">Método de pago:
+                        <span class="material-symbols-rounded text-[15px] text-essentials-primary">
+                            account_balance_wallet
                         </span>
+                        Efectivo
+                    </p>
+                    <p class="flex items-center gap-2">Monto a pagar: <span
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">payments</span> $18.400
+                    </p>
                 </div>
-            </div>
-            <div class="border border-secundary-light rounded-lg w-full p-2 flex justify-between items-center">
-                <div class="metodoPago-monto">
-                    <p class="text-[12px]">Son datos y hay que darlos</p>
-                    <p class="text-[14px]">Ultimo movimiento en la base de datos:</p>
-                    <p class="font-bold text-[18px]">Fecha de ultimo movimiento</p>
+
+                <div class="text-blanco flex items-center justify-between text-[14px]">
+                    <p class="flex items-center gap-2">Dinero recibido: <span
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">payments</span> $20.000
+                    </p>
+                    <p class="flex items-center gap-2">Dinero a devolver: <span
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">payments</span> $600
+                    </p>
                 </div>
-                <div
-                    class="contador bg-essentials-primary p-2 rounded-md flex justify-center items-center shadow-essentials w-10 h-10 font-bold">
-                    <span class="material-symbols-rounded">
-                        edit_calendar
-                        </span>
+
+                <hr class="h-[2px] w-full my-[10px]" />
+
+                <div class="px-[10px] overflow-x-auto custom-scrollbar text-blanco" id="facturacion">
+                    <div class="flex justify-between items-center gap-[8px] mt-[16px]">
+                        <div class="flex items-center gap-[5px]">
+
+                            <div
+                                class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center">
+                                <img src="" alt="img producto" width="25px" height="25px"
+                                    class="rounded-[100%] h-[25px] w-[25px]" />
+                            </div>
+
+                            <div class="flex flex-col">
+                                <p>Hamburguesa</p>
+                                <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
+                            </div>
+
+
+                        </div>
+
+                        <p class="flex items-center gap-2">
+                            <span class="material-symbols-rounded text-[15px] text-essentials-primary">
+                                pin
+                            </span>
+                            x1
+                        </p>
+
+                        <p class="number">$18.800</p>
+                    </div>
                 </div>
-            </div>
-            <div class="border border-secundary-light rounded-lg w-full p-2 flex justify-between items-center">
-                <div class="metodoPago-monto">
-                    <p class="text-[12px]">Son datos y hay que darlos</p>
-                    <p class="text-[14px]">Proveedores registrados:</p>
-                    <p class="font-bold text-[18px]">total de proveedores</p>
+                <div class="flex items-center text-[14px] my-[10px]">
+                    <p class="flex items-center gap-2">Comentario de la orden: <span
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">format_italic</span>
+                        Comentario del cliente</p>
                 </div>
-                <div
-                    class="contador bg-essentials-primary p-2 rounded-md flex justify-center items-center shadow-essentials w-10 h-10 font-bold">
-                    <span class="material-symbols-rounded">
-                        diversity_1
-                        </span>
+
+                <div class="estado-orden flex items-center gap-2">
+                    <div class="gota h-5 w-5 bg-semaforo-verde shadow-verde rounded-full"></div>
+                    <p>Finalizado</p>
                 </div>
-            </div>
-            
-        </div>
-
-        <!-- formulario -->
-        <div class="div">
-            <div class="encabezado flex justify-between items-center mb-3">
-                <h2 class="text-blanco text-[20px] font-semibold">Movimientos almacenados</h2>
-                <span class="material-symbols-rounded">receipt_long</span>
-            </div>
-
-            <div class="overflow-x-auto">
-                <table class="w-full border-collapse">
-                    <thead class="rounded-xl">
-
-                        <tr class="border border-secundary-light">
-                            <th class="p-2 text-left">ID</th>
-                            <th class="p-2 text-left">Nombre completo</th>
-                            <th class="p-2 text-left">Nombre empresa</th>
-                            <th class="p-2 text-left">Telefono</th>
-                            <th class="p-2 text-left">Email</th>
-                            <th class="p-2 text-left">Tipo producto</th>
-                            <th class="p-2 text-left">Saldo pendiente</th>
-                            <th class="p-2 text-left">Estado</th>
-                            <th class="p-2 text-left">Visitas</th>
-                            <th class="p-2 text-left">Acciones</th>
-                        </tr>
-
-
-                    </thead>
-                    <tbody>
-                        <tr class="">
-                            <td class="text-[14px] p-2">Id cliente</td>
-                            <td class="text-[14px] p-2">Nombre del cliente</td>
-                            <td class="text-[14px] p-2">Nombre de empresa</td>
-                            <td class="text-[14px] p-2">Telefono</td>
-                            <td class="text-[14px] p-2">Email proveedor</td>
-                            <td class="text-[14px] p-2">Tipo producto</td>
-                            <td class="text-[14px] p-2">Total debiendo</td>
-                            <td class="text-[14px] p-2">(Activo, inactivo, supendido)</td>
-                            <td class="text-[14px] p-2">Visitas realizadas</td>
-                            <td>
-                                <div class="bth-acciones flex gap-2 items-center">
-                                    <span class="material-symbols-rounded hover:text-essentials-primary cursor-pointer">
-                                        delete
-                                    </span>
-                                    <span class="material-symbols-rounded hover:text-blue-400 cursor-pointer">
-                                        ink_pen
-                                    </span>
-                                </div>
-                            </td>
-
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
 
 
     </main>
-    
-        <script src="../Assets/js/hora.js"></script>
+
+    <script src="../Assets/js/hora.js"></script>
+    <script src="../Assets/js/subirImg.js"></script>
 </body>
 
 </html>

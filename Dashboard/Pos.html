@@ -132,7 +132,7 @@
     <div class="titulp-input-btn flex justify-between items-center gap-5">
       <h4 class="font-semibold text-[25px]">Vende con POS</h4>
       <div class="input">
-        <input type="search" placeholder="Buscar contenido..." />
+        <input type="search" id="searchInput" placeholder="Buscar producto..." autocomplete="off">
         <span class="material-symbols-rounded text-essentials-primary">travel_explore</span>
       </div>
 
@@ -184,6 +184,8 @@
           </div>
           
         </div>
+        <div id="mensaje-no-resultados" class="hidden text-center mt-10 font-bold text-[35px] text-secundary-light fade-in">No hay coincidencias.</div>
+
       </div>
 
 
@@ -502,6 +504,7 @@
 
     <script src="../Assets/js/hora.js"></script>
     <script src="../Assets/js/modales.js"></script>
+    <script src="../Assets/js/buscadorMenu.js"></script>
 </body>
 
 </html>

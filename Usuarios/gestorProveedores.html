@@ -135,7 +135,7 @@
         <div class="titulp-input-btn flex justify-between items-center gap-5">
             <h4 class="font-semibold text-[25px]">Gestion de proveedores</h4>
             <div class="input w-[400px]">
-                <input type="search" placeholder="Buscar contenido..." />
+                <input type="search" id="buscador" placeholder="Buscar producto..." oninput="buscarProducto()" autocomplete="off">
                 <span class="material-symbols-rounded text-essentials-primary">travel_explore</span>
             </div>
 
@@ -203,7 +203,7 @@
             </div>
 
             <div class="overflow-x-auto">
-                <table class="w-full border-collapse">
+                <table class="w-full border-collapse" id="tabla"> 
                     <thead class="rounded-xl">
 
                         <tr class="border border-secundary-light">
@@ -247,6 +247,7 @@
 
                     </tbody>
                 </table>
+                <div id="mensaje-no-resultados" class="hidden text-center mt-10 font-bold text-[35px] text-secundary-light">No hay coincidencias.</div>
             </div>
         </div>
 
@@ -395,6 +396,7 @@
 
         <script src="../Assets/js/hora.js"></script>
         <script src="../Assets/js/modales.js"></script>
+        <script src="../Assets/js/items.js"></script>
 </body>
 
 </html>

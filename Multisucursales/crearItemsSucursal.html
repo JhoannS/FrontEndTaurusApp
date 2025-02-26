@@ -155,7 +155,7 @@
 
                     </div>
                     <div id="cancel-btn">
-                        <i class="material-symbols-rounded">close</i>
+                        <i class="material-symbols-rounded hover:bg-essentials-primary rounded-md">close</i>
                     </div>
 
                     <input id="default-btn" type="file" hidden accept="image/png, image/jpeg, image/jpg, image/gif">
@@ -167,7 +167,7 @@
                         <div class=" mt-[5px] w-[50%]">
                             <p class="my-[5px] text-[16px]">PLU:</p>
                             <div class="input w-full">
-                                <input type="number" placeholder="Ponle identidad a tu item" name="">
+                                <input type="number" placeholder="Ponle identidad a tu item" id="plu" name="plu">
                                 <span class="material-symbols-rounded text-essentials-primary">pin</span>
                             </div>
                         </div>
@@ -175,7 +175,7 @@
                         <div class=" mt-[5px] w-[50%]">
                             <p class="my-[5px] text-[16px]">Nombre:</p>
                             <div class="input w-full">
-                                <input type="text" placeholder="Escribe su nombre" name="nombre_sucursal">
+                                <input type="text" placeholder="Escribe su nombre" id="nombreProducto" name="nombreProducto">
                                 <span class="material-symbols-rounded text-essentials-primary">format_italic</span>
                             </div>
                         </div>
@@ -185,13 +185,13 @@
                         <div class="w-[50%] mt-[5px]">
                             <p class="my-[5px] text-[16px]">Categoría:</p>
                             <div class="custom-select ">
-                                <select>
-                                    <option disabled>Selecciona una categoria existente</option>
-                                    <option>Categoria 1</option>
-                                    <option>Categoria 2</option>
-                                    <option>Categoria 3</option>
-                                    <option>Categoria 4</option>
-                                </select>
+                                <select id="categoriaProducto" name="categoriaProducto">
+                                    <optgroup label="Selecciona una categoria">Categoria</optgroup>
+                                    <option value="sub1">Categoría 1</option>
+                                    <option value="sub2">Categoría 2</option>
+                                    <option value="sub3">Categoría 3</option>
+                                    <option value="sub4">Categoría 4</option>
+                                  </select>
                                 <div class="select-arrow"></div>
                             </div>
                         </div>
@@ -199,13 +199,13 @@
                         <div class="w-[50%] mt-[5px]">
                             <p class="my-[5px] text-[16px]">Subcategoría:</p>
                             <div class="custom-select ">
-                                <select>
-                                    <option disabled>Selecciona una subcategoria existente</option>
-                                    <option>Subcategoria 1</option>
-                                    <option>Subcategoria 2</option>
-                                    <option>Subcategoria 3</option>
-                                    <option>Subcategoria 4</option>
-                                </select>
+                                <select id="subcategoriaProducto" name="subcategoriaProducto">
+                                    <optgroup label="Selecciona una subcategoria">Subcategoria</optgroup>
+                                    <option value="sub1">Subcategoría 1</option>
+                                    <option value="sub2">Subcategoría 2</option>
+                                    <option value="sub3">Subcategoría 3</option>
+                                    <option value="sub4">Subcategoría 4</option>
+                                  </select>
                                 <div class="select-arrow"></div>
                             </div>
                         </div>
@@ -215,7 +215,7 @@
                         <div class=" mt-[5px] w-[50%]">
                             <p class="my-[5px] text-[16px]">Descripción:</p>
                             <div class="input w-full">
-                                <input type="text" placeholder="Describe a (nombre)" name="">
+                                <input type="text" placeholder="Describe a (nombre)" id="descripcionProducto" name="descripcionProducto">
                                 <span class="material-symbols-rounded text-essentials-primary">format_italic</span>
                             </div>
                         </div>
@@ -223,7 +223,7 @@
                         <div class=" mt-[5px] w-[50%]">
                             <p class="my-[5px] text-[16px]">Cantidad en Stock:</p>
                             <div class="input w-full">
-                                <input type="number" placeholder="¿Cuantos tienes disponibles?" name="nombre_sucursal">
+                                <input type="number" placeholder="¿Cuantos tienes disponibles?" id="stockProducto" name="stockProducto">
                                 <span class="material-symbols-rounded text-essentials-primary">pin</span>
                             </div>
                         </div>
@@ -233,7 +233,7 @@
                         <div class=" mt-[5px] w-[50%]">
                             <p class="my-[5px] text-[16px]">Cantidad:</p>
                             <div class="input w-full">
-                                <input type="number" placeholder="Ejemplo: 400" name="">
+                                <input type="number" placeholder="Ejemplo: 400" id="cantidadProducto" name="cantidadProducto">
                                 <span class="material-symbols-rounded text-essentials-primary">pin</span>
                             </div>
                         </div>
@@ -241,15 +241,15 @@
                         <div class="w-[50%] mt-[5px]">
                             <p class="my-[5px] text-[16px]">Unidad de medida:</p>
                             <div class="custom-select ">
-                                <select>
-                                    <option disabled>Selecciona una unidad disponible</option>
-                                    <option>Unidades</option>
-                                    <option>Onzas</option>
-                                    <option>Gramos</option>
-                                    <option>Mililitros</option>
-                                    <option>Litros</option>
-                                    <option>Kilos</option>
-                                    <option>Libras</option>
+                                <select id="unidadMedidaProducto" name="unidadMedidaProducto">
+                                    <optgroup label="Selecciona una subcategoria">Categoria</optgroup>
+                                    <option value="Unidades">Unidades</option>
+                                    <option value="Onzas">Onzas</option>
+                                    <option value="Gramos">Gramos</option>
+                                    <option value="Mililitros">Mililitros</option>
+                                    <option value="Litros">Litros</option>
+                                    <option value="Kilos">Kilos</option>
+                                    <option value="Libras">Libras</option>
                                 </select>
                                 <div class="select-arrow"></div>
                             </div>
@@ -260,7 +260,7 @@
                         <div class=" mt-[5px] w-[50%]">
                             <p class="my-[5px] text-[16px]">Marca:</p>
                             <div class="input w-full">
-                                <input type="text" placeholder="Ejemplo: Coca cola" name="">
+                                <input type="text" placeholder="Ejemplo: Coca cola" id="marcaProducto" name="marcaProducto">
                                 <span class="material-symbols-rounded text-essentials-primary">format_italic</span>
                             </div>
                         </div>
@@ -268,7 +268,7 @@
                         <div class=" mt-[5px] w-[50%]">
                             <p class="my-[5px] text-[16px]">Descuento:</p>
                             <div class="input w-full">
-                                <input type="number" placeholder="Escribe el monto" name="nombre_sucursal">
+                                <input type="number" placeholder="Escribe el monto" id="descuentoProducto" name="descuentoProducto">
                                 <span class="material-symbols-rounded text-essentials-primary">pin</span>
                             </div>
                         </div>
@@ -278,7 +278,7 @@
                         <div class=" mt-[5px] w-[50%]">
                             <p class="my-[5px] text-[16px]">Precio neto:</p>
                             <div class="input w-full">
-                                <input type="text" placeholder="Precio comprado" name="">
+                                <input type="number" placeholder="Precio comprado" id="precioNetoProducto" name="precioNetoProducto">
                                 <span class="material-symbols-rounded text-essentials-primary">format_italic</span>
                             </div>
                         </div>
@@ -286,8 +286,7 @@
                         <div class=" mt-[5px] w-[50%]">
                             <p class="my-[5px] text-[16px]">IVA %:</p>
                             <div class="input w-full">
-                                <input type="number" placeholder="Si tiene ICUI E IVA ingresalo asi: (ICUI+IVA)"
-                                    name="nombre_sucursal">
+                                <input type="number" placeholder="Si tiene ICUI E IVA ingresalo asi: (ICUI+IVA)" id="ivaProducto" name="ivaProducto">
                                 <span class="material-symbols-rounded text-essentials-primary">pin</span>
                             </div>
                         </div>
@@ -297,15 +296,15 @@
                         <div class=" mt-[5px] w-[50%]">
                             <p class="my-[5px] text-[16px]">Lote:</p>
                             <div class="input w-full">
-                                <input type="text" placeholder="Ingresa Lote" name="">
+                                <input type="text" placeholder="Ingresa Lote" id="loteProducto" name="loteProducto">
                                 <span class="material-symbols-rounded text-essentials-primary">format_italic</span>
                             </div>
                         </div>
 
                         <div class=" mt-[5px] w-[50%]">
-                            <p class="my-[5px] text-[16px]">Registro Sanitario %:</p>
+                            <p class="my-[5px] text-[16px]">Registro Sanitario :</p>
                             <div class="input w-full">
-                                <input type="text" placeholder="RSA de cada producto" name="nombre_sucursal">
+                                <input type="text" placeholder="RSA de cada producto" id="rsaProducto" name="rsaProducto">
                                 <span class="material-symbols-rounded text-essentials-primary">format_italic</span>
                             </div>
                         </div>
@@ -315,7 +314,7 @@
                         <div class=" mt-[5px] w-[50%]">
                             <p class="my-[5px] text-[16px]">Fecha vencimiento:</p>
                             <div class="input w-full">
-                                <input type="date" placeholder="" name="">
+                                <input type="date" placeholder="" id="vencimientoProducto" name="vencimientoProducto">
                                 <span class="material-symbols-rounded text-essentials-primary">event</span>
                             </div>
                         </div>
@@ -323,10 +322,11 @@
                         <div class="w-[50%] mt-[5px]">
                             <p class="my-[5px] text-[16px]">Proveedor:</p>
                             <div class="custom-select ">
-                                <select>
-                                    <option disabled>Selecciona una proveedor</option>
-                                    <option>NA</option>
-                                    <option>Jhoann Zamudio</option>
+                                <select id="proveedorProducto" name="proveedorProducto">
+                                    <optgroup label="Selecciona un proveedor">Proveedor</optgroup>
+                                    <option value="NA">No aplica</option>
+                                    <option value="Jhoann Zamudio">Jhoann Zamudio</option>
+                                    
                                 </select>
                                 <div class="select-arrow"></div>
                             </div>
@@ -354,10 +354,10 @@
 
                 <div class=" text-blanco  my-[15px]">
                     <div class="flex justify-between items-center text-[25px] font-medium">
-                        <p>Nombre</p>
-                        <p>Identificador PLU</p>
+                        <p id="nombreProductoPreview">Nombre</p>
+                        <p id="pluPreview">Identificador PLU</p>
                     </div>
-                    <p class="text-secundary-light text-4">Descripcion</p>
+                    <p class="text-secundary-light text-4" id="descripcionProductoPreview">Descripcion</p>
                 </div>
 
                 <div class="text-blanco flex items-center justify-between text-[15px] my-2">
@@ -365,22 +365,30 @@
                         <span class="material-symbols-rounded text-[15px] text-essentials-primary">
                             category
                         </span>
-                        Efectivo
+                        <span id="categoriaProductoPreview">Categoria</span>
+                        
                     </p>
                     <p class="flex items-center gap-2"><span
                             class="material-symbols-rounded text-[15px] text-essentials-primary">view_object_track</span>
-                        Subcategoría
+                            <span id="subcategoriaProductoPreview">Subcategoria</span>
+
                     </p>
-                    <p class="flex items-center gap-2"><span class="cantidad">10 Unidades</span></p>
+                    <p class="flex items-center gap-2 cantidad" id="stockProductoPreview">20<span class="cantidad">Unidades</span></p>
                 </div>
 
                 <div class="text-blanco flex items-center justify-between text-[15px] my-2">
                     <p class="flex items-center gap-2"><span
                             class="material-symbols-rounded text-[15px] text-essentials-primary">square_foot</span>
-                        Unidad medida
+                            <span id="cantidadProductoPreview">Unidad</span><span id="unidadMedidaProductoPreview">Medida</span>
+                        
                     </p>
                     <p class="flex items-center gap-2"><span
-                            class="material-symbols-rounded text-[15px] text-essentials-primary">verified</span> Marca
+                        class="material-symbols-rounded text-[15px] text-essentials-primary">person</span> 
+                        <span id="proveedorProductoPreview">Proveedor</span>
+                </p>
+                    <p class="flex items-center gap-2"><span
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">verified</span> 
+                            <span id="marcaProductoPreview">Marca</span>
                     </p>
                 </div>
 
@@ -389,14 +397,15 @@
                         <span class="material-symbols-rounded text-[15px] text-essentials-primary">
                             payments
                         </span>
-                        Precio neto
+                        <span id="precioNetoProductoPreview">Precio neto</span>
                     </p>
                     <p class="flex items-center gap-2"><span
-                            class="material-symbols-rounded text-[15px] text-essentials-primary">remove</span> Descuento
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">remove</span>
+                            <span id="descuentoProductoPreview">Descuento</span> 
                     </p>
                     <p class="flex items-center gap-2"><span
-                            class="material-symbols-rounded text-[15px] text-essentials-primary">percent</span> IVA +
-                        ICUI
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">percent</span>
+                            <span id="ivaProductoPreview">IVA + ICUI</span> 
                     </p>
                 </div>
 
@@ -405,15 +414,15 @@
                         <span class="material-symbols-rounded text-[15px] text-essentials-primary">
                             table_convert
                         </span>
-                        Lote
+                        <span id="loteProductoPreview">Lote</span>
                     </p>
                     <p class="flex items-center gap-2"><span
-                            class="material-symbols-rounded text-[15px] text-essentials-primary">news</span> Registro
-                        Sanitario
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">news</span> 
+                            <span id="rsaProductoPreview">Registro Sanitario</span>
                     </p>
                     <p class="flex items-center gap-2"><span
-                            class="material-symbols-rounded text-[15px] text-essentials-primary">event_busy</span> Fecha
-                        vencimiento
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">event_busy</span>
+                            <span id="vencimientoProductoPreview">Fecha vencimiento</span>
                     </p>
                 </div>
 
@@ -426,7 +435,7 @@
                         <span class="material-symbols-rounded text-[40px] text-essentials-primary">
                             attach_money
                         </span>
-                        Lote
+                        <span id="">0</span>
                     </p>
                 </div>
 

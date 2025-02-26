@@ -5,15 +5,14 @@ function stock() {
         let valor = parseInt(elemento.textContent.trim().replace(/\D/g, "")); // Elimina todo excepto números
 
         if (valor <= 9) {
-            elemento.classList.add("bg-semaforo-rojo");
+            elemento.classList.add("bg-semaforo-rojo", "px-2", "py-1", "rounded-lg", "font-bold");
         } else if (valor >= 10 && valor <= 14) {
-            elemento.classList.add("bg-semaforo-amarillo");
+            elemento.classList.add("bg-semaforo-amarillo", "px-2", "py-1", "rounded-lg", "font-bold");
         } else if (valor >= 15) {
-            elemento.classList.add("bg-semaforo-verde");
+            elemento.classList.add("bg-semaforo-verde", "px-2", "py-1", "rounded-lg", "font-bold");
         }
     });
 }
-
 function estado() {
     let estados = document.querySelectorAll(".estado");
 
@@ -21,11 +20,11 @@ function estado() {
         let estadoActual = actual.textContent.trim(); // Solo obtiene el texto
 
         if (estadoActual === "Inactivo") {
-            actual.classList.add("bg-semaforo-rojo");
+            actual.classList.add("bg-semaforo-rojo", "px-2", "py-1", "rounded-lg", "font-bold");
         } else if (estadoActual === "Suspendido") {
-            actual.classList.add("bg-semaforo-amarillo");
+            actual.classList.add("bg-semaforo-amarillo", "px-2", "py-1", "rounded-lg", "font-bold");
         } else if (estadoActual === "Activo") {
-            actual.classList.add("bg-semaforo-verde");
+            actual.classList.add("bg-semaforo-verde", "px-2", "py-1", "rounded-lg", "font-bold");
         }
     });
 }

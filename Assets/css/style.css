@@ -335,11 +335,11 @@ body{
   appearance: none;
   -webkit-appearance: none;
   width: 100%;
-  font-size: 13px;
-  padding: 5px 10px 5px 10px;
+  font-size: 14px;
+  padding: 6px 10px;
   background-color: var(--secundary_opacity);
-  border: 1px solid var(--mono_blanco);
-  border-radius: 5px;
+  border: 2px solid var(--secundary_light);
+  border-radius: 8px;
   color: var(--mono_blanco);
   cursor: pointer;
   outline: none;
@@ -347,7 +347,7 @@ body{
 
 .custom-select select:focus {
   background: var(--secundary_opacity);
-  border: 1px solid var(--primary_essentials);
+  border: 2px solid var(--primary_essentials);
   border-radius: 8px;
 }
 

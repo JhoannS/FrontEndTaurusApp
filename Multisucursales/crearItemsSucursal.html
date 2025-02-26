@@ -138,10 +138,13 @@
 
         <div class="parentOver flex justify-between gap-[60px] mt-4">
             <div class="w-[60%]">
-                <div class="encabezado flex justify-between items-center mb-3">
-                    <h2 class="text-blanco text-[20px] font-semibold">Creación de mercancia</h2>
+                <div class="encabezado mb-5">
+                    <h2 class="text-blanco text-[25px] font-semibold">Creación de mercancia</h2>
+                    <p class="mb-[10px] text-secundary-light">En este apartado podrás crear un nuevo item a la sucursal
+                        de tu tienda, recuerda llenar todos los campos correspondientes.</p>
                 </div>
 
+                <!-- img -->
                 <div class="container cursor-pointer flex justify-between items-center gap-4">
                     <div class="wrapper w-full h-full border border-dashed border-secundary-light rounded-lg flex justify-between items-center"
                         onclick="defaultBtnActive()">
@@ -157,95 +160,285 @@
 
                     <input id="default-btn" type="file" hidden accept="image/png, image/jpeg, image/jpg, image/gif">
                 </div>
-            </div>
 
-            <div class="w-[40%] flex flex-col justify-center h-[80vh]">
-                <div class="">
-                    <p class="text-blanco text-[25px] font-semibold">Vista previa de tu item</p>
-                    <div class="max-h-[200px] max-w-[200px">
-                        <div class="image p-2 w-[200px]  flex justify-center items-center ">
-                            <img alt="" class="border border-dashed border-secundary-light rounded-lg h-[200px] w-[200px] object-cover">
+                <!-- form -->
+                <form action="" method="post">
+                    <div class="mt-[5px] flex justify-between gap-3 w-full">
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">PLU:</p>
+                            <div class="input w-full">
+                                <input type="number" placeholder="Ponle identidad a tu item" name="">
+                                <span class="material-symbols-rounded text-essentials-primary">pin</span>
+                            </div>
+                        </div>
+
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Nombre:</p>
+                            <div class="input w-full">
+                                <input type="text" placeholder="Escribe su nombre" name="nombre_sucursal">
+                                <span class="material-symbols-rounded text-essentials-primary">format_italic</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class=" text-blanco text-[17px] font-medium my-[15px]">
-                    <p>Orden #98979778</p>
-                    <div class="flex justify-between items-center">
-                        <p>Fecha de creación: <span>Nov 29, 2024</span></p>
-                        <p>14:20:23</p>
+                    <div class="mt-[5px] flex justify-between gap-3 w-full">
+                        <div class="w-[50%] mt-[5px]">
+                            <p class="my-[5px] text-[16px]">Categoría:</p>
+                            <div class="custom-select ">
+                                <select>
+                                    <option disabled>Selecciona una categoria existente</option>
+                                    <option>Categoria 1</option>
+                                    <option>Categoria 2</option>
+                                    <option>Categoria 3</option>
+                                    <option>Categoria 4</option>
+                                </select>
+                                <div class="select-arrow"></div>
+                            </div>
+                        </div>
+
+                        <div class="w-[50%] mt-[5px]">
+                            <p class="my-[5px] text-[16px]">Subcategoría:</p>
+                            <div class="custom-select ">
+                                <select>
+                                    <option disabled>Selecciona una subcategoria existente</option>
+                                    <option>Subcategoria 1</option>
+                                    <option>Subcategoria 2</option>
+                                    <option>Subcategoria 3</option>
+                                    <option>Subcategoria 4</option>
+                                </select>
+                                <div class="select-arrow"></div>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="mt-[5px] flex justify-between gap-3 w-full">
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Descripción:</p>
+                            <div class="input w-full">
+                                <input type="text" placeholder="Describe a (nombre)" name="">
+                                <span class="material-symbols-rounded text-essentials-primary">format_italic</span>
+                            </div>
+                        </div>
+
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Cantidad en Stock:</p>
+                            <div class="input w-full">
+                                <input type="number" placeholder="¿Cuantos tienes disponibles?" name="nombre_sucursal">
+                                <span class="material-symbols-rounded text-essentials-primary">pin</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-[5px] flex justify-between gap-3 w-full">
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Cantidad:</p>
+                            <div class="input w-full">
+                                <input type="number" placeholder="Ejemplo: 400" name="">
+                                <span class="material-symbols-rounded text-essentials-primary">pin</span>
+                            </div>
+                        </div>
+
+                        <div class="w-[50%] mt-[5px]">
+                            <p class="my-[5px] text-[16px]">Unidad de medida:</p>
+                            <div class="custom-select ">
+                                <select>
+                                    <option disabled>Selecciona una unidad disponible</option>
+                                    <option>Unidades</option>
+                                    <option>Onzas</option>
+                                    <option>Gramos</option>
+                                    <option>Mililitros</option>
+                                    <option>Litros</option>
+                                    <option>Kilos</option>
+                                    <option>Libras</option>
+                                </select>
+                                <div class="select-arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-[5px] flex justify-between gap-3 w-full">
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Marca:</p>
+                            <div class="input w-full">
+                                <input type="text" placeholder="Ejemplo: Coca cola" name="">
+                                <span class="material-symbols-rounded text-essentials-primary">format_italic</span>
+                            </div>
+                        </div>
+
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Descuento:</p>
+                            <div class="input w-full">
+                                <input type="number" placeholder="Escribe el monto" name="nombre_sucursal">
+                                <span class="material-symbols-rounded text-essentials-primary">pin</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-[5px] flex justify-between gap-3 w-full">
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Precio neto:</p>
+                            <div class="input w-full">
+                                <input type="text" placeholder="Precio comprado" name="">
+                                <span class="material-symbols-rounded text-essentials-primary">format_italic</span>
+                            </div>
+                        </div>
+
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">IVA %:</p>
+                            <div class="input w-full">
+                                <input type="number" placeholder="Si tiene ICUI E IVA ingresalo asi: (ICUI+IVA)"
+                                    name="nombre_sucursal">
+                                <span class="material-symbols-rounded text-essentials-primary">pin</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-[5px] flex justify-between gap-3 w-full">
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Lote:</p>
+                            <div class="input w-full">
+                                <input type="text" placeholder="Ingresa Lote" name="">
+                                <span class="material-symbols-rounded text-essentials-primary">format_italic</span>
+                            </div>
+                        </div>
+
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Registro Sanitario %:</p>
+                            <div class="input w-full">
+                                <input type="text" placeholder="RSA de cada producto" name="nombre_sucursal">
+                                <span class="material-symbols-rounded text-essentials-primary">format_italic</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-[5px] flex justify-between gap-3 w-full">
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Fecha vencimiento:</p>
+                            <div class="input w-full">
+                                <input type="date" placeholder="" name="">
+                                <span class="material-symbols-rounded text-essentials-primary">event</span>
+                            </div>
+                        </div>
+
+                        <div class="w-[50%] mt-[5px]">
+                            <p class="my-[5px] text-[16px]">Proveedor:</p>
+                            <div class="custom-select ">
+                                <select>
+                                    <option disabled>Selecciona una proveedor</option>
+                                    <option>NA</option>
+                                    <option>Jhoann Zamudio</option>
+                                </select>
+                                <div class="select-arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <button class="btn-essentials mt-4 w-full" id="confirm-button">Confirmar creacion</button>
+                </form>
+            </div>
+
+            <div class="w-[40%]  h-[80vh]">
+       
+                    <p class="text-blanco text-[25px] font-semibold">Vista previa de tu item</p>
+
+                    <div class="image p-2 w-full flex justify-center items-center my-4">
+                        <img alt=""
+                            class="border border-dashed border-secundary-light rounded-lg h-[400px] w-[400px] object-cover">
+                    </div>
+
+          
+
+                <div class=" text-blanco  my-[15px]">
+                    <div class="flex justify-between items-center text-[25px] font-medium">
+                        <p>Nombre</p>
+                        <p>Identificador PLU</p>
+                    </div>
+                    <p class="text-secundary-light text-4">Descripcion</p>
                 </div>
 
-                <hr class="h-[2px] w-full my-[10px]" />
-
-                <div class="text-blanco flex items-center justify-between text-[14px]">
-                    <p class="flex items-center gap-2">Método de pago:
+                <div class="text-blanco flex items-center justify-between text-[15px] my-2">
+                    <p class="flex items-center gap-2">
                         <span class="material-symbols-rounded text-[15px] text-essentials-primary">
-                            account_balance_wallet
+                            category
                         </span>
                         Efectivo
                     </p>
-                    <p class="flex items-center gap-2">Monto a pagar: <span
-                            class="material-symbols-rounded text-[15px] text-essentials-primary">payments</span> $18.400
+                    <p class="flex items-center gap-2"><span
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">view_object_track</span>
+                        Subcategoría
+                    </p>
+                    <p class="flex items-center gap-2"><span class="cantidad">10 Unidades</span></p>
+                </div>
+
+                <div class="text-blanco flex items-center justify-between text-[15px] my-2">
+                    <p class="flex items-center gap-2"><span
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">square_foot</span>
+                        Unidad medida
+                    </p>
+                    <p class="flex items-center gap-2"><span
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">verified</span> Marca
                     </p>
                 </div>
 
-                <div class="text-blanco flex items-center justify-between text-[14px]">
-                    <p class="flex items-center gap-2">Dinero recibido: <span
-                            class="material-symbols-rounded text-[15px] text-essentials-primary">payments</span> $20.000
+                <div class="text-blanco flex items-center justify-between text-[15px] my-2">
+                    <p class="flex items-center gap-2">
+                        <span class="material-symbols-rounded text-[15px] text-essentials-primary">
+                            payments
+                        </span>
+                        Precio neto
                     </p>
-                    <p class="flex items-center gap-2">Dinero a devolver: <span
-                            class="material-symbols-rounded text-[15px] text-essentials-primary">payments</span> $600
+                    <p class="flex items-center gap-2"><span
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">remove</span> Descuento
+                    </p>
+                    <p class="flex items-center gap-2"><span
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">percent</span> IVA +
+                        ICUI
                     </p>
                 </div>
 
-                <hr class="h-[2px] w-full my-[10px]" />
+                <div class="text-blanco flex items-center justify-between text-[15px] my-2">
+                    <p class="flex items-center gap-2">
+                        <span class="material-symbols-rounded text-[15px] text-essentials-primary">
+                            table_convert
+                        </span>
+                        Lote
+                    </p>
+                    <p class="flex items-center gap-2"><span
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">news</span> Registro
+                        Sanitario
+                    </p>
+                    <p class="flex items-center gap-2"><span
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">event_busy</span> Fecha
+                        vencimiento
+                    </p>
+                </div>
 
-                <div class="px-[10px] overflow-x-auto custom-scrollbar text-blanco" id="facturacion">
-                    <div class="flex justify-between items-center gap-[8px] mt-[16px]">
-                        <div class="flex items-center gap-[5px]">
-
-                            <div
-                                class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center">
-                                <img src="" alt="img producto" width="25px" height="25px"
-                                    class="rounded-[100%] h-[25px] w-[25px]" />
-                            </div>
-
-                            <div class="flex flex-col">
-                                <p>Hamburguesa</p>
-                                <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
-                            </div>
-
-
-                        </div>
-
-                        <p class="flex items-center gap-2">
-                            <span class="material-symbols-rounded text-[15px] text-essentials-primary">
-                                pin
-                            </span>
-                            x1
-                        </p>
-
-                        <p class="number">$18.800</p>
+                <div class=" flex justify-between items-center">
+                    <div class="estado-orden flex items-center gap-2 my-2">
+                        <div class="gota h-5 w-5 bg-semaforo-verde shadow-verde rounded-full"></div>
+                        <p>Activo</p>
                     </div>
-                </div>
-                <div class="flex items-center text-[14px] my-[10px]">
-                    <p class="flex items-center gap-2">Comentario de la orden: <span
-                            class="material-symbols-rounded text-[15px] text-essentials-primary">format_italic</span>
-                        Comentario del cliente</p>
+                    <p class="flex items-center gap-2 text-[40px]">
+                        <span class="material-symbols-rounded text-[40px] text-essentials-primary">
+                            attach_money
+                        </span>
+                        Lote
+                    </p>
                 </div>
 
-                <div class="estado-orden flex items-center gap-2">
-                    <div class="gota h-5 w-5 bg-semaforo-verde shadow-verde rounded-full"></div>
-                    <p>Finalizado</p>
-                </div>
+
+
 
 
     </main>
 
     <script src="../Assets/js/hora.js"></script>
     <script src="../Assets/js/subirImg.js"></script>
+    <script src="../Assets/js/items.js"></script>
 </body>
 
 </html>

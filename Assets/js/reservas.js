@@ -138,15 +138,17 @@ function populateTimeSelectors() {
 
   for (let hour = 0; hour <= 23; hour++) {
     for (let minute of [0, 30]) {
-      const time = `${hour}:${minute === 0 ? "00" : "30"}`;
-      startSelect.innerHTML += `<option value="${
-        hour + minute / 60
-      }">${time}</option>`;
-      endSelect.innerHTML += `<option value="${
-        hour + minute / 60
-      }">${time}</option>`;
+        const period = hour >= 12 ? "PM" : "AM";
+        const displayHour = hour % 12 || 12; // Convierte 0 y 12 a 12, el resto lo deja igual
+        const time = `${displayHour}:${minute === 0 ? "00" : "30"} ${period}`;
+
+        const value = hour + minute / 60; // Mantiene el valor en formato 24h para la lógica interna
+        
+        startSelect.innerHTML += `<option value="${value}">${time}</option>`;
+        endSelect.innerHTML += `<option value="${value}">${time}</option>`;
     }
-  }
+}
+
 }
 
 function setSchedule() {

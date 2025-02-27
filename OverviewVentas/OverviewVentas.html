@@ -131,7 +131,7 @@
         <div class="titulp-input-btn flex justify-between items-center gap-5">
             <h4 class="font-semibold text-[25px]">Overview de tienda</h4>
             <div class="input">
-                <input type="search" placeholder="Buscar contenido...">
+                <input type="search" id="searchInput" placeholder="Buscar un ticket..." autocomplete="off">
                 <span class="material-symbols-rounded text-essentials-primary">travel_explore</span>
             </div>
 
@@ -185,29 +185,30 @@
                     <span class="material-symbols-rounded">receipt_long</span>
                 </div>
 
-                <div class="w-full flex justify-between items-center gap-5">
+                <div class="ticket w-full flex justify-between items-center gap-5">
                     <div
-                        class="caja w-[33.3%] relative cursor-pointer border border-secundary-opacity  hover:border-essentials-primary transition-all rounded-[5px] bg-secundary-opacity text-center text-blanco text-[12px] p-3">
+                        class=" w-[33.3%] relative cursor-pointer border border-secundary-opacity  hover:border-essentials-primary transition-all rounded-[5px] bg-secundary-opacity text-center text-blanco text-[12px] p-3">
                         <div class="absolute shadow-essentials w-[15px] h-[15px] bg-essentials-primary -left-[8px] top-[40%] rounded-full"></div>
-                        <p class="bg-transparent">Orden #98979778</p>
+                        <p class="bg-transparent">Orden #1</p>
                         <p class="bg-transparent">14:20:45</p>
                         <p class="bg-transparent">Fecha creación: Nov 29,2024</p>
                     </div>
                     <div
-                        class="caja w-[33.3%] relative cursor-pointer border border-secundary-opacity  hover:border-essentials-primary transition-all rounded-[5px] bg-secundary-opacity text-center text-blanco text-[12px] p-3">
+                        class=" w-[33.3%] relative cursor-pointer border border-secundary-opacity  hover:border-essentials-primary transition-all rounded-[5px] bg-secundary-opacity text-center text-blanco text-[12px] p-3">
                         <div class="absolute shadow-essentials w-[15px] h-[15px] bg-essentials-primary -left-[8px] top-[40%] rounded-full"></div>
-                        <p class="bg-transparent">Orden #98979778</p>
+                        <p class="bg-transparent">Orden #2</p>
                         <p class="bg-transparent">14:20:45</p>
                         <p class="bg-transparent">Fecha creación: Nov 29,2024</p>
                     </div>
                     <div
-                        class="caja w-[33.3%] relative cursor-pointer border border-secundary-opacity  hover:border-essentials-primary transition-all rounded-[5px] bg-secundary-opacity text-center text-blanco text-[12px] p-3">
+                        class=" w-[33.3%] relative cursor-pointer border border-secundary-opacity  hover:border-essentials-primary transition-all rounded-[5px] bg-secundary-opacity text-center text-blanco text-[12px] p-3">
                         <div class="absolute shadow-essentials w-[15px] h-[15px] bg-essentials-primary -left-[8px] top-[40%] rounded-full"></div>
-                        <p class="bg-transparent">Orden #98979778</p>
+                        <p class="bg-transparent">Orden #3</p>
                         <p class="bg-transparent">14:20:45</p>
                         <p class="bg-transparent">Fecha creación: Nov 29,2024</p>
                     </div>
                 </div>
+                <div id="mensaje-no-resultados" class="hidden text-center mt-10 font-bold text-[35px] text-secundary-light fade-in">No hay coincidencias.</div>
             </div>
 
             <div class="w-[40%]">
@@ -293,6 +294,7 @@
 
 
     <script src="../Assets/js/hora.js"></script>
+    <script src="../Assets/js/buscadorTicket.js"></script>
 </body>
 
 </html>

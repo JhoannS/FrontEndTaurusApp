@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservas de clientes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/Assets/css/style.css" />
+    <script src="../Assets/js/styles.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+</head>
+
+<body class="bg-mono flex scrollbar-custom">
+    <!-- Panel de navegacion -->
+    <div class="h-[100vh] w-[60px] flex items-center p-[20px]">
+        <aside class="w-[60px] flex justify-center flex-col gap-2 items-center bg-secundary-default p-2 rounded-full">
+            <div class="gota h-12 w-12 shadow-essentials bg-essentials-primary rounded-full z-20"></div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> space_dashboard </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> swap_horiz </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> savings </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> monitoring </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> identity_platform </span>
+                </a>
+            </div>
+            <div class="btn-link">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> calendar_clock </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> checklist </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> barcode_scanner </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> qr_code_2 </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> donut_small </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> diversity_1 </span>
+                </a>
+            </div>
+        </aside>
+    </div>
+
+    <!-- panel de contenido -->
+    <main class="w-full h-[100%] px-[40px] py-[20px] bg-transparent">
+        <!-- header de opciones -->
+        <header class="w-full h-[100%] flex justify-between mb-[20px]">
+            <div class="date flex gap-3 items-center">
+                <div class="dia flex items-center justify-center font-semibold h-10 w-7 shadow-essentials bg-essentials-primary rounded-full"
+                    id="dia">
+                    00
+                </div>
+                <div class="mes-año flex flex-col text-[14px] font-medium" id="mes-año">
+                    <span id="mes">Enero</span>
+                    <span id="anio">2025</span>
+                </div>
+                <div class="separador h-8 w-[2px] bg-essentials-primary rounded-lg"></div>
+                <div class="hora text-[14px]" id="hora">00:00:00</div>
+            </div>
+
+            <div class="options-user flex gap-2 items-center justify-center">
+                <div class="btn-link-disable">
+                    <span class="bg-transparent material-symbols-rounded">
+                        notifications
+                    </span>
+                </div>
+                <div class="btn-link-disable">
+                    <span class="bg-transparent material-symbols-rounded">
+                        settings
+                    </span>
+                </div>
+                <div class="logo flex gap-3 items-center">
+                    <div class="gota h-10 w-10 shadow-essentials bg-essentials-primary rounded-full"></div>
+                    <div class="logo">
+                        <h3 class="font-semibold">Nombre de Usuario</h3>
+                        <p class="-mt-[8px] text-secundary-light text-[13px] font-medium">
+                            Rol de perfil
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- navegable -->
+        <div class="options flex gap-1 items-center text-[14px]">
+            <a href="" class="hover:text-essentials-secundary">
+                <p>Dashboard</p>
+            </a>
+            <span class="material-symbols-rounded text-[18px]">chevron_right</span>
+            <p class="font-bold">Agenda de reservas</p>
+        </div>
+
+        <div class="calendario w-full flex mt-5 items-center gap-4 justify-between">
+            <div class="almanaque-eventos bg-secundary-default p-4 w-[20%] h-[84vh] rounded-xl">
+                <article id="calendario" class="">
+                    <div class="calendar w-full bg-blanco">
+                        <div class="header items-center flex justify-between">
+                            <div class="flex gap-3 text-[30px]">
+                                <span id="month" class=""></span>
+                                <span id="year" class="text-essentials-primary"></span>
+                            </div>
+
+
+                            <div class="flex">
+                                <button id="prev-month"
+                                    class="shadow-lg hover:bg-essentials-primary transition-all flex justify-center items-center rounded-full h-[30px] w-[30px] text-azul"><i
+                                        class="material-symbols-rounded">arrow_left</i></button>
+                                <button id="next-month"
+                                    class="shadow-lg hover:bg-essentials-primary transition-all flex justify-center items-center rounded-full h-[30px] w-[30px] text-azul"><i
+                                        class="material-symbols-rounded">arrow_right</i></button>
+                            </div>
+
+                        </div>
+                        <div class="weekdays grid grid-cols-7 text-center text-[12px] mt-3 font-medium text-gray-500">
+                            <div>DOM</div>
+                            <div>LUN</div>
+                            <div>MAR</div>
+                            <div>MIE</div>
+                            <div>JUE</div>
+                            <div>VIE</div>
+                            <div>SAB</div>
+                        </div>
+                        <div class="days grid grid-cols-7 text-center text-[14px] font-medium" id="days"></div>
+                    </div>
+                </article>
+                <div class="eventos">
+                    <div id="fechas"></div>
+                </div>
+            </div>
+            <div class="Asignacion w-[80%] p-4 h-[84vh] rounded-xl">
+                <div class="">
+                    <div class="flex justify-between w-full items-center">
+                        <h2 class="text-xl font-bold w-[50%]">Personaliza tu tiempo</h2>
+                        <div class="flex items-center gap-3 w-[50%] justify-between">
+                            <div class="w-full">
+                                <p class="my-[5px] text-[14px]">Hora de inicio:</p>
+                                <div class="custom-select">
+                                    <select id="userStartTime">
+
+                                    </select>
+                                    <div class="select-arrow"></div>
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <p class="my-[5px] text-[14px]">Hora de cierre:</p>
+                                <div class="custom-select">
+                                    <select id="userEndTime">
+
+                                    </select>
+                                    <div class="select-arrow"></div>
+                                </div>
+                            </div>
+
+                            <div class="">
+                                <p class="my-[5px] text-[14px] opacity-0">Acción:</p>
+                                <button onclick="setSchedule()" class="btn-essentials">Aplicar</button>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                            <div class="flex gap-2 justify-between my-4">
+                                <div class="flex gap-2 items-center">
+                                    <button id="prev-month" onclick="changeWeek(-1)"
+                                    class="shadow-lg hover:bg-essentials-primary transition-all flex justify-center items-center rounded-full h-[30px] w-[30px] text-azul"><i
+                                        class="material-symbols-rounded">arrow_left</i></button>
+                                        <p>Semana</p>
+                                <button id="next-month" onclick="changeWeek(1)"
+                                    class="shadow-lg hover:bg-essentials-primary transition-all flex justify-center items-center rounded-full h-[30px] w-[30px] text-azul"><i
+                                        class="material-symbols-rounded">arrow_right</i></button>
+                                </div>
+                                
+                                        <h1 class="text-2xl font-bold" id="currentWeek"></h1>
+                            </div>
+
+                            <div id="schedule" class="grid grid-cols-8 gap-2 hidden">
+                        <div></div>
+                        <div id="days_calendario" class="grid grid-cols-7 gap-2 col-span-7"></div>
+                    </div>
+                </div>
+
+                <div id="modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex items-center justify-center">
+                    <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+                        <h2 class="text-xl font-bold mb-4">Nueva Reserva</h2>
+                        <p id="modalDate"></p>
+                        <p id="modalTime"></p>
+                        <input type="text" id="title" placeholder="Título" class="w-full p-2 border rounded mb-2">
+                        <input type="text" id="user" placeholder="Usuario" class="w-full p-2 border rounded mb-2">
+                        <button onclick="saveReservation()"
+                            class="w-full px-4 py-2 bg-green-500 text-white rounded">Guardar</button>
+                        <button onclick="closeModal()"
+                            class="w-full mt-2 px-4 py-2 bg-red-500 text-white rounded">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <div id="modalGasto"
+        class="modal hidden fixed inset-0 flex items-center justify-center bg-secundary-opacity backdrop-blur-sm z-50">
+        <div
+            class="bg-mono-negro border-[2px] border-secundary-light text-blanco p-6 rounded-lg shadow-lg w-[90%] max-w-[600px]">
+            <div class="flex items-center gap-[3px] cursor-pointer" data-modal-close>
+                <span class="material-symbols-rounded">chevron_left</span>
+                <p class="text-[12px]">Volver</p>
+            </div>
+
+            <div class="encabezado flex gap-2 items-center bg-transparent my-2">
+                <div class="gota h-[20px] w-[20px] rounded-full bg-essentials-primary shadow-essentials"></div>
+                <p class="bg-transparent text-[25px]">Creacion de un nuevo gasto</p>
+            </div>
+
+            <p class="mb-[10px] text-secundary-light">En este apartado podrás crear gastos de diferentes categorías,
+                recuerda
+                llenar los datos a conciencia para tener un registro exitoso.</p>
+
+            <hr class="h-[2px] w-full" />
+
+
+            <!-- contenido del modal -->
+            <div class="mt-[20px] flex justify-between gap-3 w-full">
+                <div class="w-[50%]">
+                    <p class="my-[5px] text-[14px]">Tipo de gasto:</p>
+                    <div class="custom-select">
+                        <select>
+                            <option>Selecciona una categoría</option>
+                            <option>Imprevisto</option>
+                            <option>Variable</option>
+                            <option>Fijo</option>
+                        </select>
+                        <div class="select-arrow text-blanco"></div>
+                    </div>
+                </div>
+
+                <div class="w-[50%]">
+                    <p class="my-[5px] text-[14px]">Monto total del gasto:</p>
+                    <div
+                        class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
+                        <span
+                            class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">payments</span>
+
+                        <input type="number" id="monto"
+                            class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro"
+                            placeholder="Digita el monto en números." name="montoGasto" />
+                    </div>
+                </div>
+            </div>
+
+            <div class=" mt-[10px] w-[100%]">
+                <p class="my-[5px] text-[14px]">Titulo de gasto:</p>
+                <div
+                    class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
+                    <span
+                        class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">format_italic</span>
+
+                    <input type="text" id="monto"
+                        class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro"
+                        placeholder="Ponle un titulo para el gasto." name="tituloGasto" />
+                </div>
+            </div>
+            <div class=" mt-[10px] w-[100%]">
+                <p class="my-[5px] text-[14px]">Descripción del gasto:</p>
+                <div
+                    class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
+                    <span
+                        class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">format_italic</span>
+
+                    <input type="text" id="monto"
+                        class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro "
+                        placeholder="Describe brevemente este gasto." name="descripcionGasto" />
+                </div>
+            </div>
+
+            <button class="btn-essentials mt-4 w-full" id="confirm-button">Confirmar creacion</button>
+
+        </div>
+
+        <script src="../Assets/js/hora.js"></script>
+        <script src="../Assets/js/modales.js"></script>
+        <script src="../Assets/js/reservas.js"></script>
+</body>
+
+</html>

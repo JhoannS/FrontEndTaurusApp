@@ -1,3 +1,165 @@
-<span class="material-symbols-rounded">
-   square_foot
-   </span>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario Interactivo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <div class="mb-4">
+            <h2 class="text-xl font-bold">Configurar Horario</h2>
+            <label>Hora de inicio:</label>
+            <select id="userStartTime" class="p-2 border rounded"></select>
+            <label>Hora de fin:</label>
+            <select id="userEndTime" class="p-2 border rounded"></select>
+            <button onclick="setSchedule()" class="px-4 py-2 bg-blue-500 text-white rounded">Aplicar</button>
+        </div>
+        <div class="flex justify-between items-center mb-4">
+            <button onclick="changeWeek(-1)" class="px-4 py-2 bg-gray-500 text-white rounded">◀ Semana anterior</button>
+            <h1 class="text-2xl font-bold" id="currentWeek"></h1>
+            <button onclick="changeWeek(1)" class="px-4 py-2 bg-gray-500 text-white rounded">Semana siguiente ▶</button>
+        </div>
+        <div id="schedule" class="grid grid-cols-8 gap-2 hidden">
+            <div></div>
+            <div id="days" class="grid grid-cols-7 gap-2 col-span-7"></div>
+        </div>
+    </div>
+
+    <div id="modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex items-center justify-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+            <h2 class="text-xl font-bold mb-4">Nueva Reserva</h2>
+            <p id="modalDate"></p>
+            <p id="modalTime"></p>
+            <input type="text" id="title" placeholder="Título" class="w-full p-2 border rounded mb-2">
+            <input type="text" id="user" placeholder="Usuario" class="w-full p-2 border rounded mb-2">
+            <button onclick="saveReservation()" class="w-full px-4 py-2 bg-green-500 text-white rounded">Guardar</button>
+            <button onclick="closeModal()" class="w-full mt-2 px-4 py-2 bg-red-500 text-white rounded">Cancelar</button>
+        </div>
+    </div>
+    
+    <script>
+        let currentDate = new Date();
+        let reservations = JSON.parse(localStorage.getItem('reservations')) || {};
+        let userStartTime = 8;
+        let userEndTime = 22;
+        let selectedDate = '';
+        let selectedTime = '';
+
+        function populateTimeSelectors() {
+            const startSelect = document.getElementById('userStartTime');
+            const endSelect = document.getElementById('userEndTime');
+            startSelect.innerHTML = '';
+            endSelect.innerHTML = '';
+            
+            for (let hour = 0; hour <= 23; hour++) {
+                for (let minute of [0, 30]) {
+                    const time = `${hour}:${minute === 0 ? '00' : '30'}`;
+                    startSelect.innerHTML += `<option value="${hour + minute / 60}">${time}</option>`;
+                    endSelect.innerHTML += `<option value="${hour + minute / 60}">${time}</option>`;
+                }
+            }
+        }
+
+        function setSchedule() {
+            userStartTime = parseFloat(document.getElementById('userStartTime').value);
+            userEndTime = parseFloat(document.getElementById('userEndTime').value);
+            
+            if (userStartTime >= userEndTime) {
+                alert('La hora de inicio debe ser menor que la hora de fin.');
+                return;
+            }
+            
+            document.getElementById('schedule').classList.remove('hidden');
+            renderSchedule();
+        }
+
+        function renderSchedule() {
+            const schedule = document.getElementById('days');
+            const currentWeek = document.getElementById('currentWeek');
+            schedule.innerHTML = '';
+            
+            const startDate = new Date(currentDate);
+            startDate.setDate(currentDate.getDate() - currentDate.getDay() + 1);
+            const endDate = new Date(startDate);
+            endDate.setDate(startDate.getDate() + 6);
+            
+            currentWeek.textContent = `${startDate.toLocaleDateString('es-ES', { weekday: 'long', day: '2-digit', month: '2-digit', year: 'numeric' })} - ${endDate.toLocaleDateString('es-ES', { weekday: 'long', day: '2-digit', month: '2-digit', year: 'numeric' })}`;
+            
+            for (let d = 0; d < 7; d++) {
+                const day = new Date(startDate);
+                day.setDate(startDate.getDate() + d);
+                const dateKey = `${day.getFullYear()}-${day.getMonth() + 1}-${day.getDate()}`;
+                
+                const dayDiv = document.createElement('div');
+                dayDiv.className = 'p-4 border rounded-lg bg-gray-100';
+                dayDiv.innerHTML = `<div class="font-bold">${day.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric' })}</div>`;
+                
+                for (let hour = userStartTime; hour < userEndTime; hour += 0.5) {
+                    const h = Math.floor(hour);
+                    const m = hour % 1 === 0 ? '00' : '30';
+                    const time = `${h}:${m}`;
+                    const hourDiv = document.createElement('div');
+                    hourDiv.className = 'p-2 text-center border rounded-lg cursor-pointer bg-gray-200';
+                    hourDiv.onclick = () => openModal(dateKey, time);
+                    hourDiv.innerHTML = `<span class="block">${time}</span>`;
+                    
+                    if (reservations[dateKey] && reservations[dateKey][time]) {
+                        hourDiv.classList.add('bg-green-300');
+                        hourDiv.innerHTML += `<div class="text-xs bg-white p-1 mt-1 rounded">${reservations[dateKey][time].title} - ${reservations[dateKey][time].user} <button onclick="deleteReservation('${dateKey}', '${time}')" class="ml-2 text-red-500">❌</button></div>`;
+                    }
+                    
+                    dayDiv.appendChild(hourDiv);
+                }
+                schedule.appendChild(dayDiv);
+            }
+        }
+        function openModal(date, time) {
+            selectedDate = date;
+            selectedTime = time;
+            document.getElementById('modalDate').textContent = `Fecha: ${date}`;
+            document.getElementById('modalTime').textContent = `Hora: ${time}`;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+
+        function saveReservation() {
+            const title = document.getElementById('title').value;
+            const user = document.getElementById('user').value;
+            if (!title || !user) {
+                alert('Por favor, complete todos los campos.');
+                return;
+            }
+            
+            if (!reservations[selectedDate]) reservations[selectedDate] = {};
+            reservations[selectedDate][selectedTime] = { title, user };
+            localStorage.setItem('reservations', JSON.stringify(reservations));
+            closeModal();
+            renderSchedule();
+        }
+
+        function changeWeek(offset) {
+            currentDate.setDate(currentDate.getDate() + offset * 7);
+            renderSchedule();
+        }
+
+
+        function deleteReservation(dateKey, time) {
+            if (confirm("¿Seguro que quieres eliminar esta reserva?")) {
+                delete reservations[dateKey][time];
+                if (Object.keys(reservations[dateKey]).length === 0) {
+                    delete reservations[dateKey];
+                }
+                localStorage.setItem('reservations', JSON.stringify(reservations));
+                renderSchedule();
+            }
+        }
+        
+        populateTimeSelectors();
+    </script>
+</body>
+</html>

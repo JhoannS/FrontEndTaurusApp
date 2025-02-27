@@ -100,7 +100,7 @@ function calcularPrecioFinal() {
     let descuento = obtenerNumero(document.getElementById('descuentoProducto'));
     let iva = obtenerNumero(document.getElementById('ivaProducto'));
 
-    let precioConDescuento = precioNeto - (precioNeto * (descuento / 100));
+    let precioConDescuento = precioNeto - descuento;
     let precioFinal = precioConDescuento + (precioConDescuento * (iva / 100));
 
     let precioFinalPreview = document.getElementById('precioFinalPreview');

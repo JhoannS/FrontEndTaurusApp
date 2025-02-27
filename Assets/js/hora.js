@@ -16,7 +16,7 @@ function actualizarFechaHora() {
     let horas = fecha.getHours();
     const minutos = fecha.getMinutes().toString().padStart(2, "0");
     const segundos = fecha.getSeconds().toString().padStart(2, "0");
-    const periodo = horas >= 12 ? "Pm" : "Am";
+    const periodo = horas >= 12 ? "pm" : "am";
 
     // Convertir formato 24h a 12h
     if (horas > 12) {

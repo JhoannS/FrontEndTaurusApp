@@ -168,7 +168,7 @@
                 <div class="">
                     <div class="flex justify-between w-full items-center">
                         <h2 class="text-xl font-bold w-[50%]">Personaliza tu tiempo</h2>
-                        <div class="flex items-center gap-3 w-[50%] justify-between">
+                        <div class="flex items-center gap-3 w-[30%] justify-between">
                             <div class="w-full">
                                 <p class="my-[5px] text-[14px]">Hora de inicio:</p>
                                 <div class="custom-select">
@@ -192,28 +192,50 @@
                                 <p class="my-[5px] text-[14px] opacity-0">Acción:</p>
                                 <button onclick="setSchedule()" class="btn-essentials">Aplicar</button>
                             </div>
-                            
+
 
                         </div>
                     </div>
-                            <div class="flex gap-2 justify-between my-4">
-                                <div class="flex gap-2 items-center">
-                                    <button id="prev-month" onclick="changeWeek(-1)"
-                                    class="shadow-lg hover:bg-essentials-primary transition-all flex justify-center items-center rounded-full h-[30px] w-[30px] text-azul"><i
-                                        class="material-symbols-rounded">arrow_left</i></button>
-                                        <p>Semana</p>
-                                <button id="next-month" onclick="changeWeek(1)"
-                                    class="shadow-lg hover:bg-essentials-primary transition-all flex justify-center items-center rounded-full h-[30px] w-[30px] text-azul"><i
-                                        class="material-symbols-rounded">arrow_right</i></button>
-                                </div>
-                                
-                                        <h1 class="text-2xl font-bold" id="currentWeek"></h1>
-                            </div>
+                    <div class="flex gap-2 justify-between my-4">
+                        <div class="flex gap-2 items-center">
+                            <button id="prev-month" onclick="changeWeek(-1)"
+                                class="shadow-lg hover:bg-essentials-primary transition-all flex justify-center items-center rounded-full h-[30px] w-[30px] text-azul"><i
+                                    class="material-symbols-rounded">arrow_left</i></button>
+                            <p>Semana</p>
+                            <button id="next-month" onclick="changeWeek(1)"
+                                class="shadow-lg hover:bg-essentials-primary transition-all flex justify-center items-center rounded-full h-[30px] w-[30px] text-azul"><i
+                                    class="material-symbols-rounded">arrow_right</i></button>
+                        </div>
 
-                            <div id="schedule" class="grid grid-cols-8 gap-2 hidden">
-                        <div></div>
-                        <div id="days_calendario" class="grid grid-cols-7 gap-2 col-span-7"></div>
+                        <h1 class="text-xl font-bold" id="currentWeek"></h1>
                     </div>
+
+                    <div id="schedule" class="grid grid-cols-[0.5fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr] m-0 hidden">
+                        <!-- Columna de Horas -->
+                        <div class="flex flex-col">
+                            <div class="p-2 font-bold text-center">Hora</div>
+                            <div id="horaSpan" class="flex flex-col">
+                                <!-- Aquí se generarán las horas dinámicamente -->
+                            </div>
+                        </div>
+                    
+                        <!-- Días de la Semana -->
+                        <div id="days_calendario" class="grid grid-cols-7 col-span-7">
+                            <!-- Aquí se generarán los días dinámicamente -->
+                        </div>
+                    </div>
+
+                    
+                    
+
+                    
+                    <div id="schedule" class="grid grid-cols-8 hidden">
+                        <div class="font-bold p-2 border-x border-secundary-light">
+                            Hora
+                            <div id="horaSpan" class="flex flex-col pt-2"></div>
+                        </div>
+                        <div id="days_calendario" class="grid grid-cols-7 col-span-7"></div>
+                    </div
                 </div>
 
                 <div id="modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex items-center justify-center">

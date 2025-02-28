@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear Productos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/Assets/css/style.css" />
+    <script src="../Assets/js/styles.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+</head>
+
+<body class="bg-mono flex scrollbar-custom">
+    <!-- Panel de navegacion -->
+    <div class="h-[100vh] w-[60px] flex items-center p-[20px]">
+        <aside class="w-[60px] flex justify-center flex-col gap-2 items-center bg-secundary-default p-2 rounded-full">
+            <div class="gota h-12 w-12 shadow-essentials bg-essentials-primary rounded-full z-20"></div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> space_dashboard </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> swap_horiz </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> savings </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> monitoring </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> identity_platform </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> calendar_clock </span>
+                </a>
+            </div>
+            <div class="btn-link">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> checklist </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> barcode_scanner </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> qr_code_2 </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> donut_small </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> diversity_1 </span>
+                </a>
+            </div>
+        </aside>
+    </div>
+
+    <!-- panel de contenido -->
+    <main class="w-full h-[100%] px-[40px] py-[20px] bg-transparent">
+        <!-- header de opciones -->
+        <header class="w-full h-[100%] flex justify-between mb-[20px]">
+            <div class="date flex gap-3 items-center">
+                <div class="dia flex items-center justify-center font-semibold h-10 w-7 shadow-essentials bg-essentials-primary rounded-full"
+                    id="dia">
+                    00
+                </div>
+                <div class="mes-año flex flex-col text-[14px] font-medium" id="mes-año">
+                    <span id="mes">Enero</span>
+                    <span id="anio">2025</span>
+                </div>
+                <div class="separador h-8 w-[2px] bg-essentials-primary rounded-lg"></div>
+                <div class="hora text-[14px]" id="hora">00:00:00</div>
+            </div>
+
+            <div class="options-user flex gap-2 items-center justify-center">
+                <div class="btn-link-disable">
+                    <span class="bg-transparent material-symbols-rounded">
+                        notifications
+                    </span>
+                </div>
+                <div class="btn-link-disable">
+                    <span class="bg-transparent material-symbols-rounded">
+                        settings
+                    </span>
+                </div>
+                <div class="logo flex gap-3 items-center">
+                    <div class="gota h-10 w-10 shadow-essentials bg-essentials-primary rounded-full"></div>
+                    <div class="logo">
+                        <h3 class="font-semibold">Nombre de Usuario</h3>
+                        <p class="-mt-[8px] text-secundary-light text-[13px] font-medium">
+                            Rol de perfil
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- navegable -->
+        <div class="options flex gap-1 my-2 items-center text-[14px]">
+            <a href="" class="hover:text-essentials-secundary">
+                <p>Dashboard</p>
+            </a>
+            <span class="material-symbols-rounded text-[18px]">chevron_right</span>
+            <a href="" class="hover:text-essentials-secundary">
+                <p>Overviews de inventarios</p>
+            </a>
+            <span class="material-symbols-rounded text-[18px]">chevron_right</span>
+            <a href="" class="hover:text-essentials-secundary">
+                <p>Gestor de productos</p>
+            </a>
+            
+            <span class="material-symbols-rounded text-[18px]">chevron_right</span>
+
+            <p class="font-bold">Crear producto</p>
+        </div>
+
+        <div class="parentOver flex justify-between gap-[60px] mt-4">
+            <div class="w-[60%]">
+                <div class="encabezado mb-5">
+                    <h2 class="text-blanco text-[25px] font-semibold">Creación de mercancia</h2>
+                    <p class="mb-[10px] text-secundary-light">En este apartado podrás crear un nuevo producto a la sucursal
+                        de tu tienda, recuerda llenar todos los campos correspondientes.</p>
+                </div>
+
+                <!-- img -->
+                <div class="container cursor-pointer flex justify-between items-center gap-4">
+                    <div class="wrapper w-full h-full border border-dashed border-secundary-light rounded-lg flex justify-between items-center"
+                        onclick="defaultBtnActive()">
+                        <div class="file-name p-2 flex justify-between w-full">
+                            <p>Imagen de referencia en formato PNG, JPG, JPEG no mayor a 3Mb</p>
+                            <span class="material-symbols-rounded">Upload</span>
+                        </div>
+
+                    </div>
+                    <div id="cancel-btn">
+                        <i class="material-symbols-rounded hover:bg-essentials-primary rounded-md">close</i>
+                    </div>
+
+                    <input id="default-btn" type="file" hidden accept="image/png, image/jpeg, image/jpg, image/gif">
+                </div>
+
+                <!-- form -->
+                <form action="" method="post">
+                    <div class="mt-[5px] flex justify-between gap-3 w-full">
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">PLU:</p>
+                            <div class="input w-full">
+                                <input type="number" placeholder="Ponle identidad a tu produto" id="plu" name="plu">
+                                <span class="material-symbols-rounded text-essentials-primary">pin</span>
+                            </div>
+                        </div>
+
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Nombre:</p>
+                            <div class="input w-full">
+                                <input type="text" placeholder="Escribe su nombre" id="nombreProducto" name="nombreProducto">
+                                <span class="material-symbols-rounded text-essentials-primary">format_italic</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-[5px] flex justify-between gap-3 w-full">
+                        <div class="w-[50%] mt-[5px]">
+                            <p class="my-[5px] text-[16px]">Categoría:</p>
+                            <div class="custom-select ">
+                                <select id="categoriaProducto" name="categoriaProducto">
+                                    <optgroup label="Selecciona una categoria">Categoria</optgroup>
+                                    <option value="sub1">Categoría 1</option>
+                                    <option value="sub2">Categoría 2</option>
+                                    <option value="sub3">Categoría 3</option>
+                                    <option value="sub4">Categoría 4</option>
+                                  </select>
+                                <div class="select-arrow"></div>
+                            </div>
+                        </div>
+
+                        <div class="w-[50%] mt-[5px]">
+                            <p class="my-[5px] text-[16px]">Subcategoría:</p>
+                            <div class="custom-select ">
+                                <select id="subcategoriaProducto" name="subcategoriaProducto">
+                                    <optgroup label="Selecciona una subcategoria">Subcategoria</optgroup>
+                                    <option value="sub1">Subcategoría 1</option>
+                                    <option value="sub2">Subcategoría 2</option>
+                                    <option value="sub3">Subcategoría 3</option>
+                                    <option value="sub4">Subcategoría 4</option>
+                                  </select>
+                                <div class="select-arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-[5px] flex justify-between gap-3 w-full">
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Descripción:</p>
+                            <div class="input w-full">
+                                <input type="text" placeholder="Describe a (nombre)" id="descripcionProducto" name="descripcionProducto">
+                                <span class="material-symbols-rounded text-essentials-primary">format_italic</span>
+                            </div>
+                        </div>
+
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Cantidad en Stock:</p>
+                            <div class="input w-full">
+                                <input type="number" placeholder="¿Cuantos tienes disponibles?" id="stockProducto" name="stockProducto">
+                                <span class="material-symbols-rounded text-essentials-primary">pin</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-[5px] flex justify-between gap-3 w-full">
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Cantidad:</p>
+                            <div class="input w-full">
+                                <input type="number" placeholder="Ejemplo: 400" id="cantidadProducto" name="cantidadProducto">
+                                <span class="material-symbols-rounded text-essentials-primary">pin</span>
+                            </div>
+                        </div>
+
+                        <div class="w-[50%] mt-[5px]">
+                            <p class="my-[5px] text-[16px]">Unidad de medida:</p>
+                            <div class="custom-select ">
+                                <select id="unidadMedidaProducto" name="unidadMedidaProducto">
+                                    <optgroup label="Selecciona una subcategoria">Categoria</optgroup>
+                                    <option value="Unidades">Unidades</option>
+                                    <option value="Onzas">Onzas</option>
+                                    <option value="Gramos">Gramos</option>
+                                    <option value="Mililitros">Mililitros</option>
+                                    <option value="Litros">Litros</option>
+                                    <option value="Kilos">Kilos</option>
+                                    <option value="Libras">Libras</option>
+                                </select>
+                                <div class="select-arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-[5px] flex justify-between gap-3 w-full">
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Marca:</p>
+                            <div class="input w-full">
+                                <input type="text" placeholder="Ejemplo: Coca cola" id="marcaProducto" name="marcaProducto">
+                                <span class="material-symbols-rounded text-essentials-primary">format_italic</span>
+                            </div>
+                        </div>
+
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Precio neto:</p>
+                            <div class="input w-full">
+                                <input type="number" placeholder="Precio comprado" id="precioNetoProducto" name="precioNetoProducto">
+                                <span class="material-symbols-rounded text-essentials-primary">format_italic</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-[5px] flex justify-between gap-3 w-full">
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Descuento:</p>
+                            <div class="input w-full">
+                                <input type="number" placeholder="Escribe el monto" id="descuentoProducto" name="descuentoProducto">
+                                <span class="material-symbols-rounded text-essentials-primary">pin</span>
+                            </div>
+                        </div>
+                        
+
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">IVA %:</p>
+                            <div class="input w-full">
+                                <input type="number" placeholder="Si tiene ICUI E IVA ingresalo asi: (ICUI+IVA)" id="ivaProducto" name="ivaProducto">
+                                <span class="material-symbols-rounded text-essentials-primary">pin</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-[5px] flex justify-between gap-3 w-full">
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Lote:</p>
+                            <div class="input w-full">
+                                <input type="text" placeholder="Ingresa Lote" id="loteProducto" name="loteProducto">
+                                <span class="material-symbols-rounded text-essentials-primary">format_italic</span>
+                            </div>
+                        </div>
+
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Registro Sanitario :</p>
+                            <div class="input w-full">
+                                <input type="text" placeholder="RSA de cada producto" id="rsaProducto" name="rsaProducto">
+                                <span class="material-symbols-rounded text-essentials-primary">format_italic</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-[5px] flex justify-between gap-3 w-full">
+                        <div class=" mt-[5px] w-[50%]">
+                            <p class="my-[5px] text-[16px]">Fecha vencimiento:</p>
+                            <div class="input w-full">
+                                <input type="date" placeholder="" id="vencimientoProducto" name="vencimientoProducto">
+                                <span class="material-symbols-rounded text-essentials-primary">event</span>
+                            </div>
+                        </div>
+
+                        <div class="w-[50%] mt-[5px]">
+                            <p class="my-[5px] text-[16px]">Proveedor:</p>
+                            <div class="custom-select ">
+                                <select id="proveedorProducto" name="proveedorProducto">
+                                    <optgroup label="Selecciona un proveedor">Proveedor</optgroup>
+                                    <option value="NA">No aplica</option>
+                                    <option value="Jhoann Zamudio">Jhoann Zamudio</option>
+                                    
+                                </select>
+                                <div class="select-arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <button class="btn-essentials mt-4 w-full" id="confirm-button">Confirmar creacion</button>
+                </form>
+            </div>
+
+            <div class="w-[40%]  h-[80vh]">
+       
+                    <p class="text-blanco text-[25px] font-semibold">Vista previa de tu produto</p>
+
+                    <div class="image p-2 w-full flex justify-center items-center my-4">
+                        <img alt=""
+                            class="border border-dashed border-secundary-light rounded-lg h-[400px] w-[400px] object-cover">
+                    </div>
+
+          
+
+                <div class=" text-blanco  my-[15px]">
+                    <div class="flex justify-between items-center text-[25px] font-medium">
+                        <p id="nombreProductoPreview">Nombre</p>
+                        <p id="pluPreview">Identificador PLU</p>
+                    </div>
+                    <p class="text-secundary-light text-4" id="descripcionProductoPreview">Descripcion</p>
+                </div>
+
+                <div class="text-blanco flex items-center justify-between text-[15px] my-2">
+                    <p class="flex items-center gap-2">
+                        <span class="material-symbols-rounded text-[15px] text-essentials-primary">
+                            category
+                        </span>
+                        <span id="categoriaProductoPreview">Categoria</span>
+                        
+                    </p>
+                    <p class="flex items-center gap-2"><span
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">view_object_track</span>
+                            <span id="subcategoriaProductoPreview">Subcategoria</span>
+
+                    </p>
+                    <p class="flex items-center gap-2 cantidad" id="stockProductoPreview">20<span class="cantidad">Unidades</span></p>
+                </div>
+
+                <div class="text-blanco flex items-center justify-between text-[15px] my-2">
+                    <p class="flex items-center gap-2"><span
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">square_foot</span>
+                            <span id="cantidadProductoPreview">Unidad</span><span id="unidadMedidaProductoPreview">Medida</span>
+                        
+                    </p>
+                    <p class="flex items-center gap-2"><span
+                        class="material-symbols-rounded text-[15px] text-essentials-primary">person</span> 
+                        <span id="proveedorProductoPreview">Proveedor</span>
+                </p>
+                    <p class="flex items-center gap-2"><span
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">verified</span> 
+                            <span id="marcaProductoPreview">Marca</span>
+                    </p>
+                </div>
+
+                <div class="text-blanco flex items-center justify-between text-[15px] my-2">
+                    <p class="flex items-center gap-2">
+                        <span class="material-symbols-rounded text-[15px] text-essentials-primary">
+                            payments
+                        </span>
+                        <span id="precioNetoProductoPreview">Precio neto</span>
+                    </p>
+                    <p class="flex items-center gap-2"><span
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">remove</span>
+                            <span id="descuentoProductoPreview">Descuento</span> 
+                    </p>
+                    <p class="flex items-center gap-2"><span
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">percent</span>
+                            <span id="ivaProductoPreview">IVA + ICUI</span> 
+                    </p>
+                </div>
+
+                <div class="text-blanco flex items-center justify-between text-[15px] my-2">
+                    <p class="flex items-center gap-2">
+                        <span class="material-symbols-rounded text-[15px] text-essentials-primary">
+                            table_convert
+                        </span>
+                        <span id="loteProductoPreview">Lote</span>
+                    </p>
+                    <p class="flex items-center gap-2"><span
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">news</span> 
+                            <span id="rsaProductoPreview">Registro Sanitario</span>
+                    </p>
+                    <p class="flex items-center gap-2"><span
+                            class="material-symbols-rounded text-[15px] text-essentials-primary">event_busy</span>
+                            <span id="vencimientoProductoPreview">Fecha vencimiento</span>
+                    </p>
+                </div>
+
+                <div class=" flex justify-between items-center">
+                    <div class="estado-orden flex items-center gap-2 my-2">
+                        <div class="gota h-5 w-5 bg-semaforo-verde shadow-verde rounded-full"></div>
+                        <p>Activo</p>
+                    </div>
+                    <p class="flex items-center gap-2 text-[40px]">
+                        <span class="material-symbols-rounded text-[40px] text-essentials-primary">
+                            attach_money
+                        </span>
+                        <span id="precioFinalPreview">0,0</span>
+                    </p>
+                </div>
+
+
+
+
+
+    </main>
+
+    <script src="../Assets/js/hora.js"></script>
+    <script src="../Assets/js/subirImg.js"></script>
+    <script src="../Assets/js/items.js"></script>
+</body>
+
+</html>

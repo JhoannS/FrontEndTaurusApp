@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etiquetado de productos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/Assets/css/style.css" />
+    <script src="../Assets/js/styles.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+</head>
+
+<body class="bg-mono flex scrollbar-custom">
+    <!-- Panel de navegacion -->
+    <div class="h-[100vh] w-[60px] flex items-center p-[20px]">
+        <aside class="w-[60px] flex justify-center flex-col gap-2 items-center bg-secundary-default p-2 rounded-full">
+            <div class="gota h-12 w-12 shadow-essentials bg-essentials-primary rounded-full z-20"></div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> space_dashboard </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> swap_horiz </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> savings </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> monitoring </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> identity_platform </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> calendar_clock </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> checklist </span>
+                </a>
+            </div>
+            <div class="btn-link">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> barcode_scanner </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> qr_code_2 </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> donut_small </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> diversity_1 </span>
+                </a>
+            </div>
+        </aside>
+    </div>
+
+    <!-- panel de contenido -->
+    <main class="w-full h-[100%] px-[40px] py-[20px] bg-transparent">
+        <!-- header de opciones -->
+        <header class="w-full h-[100%] flex justify-between mb-[20px]">
+            <div class="date flex gap-3 items-center">
+                <div class="dia flex items-center justify-center font-semibold h-10 w-7 shadow-essentials bg-essentials-primary rounded-full"
+                    id="dia">
+                    00
+                </div>
+                <div class="mes-año flex flex-col text-[14px] font-medium" id="mes-año">
+                    <span id="mes">Enero</span>
+                    <span id="anio">2025</span>
+                </div>
+                <div class="separador h-8 w-[2px] bg-essentials-primary rounded-lg"></div>
+                <div class="hora text-[14px]" id="hora">00:00:00</div>
+            </div>
+
+            <div class="options-user flex gap-2 items-center justify-center">
+                <div class="btn-link-disable">
+                    <span class="bg-transparent material-symbols-rounded">
+                        notifications
+                    </span>
+                </div>
+                <div class="btn-link-disable">
+                    <span class="bg-transparent material-symbols-rounded">
+                        settings
+                    </span>
+                </div>
+                <div class="logo flex gap-3 items-center">
+                    <div class="gota h-10 w-10 shadow-essentials bg-essentials-primary rounded-full"></div>
+                    <div class="logo">
+                        <h3 class="font-semibold">Nombre de Usuario</h3>
+                        <p class="-mt-[8px] text-secundary-light text-[13px] font-medium">
+                            Rol de perfil
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- navegable -->
+        <div class="options flex gap-1 my-2 items-center text-[14px]">
+            <a href="" class="hover:text-essentials-secundary">
+                <p>Dashboard</p>
+            </a>
+
+            <span class="material-symbols-rounded text-[18px]">chevron_right</span>
+
+            <p class="font-bold">Etiquetado y clasificación</p>
+        </div>
+
+        <!-- header administrativo -->
+        <div class="titulp-input-btn flex justify-between items-center gap-5">
+            <h4 class="font-semibold text-[25px]">Gestion de categorías</h4>
+            <div class="input w-[400px]">
+                <input type="search" id="buscador" placeholder="Buscar etiqueta..." oninput="buscarProducto()"
+                    autocomplete="off">
+                <span class="material-symbols-rounded text-essentials-primary">travel_explore</span>
+            </div>
+
+            <button data-modal-target="modalEtiqueta" type="submit" class="btn-essentials">
+                Crear nueva etiqueta<span class="material-symbols-rounded">
+                    outbound
+                </span>
+            </button>
+        </div>
+
+
+        <div id="etiquetas">
+            <!-- <div class="w-[25%] border border-secundary-light p-2 rounded-lg">
+               
+                    <svg id="barcode-${idUnico}" class="class="w-full h-[100px] bg-red-400 relative rounded-md -z-10"w-full"></svg>
+                    
+                <div class="perfil w-10 h-10 rounded-full bg-essentials-primary shadow-essentials -mt-4 mx-2 z-50">
+                    <img src="../Assets/img/Recursos Essentials/empleado.jpg" class="rounded-full" width="100%" alt="">
+                </div>
+                <div class="nombre-id flex justify-between items-center mt-3">
+                    <p class="text-[25px]"> ${nombre}</p>
+                    <p class="text-[20px]">${idUnico}</p>
+                </div>
+                <div class="fecha-us flex justify-between items-center mt-3">
+                    <div class="fecha">
+                        <p class="text-[14px] text-secundary-light">Fecha de creación:</p>
+                        <p class="text-[14px] text-secundary-light">28 Feb de 2024, 16:27</p>
+                    </div>
+                    <div class="uso">
+                        <p class="text-[14px] text-secundary-light">Uso:</p>
+                        <p class="text-[14px] text-secundary-light">${uso}</p>
+                    </div>
+                </div>
+                <div class="btn-accion flex justify-between items-center mt-2">
+                    <button  class="p-1 rounded-full border border-secundary-light flex items-center justify-center"><span class="material-symbols-rounded text-[20px]">delete</span></button>
+                    <button class="p-1 rounded-full border border-secundary-light flex items-center justify-center"><span class="material-symbols-rounded text-[20px]">edit</span></button>
+                </div>
+            </div> -->
+        </div>
+
+    </main>
+
+
+    <div id="modalEtiqueta"
+        class="modal hidden fixed inset-0 flex items-center justify-center bg-secundary-opacity backdrop-blur-sm z-50">
+        <div
+            class="bg-mono-negro border-[2px] border-secundary-light text-blanco p-6 rounded-lg shadow-lg w-[90%] max-w-[600px]">
+            <div class="flex items-center gap-[3px] cursor-pointer" data-modal-close>
+                <span class="material-symbols-rounded">chevron_left</span>
+                <p class="text-[12px]">Volver</p>
+            </div>
+
+            <div class="encabezado flex gap-2 items-center bg-transparent my-2">
+                <div class="gota h-[20px] w-[20px] rounded-full bg-essentials-primary shadow-essentials"></div>
+                <p class="bg-transparent text-[25px]">Creacion de una nueva etiqueta</p>
+            </div>
+
+            <p class="mb-[10px] text-secundary-light">En este apartado podrás crear etiquetas facilmente con solo llenar
+                unos campos, podras imprimirla y hasta incluso escanearla directamente</p>
+
+            <hr class="h-[2px] w-full" />
+
+
+            <form id="etiquetaForm">
+            <!-- contenido del modal -->
+            <div class="mt-[10px] flex justify-between gap-3 w-full">
+
+                    <div class="w-[100%]">
+                        <p class="my-[5px] text-[14px]">Nombre producto:</p>
+                        <div
+                            class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
+                            <span
+                                class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">format_italic</span>
+
+                            <input type="text" id="nombre"
+                                class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
+                                placeholder="" name="nombreEtiqueta" />
+                        </div>
+                    </div>
+            </div>
+
+            <div class="mt-[10px] flex justify-between gap-3 w-full">
+                <div class="w-[100%]">
+                    <p class="my-[5px] text-[14px]">Uso:</p>
+                    <div
+                        class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
+                        <span
+                            class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">format_italic</span>
+
+                        <input type="text" id="uso"
+                            class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
+                            placeholder="palabra clave Ej: Escanear" name="usoEtiqueta" />
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-essentials mt-4 w-full" id="confirm-button" onclick="generarEtiqueta()">Generar
+                etiqueta</button>
+            </form>
+
+
+        </div>
+
+        <script src="../Assets/js/hora.js"></script>
+        <script src="../Assets/js/modales.js"></script>
+        <script src="../Assets/js/items.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+        <script src="../Assets/js/etiquetas.js" defer></script>
+</body>
+
+</html>

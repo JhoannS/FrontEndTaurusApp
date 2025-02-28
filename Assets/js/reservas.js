@@ -91,41 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-function generarFechas() {
-  const hoy = new Date();
-  const opcionesFecha = { day: "2-digit", month: "2-digit", year: "numeric" };
-  const opcionesDia = { weekday: "long" };
-
-  let html = "";
-  for (let i = 0; i < 7; i++) {
-    let fecha = new Date();
-    fecha.setDate(hoy.getDate() + i);
-
-    let diaSemana = fecha.toLocaleDateString("es-ES", opcionesDia);
-    let fechaFormateada = fecha.toLocaleDateString("es-ES", opcionesFecha);
-
-    // Capitaliza la primera letra del día de la semana
-    diaSemana = diaSemana.charAt(0).toUpperCase() + diaSemana.slice(1);
-
-    html += `
-
-        <h4 class="">${diaSemana}: ${fechaFormateada}</h4>
-        <div class="flex items-center gap-2">
-        <div class="h-4 w-4 shadow-essentials bg-essentials-primary rounded-full"></div>
-        <h1>Hola</h1>
-        </div>
-        
-        
-        \n`;
-  }
-
-  document.getElementById("fechas").innerHTML = html;
-}
-
-document.addEventListener("DOMContentLoaded", generarFechas);
-
-
 let currentDate = new Date();
 let userStartTime = 8;
 let userEndTime = 22;
@@ -400,9 +365,10 @@ function renderSchedule() {
         hourDiv.classList.add(...eventColor.split(" ")); // Aplicar el color desglosado
 
         hourDiv.innerHTML += `
-      <div class="text-[14px] gap-3 flex items-center justify-between ">
-        <p> ${reservations[dateKey][time].title} - ${reservations[dateKey][time].user} </p>
-        <button onclick="deleteReservation('${dateKey}', '${time}')" class="flex items-center justify-between">
+      <div class="text-[14px] gap-3 relative w-full px-1">
+        <p class="flex items-center gap-1"> <span class="text-sm material-symbols-rounded">format_italic</span> ${reservations[dateKey][time].title} </p>
+        <p class="flex items-center gap-1"> <span class="text-sm material-symbols-rounded">people</span> ${reservations[dateKey][time].user} </p>
+        <button onclick="deleteReservation('${dateKey}', '${time}')" class="flex items-center justify-between absolute top-1 right-1 ">
           <span class="text-[16px] material-symbols-rounded p-0">close</span>
         </button>
       </div>

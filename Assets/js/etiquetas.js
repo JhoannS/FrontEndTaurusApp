@@ -27,7 +27,7 @@ function generarEtiqueta(event) {
     contenedor.innerHTML = `
                 <svg id="barcode-${idUnico}" class="w-full rounded-lg h-[100px]"></svg>
                 <div class="perfil w-10 h-10 rounded-full bg-essentials-primary shadow-essentials -mt-4 mx-2 z-50">
-                    <img src="../Assets/img/Recursos Essentials/empleado.jpg" class="rounded-full" width="100%" alt="">
+                    <img src="../Assets/img/Recursos Essentials/dashboard.jpg" class="rounded-full" width="100%" alt="">
                 </div>
                 <div class="nombre-id flex justify-between items-center mt-3">
                     <p class="text-[25px]"> ${nombre}</p>
@@ -54,7 +54,7 @@ function generarEtiqueta(event) {
         JsBarcode(`#barcode-${idUnico}`, idUnico, {
             format: "CODE128",
             displayValue: true,
-            width: 5,  // Grosor de barras
+            width: 4,  // Grosor de barras
             height: 100,  // Altura del código de barras
             margin: 2  // Elimina márgenes extra
         }).render();

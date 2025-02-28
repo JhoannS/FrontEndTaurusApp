@@ -81,7 +81,7 @@
     <!-- panel de contenido -->
     <main class="w-full h-[100%] px-[40px] py-[20px] bg-transparent">
         <!-- header de opciones -->
-        <header class="w-full h-[100%] flex justify-between mb-[20px]">
+        <header class="w-full h-[100%] flex justify-between items-center mb-[20px]">
             <div class="date flex gap-3 items-center">
                 <div class="dia flex items-center justify-center font-semibold h-10 w-7 shadow-essentials bg-essentials-primary rounded-full"
                     id="dia">
@@ -93,8 +93,10 @@
                 </div>
                 <div class="separador h-8 w-[2px] bg-essentials-primary rounded-lg"></div>
                 <div class="hora text-[14px]" id="hora">00:00:00</div>
+                
             </div>
-
+            <div class="hora text-[14px]" id="saludo">00:00:00</div>
+            
             <div class="options-user flex gap-2 items-center justify-center">
                 <div class="btn-link-disable">
                     <span class="bg-transparent material-symbols-rounded">
@@ -223,12 +225,7 @@
                         <div id="days_calendario" class="grid grid-cols-7 col-span-7">
                             <!-- Aquí se generarán los días dinámicamente -->
                         </div>
-                    </div>
-
-                    
-                    
-
-                    
+                    </div>  
                     <div id="schedule" class="grid grid-cols-8 hidden">
                         <div class="font-bold p-2 border-x border-secundary-light">
                             Hora
@@ -238,40 +235,27 @@
                     </div
                 </div>
 
-                <div id="modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex items-center justify-center">
-                    <div class="bg-white p-6 rounded-lg shadow-lg w-96">
-                        <h2 class="text-xl font-bold mb-4">Nueva Reserva</h2>
-                        <p id="modalDate"></p>
-                        <p id="modalTime"></p>
-                        <input type="text" id="title" placeholder="Título" class="w-full p-2 border rounded mb-2">
-                        <input type="text" id="user" placeholder="Usuario" class="w-full p-2 border rounded mb-2">
-                        <button onclick="saveReservation()"
-                            class="w-full px-4 py-2 bg-green-500 text-white rounded">Guardar</button>
-                        <button onclick="closeModal()"
-                            class="w-full mt-2 px-4 py-2 bg-red-500 text-white rounded">Cancelar</button>
-                    </div>
-                </div>
             </div>
         </div>
 
 
     </main>
 
-    <div id="modalGasto"
+    <div id="modal"
         class="modal hidden fixed inset-0 flex items-center justify-center bg-secundary-opacity backdrop-blur-sm z-50">
         <div
             class="bg-mono-negro border-[2px] border-secundary-light text-blanco p-6 rounded-lg shadow-lg w-[90%] max-w-[600px]">
-            <div class="flex items-center gap-[3px] cursor-pointer" data-modal-close>
+            <div class="flex items-center gap-[3px] cursor-pointer" onclick="closeModal()">
                 <span class="material-symbols-rounded">chevron_left</span>
                 <p class="text-[12px]">Volver</p>
             </div>
 
             <div class="encabezado flex gap-2 items-center bg-transparent my-2">
                 <div class="gota h-[20px] w-[20px] rounded-full bg-essentials-primary shadow-essentials"></div>
-                <p class="bg-transparent text-[25px]">Creacion de un nuevo gasto</p>
+                <p class="bg-transparent text-[25px]">Creacion de una reserva</p>
             </div>
 
-            <p class="mb-[10px] text-secundary-light">En este apartado podrás crear gastos de diferentes categorías,
+            <p class="mb-[10px] text-secundary-light">En este apartado podrás crear varias reservas en diferene horario,
                 recuerda
                 llenar los datos a conciencia para tener un registro exitoso.</p>
 
@@ -280,65 +264,62 @@
 
             <!-- contenido del modal -->
             <div class="mt-[20px] flex justify-between gap-3 w-full">
-                <div class="w-[50%]">
-                    <p class="my-[5px] text-[14px]">Tipo de gasto:</p>
+                <div class=" mt-[10px] w-[50%]">
+                    <p class="my-[5px] text-[14px]">Hora de reserva:</p>
+                    <div
+                        class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
+                        <span
+                            class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">alarm</span>
+    
+                        <p id="modalTime"></p>
+                    </div>
+                    </div>
+                    <div class=" mt-[10px] w-[50%]">
+                        <p class="my-[5px] text-[14px]">Fecha de reserva:</p>
+                        <div
+                            class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
+                            <span
+                                class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">event</span>
+        
+                            <p id="modalDate"></p>
+                        </div>
+                        </div>
+            </div>
+            <div class="mt-[0px] flex justify-between gap-3 w-full">
+                <div class="mt-[10px] w-[50%]">
+                    <p class="my-[5px] text-[14px]">Cliente:</p>
                     <div class="custom-select">
-                        <select>
-                            <option>Selecciona una categoría</option>
-                            <option>Imprevisto</option>
-                            <option>Variable</option>
-                            <option>Fijo</option>
+                        <select id="user">
+                            <option>Jhoann Zamudio</option>
+                            <option>Salomé Zamudio</option>
+                            <option>Nikolay Zamudio</option>
                         </select>
                         <div class="select-arrow text-blanco"></div>
                     </div>
                 </div>
-
-                <div class="w-[50%]">
-                    <p class="my-[5px] text-[14px]">Monto total del gasto:</p>
-                    <div
-                        class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
-                        <span
-                            class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">payments</span>
-
-                        <input type="number" id="monto"
-                            class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro"
-                            placeholder="Digita el monto en números." name="montoGasto" />
-                    </div>
-                </div>
-            </div>
-
-            <div class=" mt-[10px] w-[100%]">
-                <p class="my-[5px] text-[14px]">Titulo de gasto:</p>
+                <div class=" mt-[10px] w-[50%]">
+                <p class="my-[5px] text-[14px]">Titulo de reserva:</p>
                 <div
                     class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
                     <span
                         class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">format_italic</span>
 
-                    <input type="text" id="monto"
+                    <input type="text" id="title"
                         class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro"
-                        placeholder="Ponle un titulo para el gasto." name="tituloGasto" />
+                        placeholder="Palabra clave" />
                 </div>
-            </div>
-            <div class=" mt-[10px] w-[100%]">
-                <p class="my-[5px] text-[14px]">Descripción del gasto:</p>
-                <div
-                    class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
-                    <span
-                        class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">format_italic</span>
-
-                    <input type="text" id="monto"
-                        class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro "
-                        placeholder="Describe brevemente este gasto." name="descripcionGasto" />
                 </div>
             </div>
 
-            <button class="btn-essentials mt-4 w-full" id="confirm-button">Confirmar creacion</button>
+            
+            
+            <button class="btn-essentials mt-4 w-full" onclick="saveReservation()">Confirmar creacion</button>
 
         </div>
 
-        <script src="../Assets/js/hora.js"></script>
-        <script src="../Assets/js/modales.js"></script>
-        <script src="../Assets/js/reservas.js"></script>
+        <script src="../Assets/js/hora.js" defer></script>
+        <script src="../Assets/js/modales.js" defer></script>
+        <script src="../Assets/js/reservas.js" defer></script>
 </body>
 
 </html>

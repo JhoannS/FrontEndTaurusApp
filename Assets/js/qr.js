@@ -38,7 +38,15 @@ let idsGenerados = new Set();
 
             document.getElementById("contenedorQR").appendChild(contenedor);
 
-            new QRCode(document.getElementById(`qrcode-${idUnico}`), enlace);
+            new QRCode(document.getElementById(`qrcode-${idUnico}`), {
+                text: enlace,
+                width: 400,  // Aumenta el tamaño (default es 128)
+                height: 400, // Aumenta el tamaño (default es 128)
+                colorDark: "#000000", // Color del QR
+                colorLight: "#ffffff", // Fondo del QR
+                correctLevel: QRCode.CorrectLevel.H // Nivel de corrección
+            });
+            
         }
 
         function guardarQR(titulo, enlace, idUnico) {

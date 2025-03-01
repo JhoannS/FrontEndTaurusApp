@@ -23,12 +23,11 @@ function generarEtiqueta(event) {
     guardarEtiqueta(nombre, uso, idUnico);  // Enviar a la base de datos
 
     const contenedor = document.createElement("div");
-    contenedor.className = "w-[20%] border border-secundary-light p-2 rounded-lg";
+    contenedor.className = "w-[32.3%] m-1 p-2 rounded-lg gap-1";
     contenedor.innerHTML = `
-                <svg id="barcode-${idUnico}" class="w-full rounded-lg h-[100px]"></svg>
-                <div class="perfil w-10 h-10 rounded-full bg-essentials-primary shadow-essentials -mt-4 mx-2 z-50">
-                    <img src="../Assets/img/Recursos Essentials/dashboard.jpg" class="rounded-full" width="100%" alt="">
-                </div>
+               
+                <svg id="barcode-${idUnico}" class="w-full rounded-lg h-[100px] -z-50"></svg>
+                 
                 <div class="nombre-id flex justify-between items-center mt-3">
                     <p class="text-[25px]"> ${nombre}</p>
                     <p class="text-[20px]">${idUnico}</p>

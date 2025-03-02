@@ -1,30 +1,38 @@
 let idsGenerados = new Set();
 
-        function generarIDUnico() {
-            let id;
-            do {
-                id = Math.floor(10000000000 + Math.random() * 90000000000).toString();
-            } while (idsGenerados.has(id));
-            idsGenerados.add(id);
-            return id;
-        }
+function generarIDUnico() {
+  let id;
+  do {
+    id = Math.floor(10000000000 + Math.random() * 90000000000).toString();
+  } while (idsGenerados.has(id));
+  idsGenerados.add(id);
+  return id;
+}
 
-        function generarQR(event) {
-            event.preventDefault();
+function generarQR(event) {
+  event.preventDefault();
 
-            const titulo = document.getElementById("titulo").value.trim();
-            const enlace = document.getElementById("enlace").value.trim();
-            if (!titulo || !enlace) {
-                alert("Por favor, completa todos los campos.");
-                return;
-            }
+  const titulo = document.getElementById("titulo").value.trim();
+  const enlaceIngresado = document.getElementById("enlace").value.trim();
 
-            const idUnico = generarIDUnico();
-            guardarQR(titulo, enlace, idUnico);
+  // Asegurar que el enlace tiene el formato correcto
+  const enlace =
+    enlaceIngresado.startsWith("http://") ||
+    enlaceIngresado.startsWith("https://")
+      ? enlaceIngresado
+      : `https://${enlaceIngresado}`;
 
-            const contenedor = document.createElement("div");
-            contenedor.className = "p-4 rounded-lg shadow-lg w-[25%]";
-            contenedor.innerHTML = `
+  if (!titulo || !enlace) {
+    alert("Por favor, completa todos los campos.");
+    return;
+  }
+
+  const idUnico = generarIDUnico();
+  guardarQR(titulo, enlace, idUnico);
+
+  const contenedor = document.createElement("div");
+  contenedor.className = "p-4 rounded-lg shadow-lg w-[25%]";
+  contenedor.innerHTML = `
                <div id="qrcode-${idUnico}" class="w-[100%]"></div>
                 <div class="titulo-id flex justify-between items-center">
                     <h3 class="text-lg font-semibold mb-2">${titulo}</h3>
@@ -36,28 +44,27 @@ let idsGenerados = new Set();
                 </a>
             `;
 
-            document.getElementById("contenedorQR").appendChild(contenedor);
+  document.getElementById("contenedorQR").appendChild(contenedor);
 
-            new QRCode(document.getElementById(`qrcode-${idUnico}`), {
-                text: enlace,
-                width: 400,  // Aumenta el tamaño (default es 128)
-                height: 400, // Aumenta el tamaño (default es 128)
-                colorDark: "#000000", // Color del QR
-                colorLight: "#ffffff", // Fondo del QR
-                correctLevel: QRCode.CorrectLevel.H // Nivel de corrección
-            });
-            
-        }
+  new QRCode(document.getElementById(`qrcode-${idUnico}`), {
+    text: enlace,
+    width: 400, // Aumenta el tamaño (default es 128)
+    height: 400, // Aumenta el tamaño (default es 128)
+    colorDark: "#000000", // Color del QR
+    colorLight: "#ffffff", // Fondo del QR
+    correctLevel: QRCode.CorrectLevel.H, // Nivel de corrección
+  });
+}
 
-        function guardarQR(titulo, enlace, idUnico) {
-            fetch("http://localhost:3000/guardar", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ titulo, enlace, codigo: idUnico })
-            })
-            .then(response => response.json())
-            .then(data => console.log("QR guardado:", data))
-            .catch(error => console.error("Error al guardar:", error));
-        }
+function guardarQR(titulo, enlace, idUnico) {
+  fetch("http://localhost:3000/guardar", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ titulo, enlace, codigo: idUnico }),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log("QR guardado:", data))
+    .catch((error) => console.error("Error al guardar:", error));
+}
 
-        document.getElementById("qrForm").addEventListener("submit", generarQR);
+document.getElementById("qrForm").addEventListener("submit", generarQR);

@@ -66,7 +66,7 @@
     --complement_essentials:#FF758F;
 
     /* SMART APP */
-    --primary_smart:#DEE2FF;
+    --primary_smart:#AF68E4;
     --secundary_smart:#FEEAFA;
     --complement_smart:#EFD3D7;
 }
@@ -78,12 +78,13 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  color:var(--mono_blanco);
   transition: all ease-in-out .2s;
 }
 
 body{
   background: var(--mono_negro);
+  color:var(--mono_blanco);
+
 }
 
 .fade-in {

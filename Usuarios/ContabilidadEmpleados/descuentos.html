@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Salario base</title>
+    <title>Descuento y deducciones</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/Assets/css/style.css" />
     <script src="../../Assets/js/styles.js"></script>
@@ -138,18 +138,18 @@
             </a>
             
             <span class="material-symbols-rounded text-[18px]">chevron_right</span>
-            <p class="font-bold">Cálculo salario base</p>
+            <p class="font-bold">Descuentos y deducciones</p>
         </div>
 
         <div class="justify-center flex items-center p-[20px]">
             <nav class="w-auto flex justify-center gap-2 items-center bg-secundary-default p-2 rounded-full">
                 
-                <div class="btn-link w-7 h-7">
+                <div class="btn-link-disable w-7 h-7">
                     <a href="" class="bg-transparent flex items-center justify-center ">
                         <span class="material-symbols-rounded  text-[20px]"> paid </span>
                     </a>
                 </div>
-                <div class="btn-link-disable w-7 h-7">
+                <div class="btn-link w-7 h-7">
                     <a href="" class="bg-transparent flex items-center justify-center ">
                         <span class="material-symbols-rounded  text-[20px]"> money_off </span>
                     </a>
@@ -203,21 +203,21 @@
         </div>
 
         <div class="contable-empleado flex justify-between items-center w-full gap-3 h-[75vh]">
-          <div class="contable w-[70%] flex flex-col justify-center   h-full  overflow-y-auto scrollbar-custom">
+          <div class="contable w-[70%] flex flex-col justify-center  h-full overflow-y-auto scrollbar-custom">
             <div class="encabezado flex gap-2 items-center bg-transparent">
               <div
                 class="gota h-[20px] w-[20px] rounded-full bg-essentials-primary shadow-essentials"
               ></div>
-              <p class="text-[20px]">Cálculo de salario base:</p>
+              <p class="text-[20px]">Descuentos y deducciones:</p>
             </div>
-            <p class="font-light">Registro del salario base mensual, quincenal o semanal de cada empleado.</p>
+            <p class="font-light">Gestión de descuentos por préstamos, multas, retenciones fiscales, seguridad social y otros conceptos.</p>
             <div class="input w-full my-3">
               <input type="search" id="buscador" placeholder="Buscar empleado en tiempo real..." oninput="buscarProducto()" autocomplete="off">
               <span class="material-symbols-rounded text-essentials-primary">travel_explore</span>
           </div>
 
           <div class="monto flex items-center gap-1">
-             <h3 class="text-[22px]">Salario base sin extras: </h3>
+             <h3 class="text-[22px]">Salario base sin extras: </h3> 
              <div class="flex items-center gap-2">
               <span class="material-symbols-rounded text-essentials-primary">payments</span>
               <span class="text-[22px]">$Salario del empleado buscado</span>
@@ -226,7 +226,7 @@
 
           <div class="mt-[20px] flex justify-between gap-3 w-full">
             <div class="w-[50%]">
-              <p class="my-[5px] text-[14px]">Modificar salario de <span>Jhoann Sebastian Zamudio</span></p>
+              <p class="my-[5px] text-[14px]">Ingresa el monto a descontar</p>
               <div
                 class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
               >
@@ -245,24 +245,52 @@
               </div>
             </div>
             <div class="w-[50%]">
-              <p class="my-[5px] text-[14px]">Periodo de trabajo</p>
-              <div class="custom-select">
-                <select>
-                  <option>Selecciona un periodo</option>
-                  <option>Diario</option>
-                  <option>Semanal</option>
-                  <option>quincenal</option>
-                  <option>Mensual</option>
-                </select>
-                <div class="select-arrow"></div>
+                <p class="my-[5px] text-[14px]">Ingrese la justificación</p>
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
+                    >format_italic</span
+                  >
+    
+                  <input
+                    type="text"
+                    id="monto"
+                    class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro"
+                    placeholder=""
+                    name="salarioEmpleado"
+                  />
+                </div>
               </div>
-            </div>
           </div>
 
-          <button class="btn-essentials mt-4 w-full" id="confirm-button">Confirmar cambios</button>
+          <button class="btn-essentials my-6 w-full" id="confirm-button">Confirmar cambios</button>
+
+          <div class="encabezado flex gap-2 items-center bg-transparent">
+            <div
+              class="gota h-[20px] w-[20px] rounded-full bg-essentials-primary shadow-essentials"
+            ></div>
+            <p class="text-[20px]">Mis registros:</p>
+          </div>
+          <p class="font-light">Recuerda que este cambio se mantendrá hasta que exportes la nomina total</p>
+
+          
+        <div class="border border-secundary-light rounded-lg w-full p-2 flex justify-between items-center my-3">
+            <div class="metodoPago-monto">
+                <p class="text-[14px]">Justificación</p>
+                <p class="font-bold text-[25px]">$ 0,00</p>
+            </div>
+            <div
+                class="contador bg-essentials-primary p-2 rounded-md flex justify-center items-center w-auto h-6 font-bold">
+                1% <span class="material-symbols-rounded"> arrow_drop_up </span>
+            </div>
+        </div>
+
+
          
           </div>
-          <div class="empleado w-[30%] h-full flex flex-col justify-center text-center">
+          <div class="empleado w-[30%]  flex flex-col justify-center text-center">
             <div class="contenido ">
 
             <div class="imagen grid place-content-center my-3">

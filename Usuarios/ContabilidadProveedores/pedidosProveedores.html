@@ -153,6 +153,11 @@
                 <input type="search" id="searchInput" placeholder="Buscar pedido..." autocomplete="off">
                 <span class="material-symbols-rounded text-essentials-primary">travel_explore</span>
             </div>
+            <button data-modal-target="modalPedidos" type="submit" class="btn-essentials">
+                Crear nuevo proveedor<span class="material-symbols-rounded">
+                    outbound
+                </span>
+            </button>
 
 
         </div>
@@ -225,11 +230,144 @@
             </div>
         </div>
 
+        <div
+    id="modalPedidos"
+    class="modal hidden fixed inset-0 flex items-center justify-center bg-secundary-opacity backdrop-blur-sm z-50"
+  >
+    <div
+      class="bg-mono-negro border-[2px] border-secundary-light text-blanco p-6 rounded-lg shadow-lg w-[90%] max-w-[600px]"
+    >
+      <div
+        class="flex items-center gap-[3px] cursor-pointer"
+        data-modal-close
+      >
+        <span class="material-symbols-rounded">chevron_left</span>
+        <p class="text-[12px]">Volver</p>
+      </div>
+
+      <div class="encabezado flex gap-2 items-center bg-transparent my-2">
+        <div
+          class="gota h-[20px] w-[20px] rounded-full bg-essentials-primary shadow-essentials"
+        ></div>
+        <p class="bg-transparent text-[25px]">Creacion de un nuevo pedido a proveedor</p>
+      </div>
+
+      <p class="mb-[10px] text-secundary-light">Este apartado podrás hacer pedidos a proveedores ya registrados, recuerda llenar todos los campos para tener un registro exitoso. </p>
+
+      <hr class="h-[2px] w-full" />
+
+      
+        <!-- contenido del modal -->
+        <div class="mt-[10px] flex justify-between gap-3 w-full">
+            <div class="w-[100%]">
+                <p class="my-[5px] text-[14px]">Busca el proveedor:</p>
+                <div class="custom-select">
+                  <select>
+                    <option>Selecciona un proveedor</option>
+                    <option>Jhoann Zamudio</option>
+                    <option>Salomé Zamudio</option>
+                    <option>Nikolay Zamudio</option>
+                  </select>
+                  <div class="select-arrow"></div>
+                </div>
+              </div>
+          
+        </div>
+        <div class="mt-[10px] flex justify-between gap-3 w-full">
+            <div class="w-[50%]">
+              <p class="my-[5px] text-[14px]">Producto:</p>
+              <div
+                class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
+              >
+                <span
+                  class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
+                  >category</span
+                >
+  
+                <input
+                  type="text"
+                  id=""
+                  class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
+                  placeholder=""
+                  name="emailProveedor"
+                />
+              </div>
+            </div>
+  
+            <div class="w-[50%]">
+              <p class="my-[5px] text-[14px]">Cantidad:</p>
+              <div
+                class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
+              >
+                <span
+                  class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
+                  >pin</span
+                >
+  
+                <input
+                  type="number"
+                  id=""
+                  class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
+                  placeholder=""
+                  name="numeroProveedor"
+                />
+              </div>
+            </div>
+            
+          </div>
+          <div class="mt-[10px] flex justify-between gap-3 w-full">
+            <div class="w-[50%]">
+              <p class="my-[5px] text-[14px]">Monto total a pagar</p>
+              <div
+                class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
+              >
+                <span
+                  class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
+                  >payments</span
+                >
+  
+                <input
+                  type="number"
+                  id=""
+                  class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
+                  placeholder=""
+                  name="mercanciaProveedor"
+                />
+              </div>
+            </div>
+            <div class="w-[50%]">
+                <p class="my-[5px] text-[14px]">Fecha de pago:</p>
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
+                    >event</span
+                  >
+    
+                  <input
+                    type="date"
+                    id=""
+                    class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
+                    placeholder=""
+                    name="mercanciaProveedor"
+                  />
+                </div>
+              </div>
+  
+           
+            
+          </div>
+
+          <button class="btn-essentials mt-4 w-full" id="confirm-button">Confirmar creacion</button>
+       
+</div>
     </main>
 
     <script src="../../Assets/js/hora.js"></script>
     <script src="../../Assets/js/exportarExcel.js"></script>
     <script src="../../Assets/js/buscadorMenu.js"></script>
+    <script src="../../Assets/js/modales.js"></script>
 
 </body>
 

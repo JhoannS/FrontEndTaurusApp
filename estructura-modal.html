@@ -1,189 +1,130 @@
- <button data-modal-target="modalOverlay" type="submit" class="btn-essentials">Crear nueva sucursal <span class="material-symbols-rounded"> outbound </span> </button>
+<button data-modal-target="modalOverlay" type="submit" class="btn-essentials">Crear nueva sucursal <span
+    class="material-symbols-rounded"> outbound </span> </button>
 
- <div
-    id="modalOverlay"
-    class="modal hidden fixed inset-0 flex items-center justify-center bg-secundary-opacity backdrop-blur-sm z-50"
-  >
-    <div
-      class="bg-mono-negro border-[2px] border-secundary-light p-6 rounded-lg shadow-lg w-[90%] max-w-[600px]"
-    >
-      <div
-        class="flex items-center gap-[3px] cursor-pointer"
-        data-modal-close
-      >
-        <span class="material-symbols-rounded">chevron_left</span>
-        <p class="text-[12px]">Volver</p>
+<div id="modalOverlay"
+  class="modal hidden fixed inset-0 flex items-center justify-center bg-secundary-opacity backdrop-blur-sm z-50">
+  <div class="bg-mono-negro border-[2px] border-secundary-light p-6 rounded-lg shadow-lg w-[90%] max-w-[600px]">
+    <div class="flex items-center gap-[3px] cursor-pointer" data-modal-close>
+      <span class="material-symbols-rounded">chevron_left</span>
+      <p class="text-[12px]">Volver</p>
+    </div>
+
+    <div class="encabezado flex gap-2 items-center bg-transparent my-2">
+      <div class="gota h-[20px] w-[20px] rounded-full bg-essentials-primary shadow-essentials"></div>
+      <p class="bg-transparent text-[25px]">Creacion de una nueva sucursal</p>
+    </div>
+
+    <p class="mb-[10px] text-secundary-light">En este apartado podrás crear una nueva sucursal de tu tienda, recuerda
+      llenar todos los campos correspondientes.</p>
+
+    <hr class="h-[2px] w-full" />
+
+
+    <!-- contenido del modal -->
+    <div class="flex items-center justify-between my-[10px]">
+      <h5 class="text-[20px]">Orden #98979778</h5>
+      <div>
+        <div class="flex items-center gap-[6px] text-[8px] cursor-pointer" id="">
+          <p>Guardar PDF</p>
+          <span class="material-symbols-rounded text-[15px]">file_Save</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-between my-[10px]">
+      <h5 class="text-[16px]">Fecha de creación: Nov 29,2024</h5>
+      <div>
+        <div class="flex items-center gap-[6px] -mt-[10px] text-[16px]" id="">
+          <p>Mesa 5</p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="h-[2px] w-full" />
+
+    <div class="mt-[20px] flex justify-between gap-3 w-full">
+      <div class="w-[50%]">
+        <p class="my-[5px] text-[14px]">Método de pago:</p>
+        <div class="custom-select">
+          <select>
+            <option>Selecciona un método</option>
+            <option>Efectivo</option>
+            <option>Nequi</option>
+            <option>Daviplata</option>
+            <option>Tarjeta</option>
+          </select>
+          <div class="select-arrow"></div>
+        </div>
       </div>
 
-      <div class="encabezado flex gap-2 items-center bg-transparent my-2">
+      <div class="w-[50%]">
+        <p class="my-[5px] text-[14px]">Monto a pagar:</p>
         <div
-          class="gota h-[20px] w-[20px] rounded-full bg-essentials-primary shadow-essentials"
-        ></div>
-        <p class="bg-transparent text-[25px]">Creacion de una nueva sucursal</p>
+          class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
+          <span class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">payments</span>
+
+          <input type="text" id="monto" class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro"
+            placeholder="" name="monto" />
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-[10px] flex justify-between gap-3 w-full">
+      <div class="w-[50%]">
+        <p class="my-[5px] text-[14px]">Dinero recibido:</p>
+        <div
+          class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
+          <span class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">payments</span>
+
+          <input type="text" id="monto" class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro"
+            placeholder="" name="monto" />
+        </div>
       </div>
 
-      <p class="mb-[10px] text-secundary-light">En este apartado podrás crear una nueva sucursal de tu tienda, recuerda
-        llenar todos los campos correspondientes.</p>
+      <div class=" w-[50%]">
+        <p class="my-[5px] text-[14px]">Dinero a devolver:</p>
+        <div
+          class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
+          <span class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">payments</span>
 
-      <hr class="h-[2px] w-full" />
-
-      
-        <!-- contenido del modal -->
-        <div class="flex items-center justify-between my-[10px]">
-          <h5 class="text-[20px]">Orden #98979778</h5>
-          <div>
-            <div
-              class="flex items-center gap-[6px] text-[8px] cursor-pointer"
-              id=""
-            >
-              <p>Guardar PDF</p>
-              <span class="material-symbols-rounded text-[15px]">file_Save</span>
-            </div>
-          </div>
+          <input type="text" id="monto" class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro"
+            placeholder="" name="monto" />
         </div>
+      </div>
 
-        <div class="flex items-center justify-between my-[10px]">
-          <h5 class="text-[16px]">Fecha de creación: Nov 29,2024</h5>
-          <div>
-            <div
-              class="flex items-center gap-[6px] -mt-[10px] text-[16px]"
-              id=""
-            >
-              <p>Mesa 5</p>
-            </div>
-          </div>
-        </div>
+    </div>
+    <div class=" mt-[10px] w-[100%]">
+      <p class="my-[5px] text-[14px]">Comentario:</p>
+      <div
+        class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]">
+        <span class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]">format_italic</span>
 
-        <hr class="h-[2px] w-full" />
+        <input type="text" id="monto" class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro"
+          placeholder="" name="monto" />
+      </div>
+    </div>
 
-        <div class="mt-[20px] flex justify-between gap-3 w-full">
-          <div class="w-[50%]">
-            <p class="my-[5px] text-[14px]">Método de pago:</p>
-            <div class="custom-select">
-              <select>
-                <option>Selecciona un método</option>
-                <option>Efectivo</option>
-                <option>Nequi</option>
-                <option>Daviplata</option>
-                <option>Tarjeta</option>
-              </select>
-              <div class="select-arrow"></div>
-            </div>
-          </div>
+    <div class="flex items-center space-x-3 mt-[10px]">
+      <label class="group flex items-center cursor-pointer">
+        <input class="hidden peer" type="checkbox" />
 
-          <div class="w-[50%]">
-            <p class="my-[5px] text-[14px]">Monto a pagar:</p>
-            <div
-              class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
-            >
-              <span
-                class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                >payments</span
-              >
+        <span
+          class="relative w-4 h-4 flex justify-center items-center bg-gray-100 border-2 border-gray-400 rounded-md shadow-md transition-all duration-500 peer-checked:border-rojo peer-checked:bg-rojo peer-hover:scale-105">
+          <span
+            class="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10 opacity-0 peer-checked:opacity-100 rounded-md transition-all duration-500 peer-checked:animate-pulse"></span>
 
-              <input
-                type="text"
-                id="monto"
-                class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro"
-                placeholder=""
-                name="monto"
-              />
-            </div>
-          </div>
-        </div>
+          <svg fill="currentColor" viewBox="0 0 20 20"
+            class="hidden w-5 h-5 text-white peer-checked:block transition-transform duration-500 transform scale-50 peer-checked:scale-100"
+            xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd"
+              d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"
+              fill-rule="evenodd"></path>
+          </svg>
+        </span>
 
-        <div class="mt-[10px] flex justify-between gap-3 w-full">
-          <div class="w-[50%]">
-            <p class="my-[5px] text-[14px]">Dinero recibido:</p>
-            <div
-              class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
-            >
-              <span
-                class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                >payments</span
-              >
-
-              <input
-                type="text"
-                id="monto"
-                class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro"
-                placeholder=""
-                name="monto"
-              />
-            </div>
-          </div>
-
-          <div class=" w-[50%]">
-            <p class="my-[5px] text-[14px]">Dinero a devolver:</p>
-            <div
-              class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
-            >
-              <span
-                class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                >payments</span
-              >
-
-              <input
-                type="text"
-                id="monto"
-                class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro"
-                placeholder=""
-                name="monto"
-              />
-            </div>
-          </div>
-          
-        </div>
-        <div class=" mt-[10px] w-[100%]">
-          <p class="my-[5px] text-[14px]">Comentario:</p>
-          <div
-            class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
-          >
-            <span
-              class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-              >format_italic</span
-            >
-
-            <input
-              type="text"
-              id="monto"
-              class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro"
-              placeholder=""
-              name="monto"
-            />
-          </div>
-        </div>
-
-        <div class="flex items-center space-x-3 mt-[10px]">
-          <label class="group flex items-center cursor-pointer">
-            <input class="hidden peer" type="checkbox" />
-
-            <span
-              class="relative w-4 h-4 flex justify-center items-center bg-gray-100 border-2 border-gray-400 rounded-md shadow-md transition-all duration-500 peer-checked:border-rojo peer-checked:bg-rojo peer-hover:scale-105"
-            >
-              <span
-                class="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10 opacity-0 peer-checked:opacity-100 rounded-md transition-all duration-500 peer-checked:animate-pulse"
-              ></span>
-
-              <svg
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                class="hidden w-5 h-5 text-white peer-checked:block transition-transform duration-500 transform scale-50 peer-checked:scale-100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"
-                  fill-rule="evenodd"
-                ></path>
-              </svg>
-            </span>
-
-            <span
-              class="ml-3 text-[12px] font-medium transition-colors duration-300"
-            >
-              Imprimir recibo de compra.
-            </span>
-          </label>
-        </div>
-</div>
+        <span class="ml-3 text-[12px] font-medium transition-colors duration-300">
+          Imprimir recibo de compra.
+        </span>
+      </label>
+    </div>
+  </div>

@@ -183,6 +183,17 @@ body{
     gap: 8px;
 }
 
+.btn-verde{
+  box-shadow: 0px 8px 28px var(--verde);
+  background: var(--verde);
+  border-radius: 8px;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
 .btn-essentials-secundary{
   background: var(--primary_essentials);
   border-radius: 8px;

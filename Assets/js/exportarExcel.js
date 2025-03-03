@@ -8,7 +8,7 @@ function exportarTablaAExcel(idTabla, nombreArchivo) {
 
     // Crear un libro de trabajo
     let wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, "Movimientos");
+    XLSX.utils.book_append_sheet(wb, ws, "Informacion de mi tabla");
 
     // Guardar el archivo
     XLSX.writeFile(wb, `${nombreArchivo}.xlsx`);

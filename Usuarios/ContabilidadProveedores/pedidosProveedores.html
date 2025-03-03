@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedidos a proveedores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../Assets/css/style.css" />
+    <script src="../../Assets/js/styles.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+</head>
+
+<body class="bg-mono flex scrollbar-custom">
+    <!-- Panel de navegacion -->
+    <div class="h-[100vh] w-[60px] flex items-center p-[20px]">
+        <aside class="w-[60px] flex justify-center flex-col gap-2 items-center bg-secundary-default p-2 rounded-full">
+            <div class="gota h-12 w-12 shadow-essentials bg-essentials-primary rounded-full z-20"></div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> space_dashboard </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> swap_horiz </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> savings </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> monitoring </span>
+                </a>
+            </div>
+            <div class="btn-link">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> identity_platform </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> calendar_clock </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> checklist </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> barcode_scanner </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> qr_code_2 </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> donut_small </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> diversity_1 </span>
+                </a>
+            </div>
+        </aside>
+    </div>
+
+    <!-- panel de contenido -->
+    <main class="w-full h-[100%] px-[40px] py-[20px] bg-transparent">
+        <!-- header de opciones -->
+        <header class="w-full h-[100%] flex justify-between mb-[20px]">
+            <div class="date flex gap-3 items-center">
+                <div class="dia flex items-center justify-center font-semibold h-10 w-7 shadow-essentials bg-essentials-primary rounded-full"
+                    id="dia">
+                    00
+                </div>
+                <div class="mes-año flex flex-col text-[14px] font-medium" id="mes-año">
+                    <span id="mes">Enero</span>
+                    <span id="anio">2025</span>
+                </div>
+                <div class="separador h-8 w-[2px] bg-essentials-primary rounded-lg"></div>
+                <div class="hora text-[14px]" id="hora">00:00:00</div>
+            </div>
+
+            <div class="options-user flex gap-2 items-center justify-center">
+                <div class="btn-link-disable">
+                    <span class="bg-transparent material-symbols-rounded">
+                        notifications
+                    </span>
+                </div>
+                <div class="btn-link-disable">
+                    <span class="bg-transparent material-symbols-rounded">
+                        settings
+                    </span>
+                </div>
+                <div class="logo flex gap-3 items-center">
+                    <div class="gota h-10 w-10 shadow-essentials bg-essentials-primary rounded-full"></div>
+                    <div class="logo">
+                        <h3 class="font-semibold">Nombre de Usuario</h3>
+                        <p class="-mt-[8px] text-secundary-light text-[13px] font-medium">
+                            Rol de perfil
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- navegable -->
+        <div class="options flex gap-1 my-2 items-center text-[14px]">
+            <a href="" class="hover:text-essentials-secundary">
+                <p>Dashboard</p>
+            </a>
+            <span class="material-symbols-rounded text-[18px]">chevron_right</span>
+            <a href="" class="hover:text-essentials-secundary">
+                <p>Overviews proveedores</p>
+            </a>
+            <span class="material-symbols-rounded text-[18px]">chevron_right</span>
+            <a href="" class="hover:text-essentials-secundary">
+                <p>Gestor de proveedores</p>
+            </a>
+            <span class="material-symbols-rounded text-[18px]">chevron_right</span>
+            <a href="" class="hover:text-essentials-secundary">
+                <p>Contabilidad</p>
+            </a>
+
+            <span class="material-symbols-rounded text-[18px]">chevron_right</span>
+            <p class="font-bold">Mis pedidos</p>
+        </div>
+
+       
+        <div class="titulp-input-btn flex justify-between items-center gap-5">
+            <div class="">
+                <h4 class="font-semibold text-[25px]">Gestión de mis pedidos a proveedores</h4>
+                <p class="font-light">Aquí podrás registrar, observar y pagar pedidos a proveedores registrados.</p>
+            </div>
+
+
+            <div class="input">
+                <input type="search" id="searchInput" placeholder="Buscar pedido..." autocomplete="off">
+                <span class="material-symbols-rounded text-essentials-primary">travel_explore</span>
+            </div>
+
+
+        </div>
+
+
+        <div class="div my-8">
+
+            <div class="encabezado flex justify-between items-center mb-3">
+                <h2 class="text-blanco text-[20px] font-semibold">Movimientos almacenados</h2>
+                <span class="material-symbols-rounded cursor-pointer" id="exportarExcel">receipt_long</span>
+            </div>
+
+            <div class="resenas my-4">
+                <div id="mensaje-no-resultados"
+                    class="hidden text-center mt-10 font-bold text-[35px] text-secundary-light fade-in">No hay
+                    coincidencias.</div>
+
+                <div class="cardMenu filtrouser">
+                    <div class=" flex justify-between items-center border border-semaforo-verde p-3 rounded-lg m-2">
+                        <div class="img-nombre flex gap-3 items-center">
+                            <img src="../../Assets/img/Recursos Essentials/Proveedor.jpg" class="rounded-full w-16"
+                                alt="">
+                            <div class="nombre-comentario">
+                                <h5 class="text-[20px]">Jhoann Sebastian Zamudio</h5>
+                                <p class="text-[15px] text-secundary-light">Postobon</p>
+                            </div>
+                        </div>
+
+                        <div class="fecha-estado flex flex-col gap-2">
+                            <p>Ingreso: 1 Dic, 2024</p>
+                            <div class="encabezado flex gap-2 items-center bg-transparent">
+                                <p class="bg-transparent">Contrato: <span>Indefinido</span></p>
+                            </div>
+                            <div class="encabezado flex gap-2 items-center bg-transparent">
+                                <div
+                                    class="gota h-[20px] w-[20px] rounded-full bg-semaforo-verde shadow-verde shadow-essentials">
+                                </div>
+                                <p class="bg-transparent">Finalizada</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cardMenu filtrouser">
+                    <div class=" flex justify-between items-center border border-semaforo-rojo p-3 rounded-lg m-2">
+                        <div class="img-nombre flex gap-3 items-center">
+                            <img src="../../Assets/img/Recursos Essentials/empleado.jpg" class="rounded-full w-16"
+                                alt="">
+                            <div class=" nombre-comentario">
+                                <h5 class="text-[20px]">Salome Zamudio</h5>
+                                <p class="text-[15px] text-secundary-light">Diseñador UI</p>
+                            </div>
+                        </div>
+
+                        <div class="fecha-estado flex flex-col gap-2">
+                            <p>llega: 23 Ene, 2025</p>
+                            <div class="encabezado flex gap-2 items-center bg-transparent">
+                                <p class="bg-transparent">Contrato: <span>Fijo</span></p>
+                            </div>
+                            <div class="encabezado flex gap-2 items-center bg-transparent">
+                                <div
+                                    class="gota h-[20px] w-[20px] rounded-full bg-semaforo-rojo shadow-rojo shadow-essentials">
+                                </div>
+                                <p class="bg-transparent">Pendiente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <script src="../../Assets/js/hora.js"></script>
+    <script src="../../Assets/js/exportarExcel.js"></script>
+    <script src="../../Assets/js/buscadorMenu.js"></script>
+
+</body>
+
+</html>

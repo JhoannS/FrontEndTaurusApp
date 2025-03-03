@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Descuento y deducciones</title>
+    <title>Pago y horas extras</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../../Assets/css/style.css" />
     <script src="../../Assets/js/styles.js"></script>
@@ -138,7 +138,7 @@
             </a>
             
             <span class="material-symbols-rounded text-[18px]">chevron_right</span>
-            <p class="font-bold">Descuentos y deducciones</p>
+            <p class="font-bold">Pagos de horas extras</p>
         </div>
 
         <div class="justify-center flex items-center p-[20px]">
@@ -149,7 +149,7 @@
                         <span class="material-symbols-rounded  text-[20px]"> paid </span>
                     </a>
                 </div>
-                <div class="btn-link w-7 h-7">
+                <div class="btn-link-disable w-7 h-7">
                     <a href="" class="bg-transparent flex items-center justify-center ">
                         <span class="material-symbols-rounded  text-[20px]"> money_off </span>
                     </a>
@@ -159,7 +159,7 @@
                         <span class="material-symbols-rounded  text-[20px]"> kid_star </span>
                     </a>
                 </div>
-                <div class="btn-link-disable w-7 h-7">
+                <div class="btn-link w-7 h-7">
                     <a href="" class="bg-transparent flex items-center justify-center ">
                         <span class="material-symbols-rounded  text-[20px]"> hourglass_arrow_up </span>
                     </a>
@@ -208,9 +208,9 @@
               <div
                 class="gota h-[20px] w-[20px] rounded-full bg-essentials-primary shadow-essentials"
               ></div>
-              <p class="text-[20px]">Descuentos y deducciones:</p>
+              <p class="text-[20px]">Pagos de horas extras :</p>
             </div>
-            <p class="font-light">Gestión de descuentos por préstamos, multas, retenciones fiscales, seguridad social y otros conceptos.</p>
+            <p class="font-light">Cálculo y gestión de pagos adicionales por horas extra laboradas.</p>
             <div class="input w-full my-3">
               <input type="search" id="buscador" placeholder="Buscar empleado en tiempo real..." oninput="buscarProducto()" autocomplete="off">
               <span class="material-symbols-rounded text-essentials-primary">travel_explore</span>
@@ -226,7 +226,7 @@
 
           <div class="mt-[20px] flex justify-between gap-3 w-full">
             <div class="w-[50%]">
-              <p class="my-[5px] text-[14px]">Ingresa el monto a descontar</p>
+              <p class="my-[5px] text-[14px]">Ingresa el valor de la hora:</p>
               <div
                 class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
               >
@@ -245,7 +245,7 @@
               </div>
             </div>
             <div class="w-[50%]">
-                <p class="my-[5px] text-[14px]">Ingrese la justificación</p>
+                <p class="my-[5px] text-[14px]">Ingrese la cantidad de horas:</p>
                 <div
                   class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
                 >
@@ -255,7 +255,7 @@
                   >
     
                   <input
-                    type="text"
+                    type="number"
                     id="monto"
                     class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro"
                     placeholder=""
@@ -282,8 +282,8 @@
                 <p class="font-bold text-[25px]">$ 0,00</p>
             </div>
             <div
-                class="contador bg-essentials-primary p-2 rounded-md flex justify-center items-center w-auto h-6 font-bold">
-                1% <span class="material-symbols-rounded"> arrow_drop_down </span>
+                class="contador bg-semaforo-verde p-2 rounded-md flex justify-center items-center w-auto h-6 font-bold">
+                1% <span class="material-symbols-rounded"> arrow_drop_up </span>
             </div>
         </div>
 

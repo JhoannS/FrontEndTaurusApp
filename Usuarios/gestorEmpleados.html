@@ -10,6 +10,7 @@
     <script src="../Assets/js/styles.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
@@ -199,7 +200,7 @@
         <div class="div">
             <div class="encabezado flex justify-between items-center mb-3">
                 <h2 class="text-blanco text-[20px] font-semibold">Movimientos almacenados</h2>
-                <span class="material-symbols-rounded">receipt_long</span>
+                <span class="material-symbols-rounded cursor-pointer" id="exportarExcel">receipt_long</span>
             </div>
 
             <div class="overflow-x-auto">
@@ -527,6 +528,8 @@
         <script src="../Assets/js/hora.js"></script>
         <script src="../Assets/js/modales.js"></script>
         <script src="../Assets/js/items.js"></script>
+        <script src="../Assets/js/exportarExcel.js"></script>
+
 </body>
 
 </html>

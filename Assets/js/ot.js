@@ -3,7 +3,7 @@ let currentMonth = currentDate.getMonth();
 let currentYear = currentDate.getFullYear();
 let today = currentDate.getDate();
 let startDayIndex = today - 1; // Comienza desde el día actual
-const daysToShow = 7; // Número de días a mostrar
+const daysToShow = 16; // Número de días a mostrar
 
 function updateCalendar() {
     const monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];

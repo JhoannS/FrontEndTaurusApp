@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orden de trabajo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/Assets/css/style.css" />
+    <script src="../Assets/js/styles.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+</head>
+
+<body class="bg-mono flex scrollbar-custom">
+    <!-- Panel de navegacion -->
+    <div class="h-[100vh] w-[60px] flex items-center p-[20px]">
+        <aside class="w-[60px] flex justify-center flex-col gap-2 items-center bg-secundary-default p-2 rounded-full">
+            <div class="gota h-12 w-12 shadow-essentials bg-essentials-primary rounded-full z-20"></div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> space_dashboard </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> swap_horiz </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> savings </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> monitoring </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> identity_platform </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> calendar_clock </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> checklist </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> barcode_scanner </span>
+                </a>
+            </div>
+            <div class="btn-link-disable">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> qr_code_2 </span>
+                </a>
+            </div>
+            <div class="btn-link">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> donut_small </span>
+                </a>
+            </div>
+            <div class="btn-link-disbale">
+                <a href="" class="bg-transparent flex items-center justify-center">
+                    <span class="material-symbols-rounded"> diversity_1 </span>
+                </a>
+            </div>
+        </aside>
+    </div>
+
+    <!-- panel de contenido -->
+    <main class="w-full h-[100%] px-[40px] py-[20px] bg-transparent">
+        <!-- header de opciones -->
+        <header class="w-full h-[100%] flex justify-between mb-[20px]">
+            <div class="date flex gap-3 items-center">
+                <div class="dia flex items-center justify-center font-semibold h-10 w-7 shadow-essentials bg-essentials-primary rounded-full"
+                    id="dia">
+                    00
+                </div>
+                <div class="mes-año flex flex-col text-[14px] font-medium" id="mes-año">
+                    <span id="mes">Enero</span>
+                    <span id="anio">2025</span>
+                </div>
+                <div class="separador h-8 w-[2px] bg-essentials-primary rounded-lg"></div>
+                <div class="hora text-[14px]" id="hora">00:00:00</div>
+            </div>
+
+            <div class="options-user flex gap-2 items-center justify-center">
+                <div class="btn-link-disable">
+                    <span class="bg-transparent material-symbols-rounded">
+                        notifications
+                    </span>
+                </div>
+                <div class="btn-link-disable">
+                    <span class="bg-transparent material-symbols-rounded">
+                        settings
+                    </span>
+                </div>
+                <div class="logo flex gap-3 items-center">
+                    <div class="gota h-10 w-10 shadow-essentials bg-essentials-primary rounded-full"></div>
+                    <div class="logo">
+                        <h3 class="font-semibold">Nombre de Usuario</h3>
+                        <p class="-mt-[8px] text-secundary-light text-[13px] font-medium">
+                            Rol de perfil
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- navegable -->
+        <div class="options flex gap-1 my-2 items-center text-[14px]">
+            <a href="" class="hover:text-essentials-secundary">
+                <p>Dashboard</p>
+            </a>
+
+            <span class="material-symbols-rounded text-[18px]">chevron_right</span>
+
+            <p class="font-bold">Orden de trabajo</p>
+        </div>
+
+        <!-- header administrativo -->
+        <div class="titulp-input-btn flex justify-between items-center gap-5">
+            <h4 class="font-semibold text-[25px]">Orden de trabajo (OT)</h4>
+            <div class="input">
+                <input type="search" id="buscador" placeholder="Buscar producto..." oninput="buscarProducto()"
+                    autocomplete="off">
+                <span class="material-symbols-rounded text-essentials-primary">travel_explore</span>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="calendar flex flex-col justify-center items-center my-5">
+                <div class="month-nav flex justify-between items-center text-[12px] my-2">
+                    <span class="material-symbols-rounded cursor-pointer" onclick="changeMonth(-1)">
+                        chevron_left
+                    </span>
+
+                    <span id="monthYear" class="mx-5"></span>
+                    <span class="material-symbols-rounded cursor-pointer" onclick="changeMonth(1)">
+                        chevron_right
+                    </span>
+                </div>
+
+                <!-- <div class="weekdays flex gap-5">
+                  <span>Dom</span><span>Lun</span><span>Mar</span><span>Mié</span
+                  ><span>Jue</span><span>Vie</span><span>Sáb</span>
+                </div> -->
+
+                <div class="day-nav flex justify-between bg-mono-blanco shadowM rounded-2xl p-[15px] w-full">
+                    <span class="material-symbols-rounded cursor-pointer text-mono-negro" onclick="changeDays(-1)">
+                        chevron_left
+                    </span>
+
+                    <div class="days flex gap-8 bg-transparent" id="daysContainer"></div>
+                    <span class="material-symbols-rounded cursor-pointer text-mono-negro" onclick="changeDays(1)">
+                        chevron_right
+                    </span>
+                </div>
+            </div>
+
+            <div class="info flex items-center justify-between gap-5">
+                <div class="realizados">
+                    <p class="text-semaforo-verde text-[14px]">Ventas finalizadas:</p>
+                    <div class="tag bg-semaforo-verde rounded-lg w-full h-[3px]"></div>
+                    <p class="number text-[16px]">Numero</p>
+                </div>
+                <div class="balance">
+                    <p class="text-semaforo-verde text-[14px]">Servicios finalizados:</p>
+                    <div class="tag bg-semaforo-verde rounded-lg w-full h-[3px]"></div>
+                    <p class="number text-[16px]">$ cantidad vendida</p>
+                </div>
+                <div class="balance text-center">
+                    <p class="text-[25px]">Balance total en dinero:</p>
+                    <p class="number text-[16px]">$ suma de ventas</p>
+
+                </div>
+                <div class="balance">
+                    <p class="text-semaforo-rojo text-[14px]">Ventas canceladas:</p>
+                    <div class="tag bg-semaforo-rojo rounded-lg w-full h-[3px]"></div>
+                    <p class="number text-[16px]">$ cantidad vendida</p>
+                </div>
+                <div class="balance">
+                    <p class="text-semaforo-rojo text-[14px]">Servicios cancelados:</p>
+                    <div class="tag bg-semaforo-rojo rounded-lg w-full h-[3px]"></div>
+                    <p class="number text-[16px]">$ cantidad vendida</p>
+                </div>
+            </div>
+
+            <div class="ot my-4 flex gap-3 flex-wrap">
+                <div class="cardOt bg-semaforo-verde_opacity border border-semaforo-verde rounded-lg p-2 w-[24%]">
+                    <div class="headerOt flex justify-between items-center">
+                        <p class="text-[20px]">$ Total de venta</p>
+                        <span class="material-symbols-rounded">info</span>
+                    </div>
+                    <div class="pago-empleado flex justify-between items-center">
+                        <p>Medio de pago</p>
+                        <p>Empleado atendio</p>
+                    </div>
+                    <p>Descripcion</p>
+                    <div class="">
+                        <p>Fecha de finalizacio:</p>
+                        <p class="-mt-2 text-[15px]">Aqui la fecha:</p>
+                    </div>
+                </div>
+                <div class="cardOt bg-semaforo-rojo_opacity border border-semaforo-rojo rounded-lg p-2 w-[24%]">
+                    <div class="headerOt flex justify-between items-center">
+                        <p class="text-[20px]">$ Total de venta</p>
+                        <span class="material-symbols-rounded">info</span>
+                    </div>
+                    <div class="pago-empleado flex justify-between items-center">
+                        <p>Medio de pago</p>
+                        <p>Empleado atendio</p>
+                    </div>
+                    <p>Descripcion</p>
+                    <div class="">
+                        <p>Fecha de finalizacio:</p>
+                        <p class="-mt-2 text-[15px]">Aqui la fecha:</p>
+                    </div>
+                </div>
+                <div class="cardOt bg-semaforo-verde_opacity border border-semaforo-verde rounded-lg p-2 w-[24%]">
+                    <div class="headerOt flex justify-between items-center">
+                        <p class="text-[20px]">$ Total de venta</p>
+                        <span class="material-symbols-rounded">info</span>
+                    </div>
+                    <div class="pago-empleado flex justify-between items-center">
+                        <p>Medio de pago</p>
+                        <p>Empleado atendio</p>
+                    </div>
+                    <p>Descripcion</p>
+                    <div class="">
+                        <p>Fecha de finalizacio:</p>
+                        <p class="-mt-2 text-[15px]">Aqui la fecha:</p>
+                    </div>
+                </div>
+                <div class="cardOt bg-semaforo-rojo_opacity border border-semaforo-rojo rounded-lg p-2 w-[24%]">
+                    <div class="headerOt flex justify-between items-center">
+                        <p class="text-[20px]">$ Total de venta</p>
+                        <span class="material-symbols-rounded">info</span>
+                    </div>
+                    <div class="pago-empleado flex justify-between items-center">
+                        <p>Medio de pago</p>
+                        <p>Empleado atendio</p>
+                    </div>
+                    <p>Descripcion</p>
+                    <div class="">
+                        <p>Fecha de finalizacio:</p>
+                        <p class="-mt-2 text-[15px]">Aqui la fecha:</p>
+                    </div>
+                </div>
+                <div class="cardOt bg-semaforo-verde_opacity border border-semaforo-verde rounded-lg p-2 w-[24%]">
+                    <div class="headerOt flex justify-between items-center">
+                        <p class="text-[20px]">$ Total de venta</p>
+                        <span class="material-symbols-rounded">info</span>
+                    </div>
+                    <div class="pago-empleado flex justify-between items-center">
+                        <p>Medio de pago</p>
+                        <p>Empleado atendio</p>
+                    </div>
+                    <p>Descripcion</p>
+                    <div class="">
+                        <p>Fecha de finalizacio:</p>
+                        <p class="-mt-2 text-[15px]">Aqui la fecha:</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="../Assets/js/hora.js"></script>
+    <script src="../Assets/js/ot.js"></script>
+</body>
+
+</html>

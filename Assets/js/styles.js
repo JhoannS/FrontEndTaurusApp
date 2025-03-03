@@ -4,17 +4,18 @@ tailwind.config = {
             
             colors: {
                 mono: {
-                  blanco: "var(--mono-blanco)",
-                  negro: "var(--mono-negro)",
+                  blanco: '#F5EFFF',
+                  negro: '#060809',
                 },
                 bg: {
-                  empty: "var(--bg-empty)",
-
+                  empty: '#1F1D2B',
                 },
                 semaforo: {
                   verde: '#1BCC75',
+                  verde_opacity: '#1bcc763f',
                   amarillo: '#FFA823',
                   rojo: '#FF3131',
+                  rojo_opacity : '#ff31312d'
                 },
                 secundary: {
                   default: '#1A2130',

@@ -37,8 +37,11 @@
 
     /* SEMAFORO */
     --verde:#1BCC75;
+    --verde_opacity:#1bcc763f;
     --amarillo:#FFA823;
+    --amarillo_opacity:#ffa7238c;
     --rojo:#FF3131;
+    --rojo_opacity:#ff31312d;
 
     /* SECUNDARIO */
     --secundary:#1A2130;
@@ -134,7 +137,7 @@ body{
 }
 
 .shadowM{
-    box-shadow: 0px 2px 27px var(--secundary_light);
+    box-shadow: 0px 2px 16px var(--secundary_light);
 }
 
 .btn-essentials{

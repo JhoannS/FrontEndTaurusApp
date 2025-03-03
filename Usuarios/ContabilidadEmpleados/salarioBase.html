@@ -201,198 +201,32 @@
                 </div>
             </nav>
         </div>
-        
 
-    </main>
-    <div
-    id="modalEmpleado"
-    class="modal hidden fixed inset-0 flex items-center justify-center bg-secundary-opacity backdrop-blur-sm z-50"
-  >
-    <div
-      class="bg-mono-negro border-[2px] border-secundary-light text-blanco p-6 rounded-lg shadow-lg w-[90%] max-w-[600px]"
-    >
-      <div
-        class="flex items-center gap-[3px] cursor-pointer"
-        data-modal-close
-      >
-        <span class="material-symbols-rounded">chevron_left</span>
-        <p class="text-[12px]">Volver</p>
-      </div>
-
-      <div class="encabezado flex gap-2 items-center bg-transparent my-2">
-        <div
-          class="gota h-[20px] w-[20px] rounded-full bg-essentials-primary shadow-essentials"
-        ></div>
-        <p class="bg-transparent text-[25px]">Creacion de un nuevo empleado</p>
-      </div>
-
-      <p class="mb-[10px] text-secundary-light">Este apartado podrás crear empleados, recuerda llenar todos los campos 
-        para tener un registro exitoso. 
-    </p>
-
-      <hr class="h-[2px] w-full" />
-
-      
-        <!-- contenido del modal -->
-        <div class="mt-[10px] flex justify-between gap-3 w-full">
-          <div class="w-[50%]">
-            <p class="my-[5px] text-[14px]">Nombre completo:</p>
-            <div
-              class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
-            >
-              <span
-                class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                >format_italic</span
-              >
-
-              <input
-                type="text"
-                id="monto"
-                class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
-                placeholder=""
-                name="nombreCliente"
-              />
+        <div class="contable-empleado flex justify-between items-center w-full gap-3">
+          <div class="contable w-[70%] h-[100%]">
+            <div class="encabezado flex gap-2 items-center bg-transparent">
+              <div
+                class="gota h-[20px] w-[20px] rounded-full bg-essentials-primary shadow-essentials"
+              ></div>
+              <p class="text-[20px]">Cálculo de salario base:</p>
             </div>
+            <p class="font-light">Registro del salario base mensual, quincenal o semanal de cada empleado.</p>
+            <div class="input w-full my-3">
+              <input type="search" id="buscador" placeholder="Buscar empleado en tiempo real..." oninput="buscarProducto()" autocomplete="off">
+              <span class="material-symbols-rounded text-essentials-primary">travel_explore</span>
           </div>
 
-          <div class="w-[50%]">
-              <p class="my-[5px] text-[14px]">Tipo y numero de documento:</p>
-              <div class="flex">
-                <div class="w-[30%]">
-                    <div class="custom-select">
-                      <select>
-                        <option>CC</option>
-                        <option>PEP</option>
-                        <option>PP</option>
-                        <option>CE</option>
-                      </select>
-                      <div class="select-arrow"></div>
-                    </div>
-                  </div>
-                <div
-                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
-                >
-                  <span
-                    class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                    >pin</span
-                  >
-    
-                  <input
-                    type="number"
-                    id=""
-                    class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
-                    placeholder=""
-                    name="documentoEmpleado"
-                  />
-                </div>
-              </div>
-              
+          <div class="monto flex items-center gap-1">
+             <h3 class="text-[22px]">Salario base sin extras: </h3>
+             <div class="flex items-center gap-2">
+              <span class="material-symbols-rounded text-essentials-primary">payments</span>
+              <span class="text-[22px]">$Salario del empleado buscado</span>
+             </div>
           </div>
-          
-        </div>
 
-        <div class="mt-[10px] flex justify-between gap-3 w-full">
+          <div class="mt-[20px] flex justify-between gap-3 w-full">
             <div class="w-[50%]">
-              <p class="my-[5px] text-[14px]">Email:</p>
-              <div
-                class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
-              >
-                <span
-                  class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                  >format_italic</span
-                >
-  
-                <input
-                  type="email"
-                  id=""
-                  class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
-                  placeholder=""
-                  name="emailEmpleado"
-                />
-              </div>
-            </div>
-  
-            <div class="w-[50%]">
-              <p class="my-[5px] text-[14px]">Telefono:</p>
-              <div
-                class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
-              >
-                <span
-                  class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                  >pin</span
-                >
-  
-                <input
-                  type="number"
-                  id=""
-                  class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
-                  placeholder=""
-                  name="telefonoEmpleado"
-                />
-              </div>
-            </div>
-            
-        </div>
-
-        <div class="mt-[10px] flex justify-between gap-3 w-full">
-            <div class="w-[50%]">
-                <p class="my-[5px] text-[14px]">Genero:</p>
-                <div class="custom-select">
-                  <select>
-                    <option>Selecciona un genero</option>
-                    <option>Hombre</option>
-                    <option>Mujer</option>
-                    <option>Otro</option>
-                  </select>
-                  <div class="select-arrow"></div>
-                </div>
-              </div>
-  
-            <div class="w-[50%]">
-              <p class="my-[5px] text-[14px]">Direccion residencia:</p>
-              <div
-                class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
-              >
-                <span
-                  class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                  >format_italic</span
-                >
-  
-                <input
-                  type="text"
-                  id=""
-                  class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
-                  placeholder=""
-                  name="direccionEmpleado"
-                />
-              </div>
-            </div>
-            
-        </div>
-
-        <div class="mt-[10px] flex justify-between gap-3 w-full">
-            <div class="w-[50%]">
-              <p class="my-[5px] text-[14px]">Cargo:</p>
-              <div
-                class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
-              >
-                <span
-                  class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                  >format_italic</span
-                >
-  
-                <input
-                  type="email"
-                  id=""
-                  class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
-                  placeholder=""
-                  name="cargoEmpleado"
-                />
-              </div>
-            </div>
-  
-            <div class="w-[50%]">
-              <p class="my-[5px] text-[14px]">Salario base:</p>
+              <p class="my-[5px] text-[14px]">Modificar salario de <span>Jhoann Sebastian Zamudio</span></p>
               <div
                 class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
               >
@@ -402,81 +236,94 @@
                 >
   
                 <input
-                  type="number"
-                  id=""
-                  class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
-                  placeholder=""
-                  name="salarioBase"
-                />
-              </div>
-            </div>
-            
-        </div>
-
-        <div class="mt-[10px] flex justify-between gap-3 w-full">
-            <div class="w-[50%]">
-              <p class="my-[5px] text-[14px]">Horario de trabajo:</p>
-              <div
-                class="w-[100%] transition-all rounded-[5px] border-[1px] border-secundary-light p-[3px] flex items-center gap-[8px]"
-              >
-                <span
-                  class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                  >format_italic</span
-                >
-  
-                <input
                   type="text"
-                  id=""
-                  class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro text-blanco"
+                  id="monto"
+                  class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro"
                   placeholder=""
-                  name="horariosEmpleado"
+                  name="salarioEmpleado"
                 />
               </div>
             </div>
-  
             <div class="w-[50%]">
-                <p class="my-[5px] text-[14px]">Tipo de contrato:</p>
-                <div class="custom-select">
-                  <select>
-                    <option>Selecciona un tipo de contrato</option>
-                    <option>Termino fijo</option>
-                    <option>Obra labor</option>
-                    <option>Prestacion de servicios</option>
-                    <option>Aprendizaje</option>
-                  </select>
-                  <div class="select-arrow"></div>
-                </div>
+              <p class="my-[5px] text-[14px]">Periodo de trabajo</p>
+              <div class="custom-select">
+                <select>
+                  <option>Selecciona un periodo</option>
+                  <option>Diario</option>
+                  <option>Semanal</option>
+                  <option>quincenal</option>
+                  <option>Mensual</option>
+                </select>
+                <div class="select-arrow"></div>
               </div>
-            
-        </div>
-
-        <div class=" mt-[10px] w-[100%]">
-            <p class="my-[5px] text-[14px]">Hoja de vida:</p>
-            <div
-              class="w-[100%] transition-all rounded-[5px] p-[3px] flex items-center gap-[8px]"
-            >
-              <span
-                class="material-symbols-rounded text-essentials-primary text-[20px] pl-[5px]"
-                >attach_file</span
-              >
-  
-              <input
-                type="file"
-                id="monto"
-                class="w-full focus:outline-none focus:border-none font-normal bg-mono-negro"
-                placeholder=""
-                name="monto"
-              />
             </div>
           </div>
 
-          <button class="btn-essentials mt-4 w-full" id="confirm-button">Confirmar creacion</button>
-       
-</div>
+          <button class="btn-essentials mt-4 w-full" id="confirm-button">Confirmar cambios</button>
+         
+          </div>
+          <div class="empleado w-[30%] h-[75vh] flex flex-col justify-center text-center">
+            <div class="contenido ">
 
+            <div class="imagen grid place-content-center my-3">
+              <img src="../../Assets/img/Recursos Essentials/empleado.jpg" class="rounded-full w-[150px] h-[150px]" alt="">
+            </div>
+            <div class="nombre text-[25px]">
+              <h1>Jhoann Sebastian Zamudio</h1>
+            </div>
+            <div class="rol text-[20px]">
+              <p class="text-secundary-light">Desarrollador de software</p>
+            </div>
+            <div class="Documento text-[20px]">
+              <span>CC</span><span> 10158887984</span>
+            </div>
+            <div class="genero-edad text-[20px] flex justify-center items-center gap-5">
+              <div class="genero flex gap-1 items-center">
+                <span class="material-symbols-rounded">male</span><p>Masculino</p>
+              </div>
+              <div class="genero text-[20px] flex gap-1 items-center">
+                <span class="material-symbols-rounded">agender</span><p>20 años</p>
+              </div>
+            </div>
+            <div class="direccion-telefono text-[20px] flex justify-center items-center gap-5">
+              <div class="direccion flex gap-1 items-center">
+                <span class="material-symbols-rounded">location_on</span><p>Calle 10b #1-24</p>
+              </div>
+              <div class="telefono text-[20px] flex gap-1 items-center">
+                <span class="material-symbols-rounded">phone</span><p>123456789</p>
+              </div>
+            </div>
+            <div class="salario-contrato text-[20px] flex justify-center items-center gap-5">
+              <div class="salario flex gap-1 items-center">
+                <span class="material-symbols-rounded">payments</span><p>$1.600.000</p>
+              </div>
+              <div class="contrato flex gap-1 items-center">
+                <span class="material-symbols-rounded">business_center</span><p>Indefinido</p>
+              </div>
+            </div>
+            <div class="correo text-[20px] flex gap-1 items-center justify-center ">
+              <span class="material-symbols-rounded">email</span><p>Sebastianzamudio2004@gmail.com</p>
+            </div>
+            <div class="horario-ingreso text-[20px] flex justify-center items-center gap-5">
+              <div class="salario flex gap-1 items-center">
+                <span class="material-symbols-rounded">hourglass_empty</span><p>8am - 5pm</p>
+              </div>
+              <div class="contrato flex gap-1 items-center">
+                <span class="material-symbols-rounded">event</span><p>Ene 13 2025</p>
+              </div>
+            </div>
+            <div class="estado text-[20px] flex justify-center items-center gap-2 my-2">
+              <div class="gota h-5 w-5 bg-semaforo-verde shadow-verde rounded-full"></div>
+              <p>Activo</p>
+          </div>
+        </div>
+          </div>
+        </div>
+        
+
+    </main>
+   
         <script src="../../Assets/js/hora.js"></script>
-        <script src="../../Assets/js/modales.js"></script>
-        <script src="../../Assets/js/items.js"></script>
         <script src="../../Assets/js/exportarExcel.js"></script>
 
 </body>

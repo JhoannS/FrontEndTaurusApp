@@ -15,10 +15,12 @@ CREATE TABLE productos_essentials(
     registro_sanitario_producto VARCHAR(150) NOT NULL,
     fecha_vencimiento DATE DEFAULT "2999-12-31",
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    fecha_modificacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    fecha_modificacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     
     FOREIGN KEY (id_estado) REFERENCES estados(id),
     FOREIGN KEY (id_producto_universal) REFERENCES productos_universales(id),
     FOREIGN KEY (id_categoria) REFERENCES categorias(id),
     FOREIGN KEY (id_receta_producto) REFERENCES recetas_productos(id)
 );
+create table user (
+    id int auto increment
